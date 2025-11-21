@@ -1368,103 +1368,103 @@ const acData = [
           },
         ],
       },
-      {
-        name: "Inverter Series",
-        products: [
-          {
-            name: "Midea AC Split 1 PK Inverter",
-            desc: "AC split standar Fife 1 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 0",
-            oldPrice: "Rp 0",
-            imgList: "img/Midea/INV.webp", // Image for list view
-            imgDetail:
-              "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
-            features: [
-              "Frozen Power",
-              "Gold Fin & Blue Fin",
-              "Smart Cleaner",
-              "Mode Turbo",
-            ],
-            specs: {
-              "Kapasitas Pendingin": "9,000 Btu/h",
-              "Daya Listrik": "750 Watt",
-              "Tipe Freon": "R32",
-              "Dimensi Indoor": "250 x 730 x 190 mm",
-              "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
-            },
-          },
-          {
-            name: "Midea AC Split 1 PK Inverter",
-            desc: "AC split standar Fife 1 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 0",
-            oldPrice: "Rp 0",
-            imgList: "img/Midea/INV.WEBP", // Image for list view
-            imgDetail:
-              "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
-            features: [
-              "Frozen Power",
-              "Gold Fin & Blue Fin",
-              "Smart Cleaner",
-              "Mode Turbo",
-            ],
-            specs: {
-              "Kapasitas Pendingin": "9,000 Btu/h",
-              "Daya Listrik": "750 Watt",
-              "Tipe Freon": "R32",
-              "Dimensi Indoor": "250 x 730 x 190 mm",
-              "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
-            },
-          },
-          {
-            name: "Midea AC Split 1 PK Inverter",
-            desc: "AC split standar Fife 1 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 0",
-            oldPrice: "Rp 0",
-            imgList: "img/Midea/INV.WEBP", // Image for list view
-            imgDetail:
-              "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
-            features: [
-              "Frozen Power",
-              "Gold Fin & Blue Fin",
-              "Smart Cleaner",
-              "Mode Turbo",
-            ],
-            specs: {
-              "Kapasitas Pendingin": "9,000 Btu/h",
-              "Daya Listrik": "750 Watt",
-              "Tipe Freon": "R32",
-              "Dimensi Indoor": "250 x 730 x 190 mm",
-              "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
-            },
-          },
-          {
-            name: "Midea AC Split 1 PK Inverter",
-            desc: "AC split standar Fife 1 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 0",
-            oldPrice: "Rp 0",
-            imgList: "img/Midea/INV.WEBP", // Image for list view
-            imgDetail:
-              "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
-            features: [
-              "Frozen Power",
-              "Gold Fin & Blue Fin",
-              "Smart Cleaner",
-              "Mode Turbo",
-            ],
-            specs: {
-              "Kapasitas Pendingin": "9,000 Btu/h",
-              "Daya Listrik": "750 Watt",
-              "Tipe Freon": "R32",
-              "Dimensi Indoor": "250 x 730 x 190 mm",
-              "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
-            },
-          },
-        ],
-      },
+      // {
+      //   name: "Inverter Series",
+      //   products: [
+      //     {
+      //       name: "Midea AC Split 1 PK Inverter",
+      //       desc: "AC split standar Fife 1 PK, pendinginan efektif dan tahan lama.",
+      //       price: "Rp 0",
+      //       oldPrice: "Rp 0",
+      //       imgList: "img/Midea/INV.webp", // Image for list view
+      //       imgDetail:
+      //         "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
+      //       features: [
+      //         "Frozen Power",
+      //         "Gold Fin & Blue Fin",
+      //         "Smart Cleaner",
+      //         "Mode Turbo",
+      //       ],
+      //       specs: {
+      //         "Kapasitas Pendingin": "9,000 Btu/h",
+      //         "Daya Listrik": "750 Watt",
+      //         "Tipe Freon": "R32",
+      //         "Dimensi Indoor": "250 x 730 x 190 mm",
+      //         "Dimensi Outdoor": "500 x 720 x 240 mm",
+      //         Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+      //       },
+      //     },
+      //     {
+      //       name: "Midea AC Split 1 PK Inverter",
+      //       desc: "AC split standar Fife 1 PK, pendinginan efektif dan tahan lama.",
+      //       price: "Rp 0",
+      //       oldPrice: "Rp 0",
+      //       imgList: "img/Midea/INV.WEBP", // Image for list view
+      //       imgDetail:
+      //         "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
+      //       features: [
+      //         "Frozen Power",
+      //         "Gold Fin & Blue Fin",
+      //         "Smart Cleaner",
+      //         "Mode Turbo",
+      //       ],
+      //       specs: {
+      //         "Kapasitas Pendingin": "9,000 Btu/h",
+      //         "Daya Listrik": "750 Watt",
+      //         "Tipe Freon": "R32",
+      //         "Dimensi Indoor": "250 x 730 x 190 mm",
+      //         "Dimensi Outdoor": "500 x 720 x 240 mm",
+      //         Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+      //       },
+      //     },
+      //     {
+      //       name: "Midea AC Split 1 PK Inverter",
+      //       desc: "AC split standar Fife 1 PK, pendinginan efektif dan tahan lama.",
+      //       price: "Rp 0",
+      //       oldPrice: "Rp 0",
+      //       imgList: "img/Midea/INV.WEBP", // Image for list view
+      //       imgDetail:
+      //         "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
+      //       features: [
+      //         "Frozen Power",
+      //         "Gold Fin & Blue Fin",
+      //         "Smart Cleaner",
+      //         "Mode Turbo",
+      //       ],
+      //       specs: {
+      //         "Kapasitas Pendingin": "9,000 Btu/h",
+      //         "Daya Listrik": "750 Watt",
+      //         "Tipe Freon": "R32",
+      //         "Dimensi Indoor": "250 x 730 x 190 mm",
+      //         "Dimensi Outdoor": "500 x 720 x 240 mm",
+      //         Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+      //       },
+      //     },
+      //     {
+      //       name: "Midea AC Split 1 PK Inverter",
+      //       desc: "AC split standar Fife 1 PK, pendinginan efektif dan tahan lama.",
+      //       price: "Rp 0",
+      //       oldPrice: "Rp 0",
+      //       imgList: "img/Midea/INV.WEBP", // Image for list view
+      //       imgDetail:
+      //         "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
+      //       features: [
+      //         "Frozen Power",
+      //         "Gold Fin & Blue Fin",
+      //         "Smart Cleaner",
+      //         "Mode Turbo",
+      //       ],
+      //       specs: {
+      //         "Kapasitas Pendingin": "9,000 Btu/h",
+      //         "Daya Listrik": "750 Watt",
+      //         "Tipe Freon": "R32",
+      //         "Dimensi Indoor": "250 x 730 x 190 mm",
+      //         "Dimensi Outdoor": "500 x 720 x 240 mm",
+      //         Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+      //       },
+      //     },
+      //   ],
+      // },
     ],
   },
 ];
