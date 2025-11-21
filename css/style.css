@@ -1,0 +1,174 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+.brand-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+.brand-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.product-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer; /* Add cursor pointer to indicate clickability */
+}
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+#product-modal {
+  z-index: 1000;
+}
+#product-detail-modal {
+  z-index: 1100;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-content {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out;
+}
+.modal-overlay.show .modal-content {
+  transform: scale(1);
+}
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.2s ease-in-out;
+}
+.close-button:hover {
+  color: #ef4444;
+}
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.spec-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+.spec-table tr:last-child td {
+  border-bottom: none;
+}
+.spec-table td:first-child {
+  font-weight: 600;
+  color: #4b5563;
+  width: 40%;
+}
+.flipbook-container {
+  perspective: 1500px;
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* Aspect Ratio 4:3 */
+}
+.flipbook-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease-in-out;
+  transform-origin: left center;
+  display: none;
+}
+.flipbook-page.active {
+  display: block;
+  z-index: 10;
+}
+.flipbook-page.flipped {
+  transform: rotateY(-180deg);
+  z-index: 9;
+}
+.page-front,
+.page-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-front img,
+.page-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.page-back {
+  transform: rotateY(180deg);
+}
+.flipbook-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 20;
+  pointer-events: none; /* Biarkan klik menembus ke gambar jika perlu */
+}
+.flipbook-nav button {
+  pointer-events: all; /* Aktifkan klik hanya untuk tombol */
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin: 0 1rem;
+}
+.flipbook-nav button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.flipbook-nav button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+#media-query : max-widht: 425px {
+  .body {
+    font-size: 14px;
+  }
+}
