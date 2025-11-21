@@ -1251,7 +1251,7 @@ const acData = [
   },
   {
     brand: "Midea",
-    imageUrl: "img/Midea/Logo.WEBP",
+    imageUrl: "img/Midea/Logo.webp",
     types: [
       {
         name: "Standar Series",
@@ -1261,7 +1261,7 @@ const acData = [
             desc: "AC split standar  1 PK, pendinginan efektif dan tahan lama.",
             price: "Rp 3.600.000",
             oldPrice: "Rp 3.750.000",
-            imgList: "img/Midea/ST.WEBP", // Image for list view
+            imgList: "img/Midea/ST.webp", // Image for list view
             imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
             features: [
               "Frozen Power",
@@ -1283,7 +1283,7 @@ const acData = [
             desc: "AC split standar 1/2 PK, pendinginan efektif dan tahan lama.",
             price: "Rp 3.200.000",
             oldPrice: "Rp 3.300.000",
-            imgList: "img/Midea/ST.WEBP", // Image for list view
+            imgList: "img/Midea/ST.webp", // Image for list view
             imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
             features: [
               "Frozen Power",
@@ -1305,7 +1305,7 @@ const acData = [
             desc: "AC split standar 3/4 PK, pendinginan efektif dan tahan lama.",
             price: "Rp 3.400.000",
             oldPrice: "Rp 3.500.000",
-            imgList: "img/Midea/ST.WEBP", // Image for list view
+            imgList: "img/Midea/ST.webp", // Image for list view
             imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
             features: [
               "Hyper Grid",
@@ -1327,7 +1327,7 @@ const acData = [
             desc: "AC split standar 1.5 PK, pendinginan efektif dan tahan lama.",
             price: "Rp 4.775.000",
             oldPrice: "Rp 4.850.000",
-            imgList: "img/Midea/ST.WEBP", // Image for list view
+            imgList: "img/Midea/ST.webp", // Image for list view
             imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
             features: [
               "Hyper Grid",
@@ -1349,7 +1349,7 @@ const acData = [
             desc: "AC split standar 2 PK, pendinginan efektif dan tahan lama.",
             price: "Rp 6.300.000",
             oldPrice: "Rp 6.450.000",
-            imgList: "img/Midea/ST.WEBP", // Image for list view
+            imgList: "img/Midea/ST.webp", // Image for list view
             imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
             features: [
               "Hyper Grid",
