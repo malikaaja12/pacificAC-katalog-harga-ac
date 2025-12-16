@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pacific AC - Katalog Harga</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f0f2f5;
+        color: #333;
+      }
+      .brand-card {
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        cursor: pointer;
+      }
+      .brand-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+      .product-card {
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        cursor: pointer; /* Add cursor pointer to indicate clickability */
+      }
+      .product-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+      /* Modal styles */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        z-index: 1000;
+      }
+      #product-detail-modal {
+        z-index: 1100;
+      }
+
+      .modal-overlay.show {
+        opacity: 1;
+        visibility: visible;
+      }
+      .modal-content {
+        background-color: #ffffff;
+        padding: 2.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        max-width: 90%;
+        max-height: 90%;
+        overflow-y: auto;
+        position: relative;
+        transform: scale(0.9);
+        transition: transform 0.3s ease-in-out;
+      }
+      .modal-overlay.show .modal-content {
+        transform: scale(1);
+      }
+      .close-button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #6b7280;
+        transition: color 0.2s ease-in-out;
+      }
+      .close-button:hover {
+        color: #ef4444;
+      }
+      .spec-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .spec-table td {
+        padding: 0.75rem;
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .spec-table tr:last-child td {
+        border-bottom: none;
+      }
+      .spec-table td:first-child {
+        font-weight: 600;
+        color: #4b5563;
+        width: 40%;
+      }
+
+      /* --- Mobile Responsive Styles --- */
+      @media (max-width: 768px) {
+        h1.text-3xl {
+          font-size: 1.5rem; /* 24px */
+        }
+        main h2.text-4xl {
+          font-size: 1.875rem; /* 30px */
+          margin-bottom: 2rem;
+        }
+        #brand-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 1rem;
+        }
+        .modal-content {
+          padding: 1.5rem;
+          max-width: 95%;
+        }
+        #modal-brand-title {
+          font-size: 1.5rem; /* 24px */
+        }
+        #modal-product-list .grid {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        #product-detail-content .flex {
+          flex-direction: column;
+        }
+        #product-detail-content .md\:w-1\/2 {
+          width: 100%;
+        }
+        #contact-section .md\:grid-cols-2 {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        header nav ul {
+          font-size: 1rem;
+          space-x: 1rem;
+        }
+      }
+      @media (max-width: 480px) {
+        #brand-grid {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <div class="min-h-screen flex flex-col">
+      <!-- Header -->
+      <header
+        class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-4 shadow-lg rounded-b-lg"
+      >
+        <div class="container mx-auto flex justify-between items-center">
+          <h1 class="text-3xl font-bold cursor-pointer" id="home-link">
+            Pacific AC
+          </h1>
+          <nav>
+            <ul class="flex space-x-6 text-lg">
+              <li>
+                <a
+                  href="#"
+                  id="home-nav-link"
+                  class="hover:text-blue-200 transition duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  id="contact-link"
+                  class="hover:text-blue-200 transition duration-300"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main Content Area (Product Catalog) -->
+      <main id="main-content" class="container mx-auto flex-grow p-6">
+        <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10">
+          Pilihan AC Split Unggulan Kami Berdasarkan Merek Terbaik
+        </h2>
+        <section class="mb-12">
+          <div
+            id="brand-grid"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+          >
+            <!-- Brand cards will be dynamically inserted here -->
+          </div>
+        </section>
+      </main>
+
+      <!-- Contact Section -->
+      <section
+        id="contact-section"
+        class="container mx-auto flex-grow p-6 hidden"
+      >
+        <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10">
+          Kontak Kami
+        </h2>
+        <div
+          class="bg-white rounded-xl shadow-md p-8 grid grid-cols-1 md:grid-cols-2 gap-12"
+        >
+          <div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              CV. KING GASAUSE
+            </h3>
+            <h5 class="text-xl font-semibold text-gray-700 mb-2">Dealer :</h5>
+            <p class="text-gray-700 mb-6">
+              Jl. Fatmawati Raya No.147, Pedurungan, Semarang, Jawa Tengah 50191
+            </p>
+            <h5 class="text-xl font-semibold text-gray-700 mb-2">Workshop :</h5>
+            <p class="text-gray-700 mb-6">
+              Jl. Klipang Blok R.III No.B10, Sendangmulyo, Kec.Tembalang
+            </p>
+            <div class="mb-6">
+              <h4 class="text-xl font-semibold text-gray-700 mb-2">
+                Jam Operasional
+              </h4>
+              <p class="text-gray-600">08.30 - 17.00 (Senin - Jumat)</p>
+              <p class="text-gray-600">08.30 - 16.30 (Sabtu)</p>
+            </div>
+            <div class="mb-6">
+              <h4 class="text-xl font-semibold text-gray-700 mb-2">Whatsapp</h4>
+              <p class="text-gray-600">+62 857-9928-9354</p>
+              <p class="text-gray-600">+62 856-4105-9555</p>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-gray-700 mb-2">Email</h4>
+              <p class="text-blue-600 hover:underline">
+                <a href="mailto:kinggasause@gmail.com">kinggasause@gmail.com</a>
+              </p>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Kirim Pesan Kepada Kami
+            </h3>
+            <form class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    for="firstName"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Nama Depan<span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:shadow-outline sm:text-based sm:leading-6"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="lastName"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Nama Belakang<span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:shadow-outline sm:text-based sm:leading-6"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    for="email"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Email<span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:shadow-outline sm:text-based sm:leading-6l"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    >Ponsel<span class="text-red-500">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:shadow-outline sm:text-based sm:leading-6"
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="province"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                  >Provinsi<span class="text-red-500">*</span></label
+                >
+                <input
+                  type="text"
+                  id="province"
+                  name="province"
+                  class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:shadow-outline sm:text-based sm:leading-6"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="subject"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                  >Subjek<span class="text-red-500">*</span></label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:shadow-outline sm:text-based sm:leading-6"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                  >Pesan<span class="text-red-500">*</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:shadow-outline sm:text-based sm:leading-6"
+                  placeholder="Halo, ada yang bisa kami bantu?"
+                  required
+                ></textarea>
+              </div>
+              <div class="flex justify-end">
+                <button
+                  type="submit"
+                  class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg hover:shadow-xl flex items-center"
+                >
+                  Kirim Pesan
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-gray-800 text-white p-6 mt-10 rounded-t-lg">
+        <div class="container mx-auto text-center text-sm">
+          <p>&copy; 2025 Katalog AC Terbaik.</p>
+          <p>Juli 2025 Pacific AC</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Product List Modal -->
+    <div id="product-modal" class="modal-overlay hidden">
+      <div class="modal-content w-full md:w-3/4 lg:w-2/3">
+        <button class="close-button" onclick="closeProductModal()">
+          &times;
+        </button>
+        <h3
+          id="modal-brand-title"
+          class="text-3xl font-bold text-gray-800 mb-6 text-center"
+        ></h3>
+        <div id="modal-product-list" class="space-y-8">
+          <!-- Product types and cards will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="product-detail-modal" class="modal-overlay hidden">
+      <div
+        id="product-detail-content"
+        class="modal-content w-full md:w-3/4 lg:w-1/2"
+      >
+        <!-- Detail content will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <a
+      href="https://wa.me/6281938027743?text=Halo%2C%20Admin%20Pacifc%20AC."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 ease-in-out transform hover:scale-110 z-50 group"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.487 5.235 3.487 8.413 0 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l.474.852-1.24 4.525 4.639-1.219.823.442z"
+        />
+      </svg>
+      <span
+        class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap"
+      >
+        Customer Service
+      </span>
+    </a>
+
+    <script>
+      // --- DATA ---
+      const acData = [
+        {
+          brand: "Daikin",
+          imageUrl: "https://placehold.co/300x200/3e8ed0/ffffff?text=Daikin",
+          types: [
+            {
+              name: "Beta Inverter Series",
+              products: [
+                {
+                  name: "Daikin AC Split 1/2 PK Beta Inverter",
+                  desc: "AC split Daikin hemat energi 1/2 PK, cocok untuk kamar tidur atau ruang keluarga Sedang.",
+                  price: "Rp 5.200.000",
+                  oldPrice: "Rp 5.300.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Daikin+Beta+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Daikin+Beta+Inverter",
+                  features: [
+                    "Mode Inverter Bertenaga",
+                    "Filter Gin-ION",
+                    "Super PCB",
+                    "Mode Econo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "5,000 (2,400 - 6,500) Btu/h",
+                    "Daya Listrik": "380 (165 - 510) Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "280 x 730 x 219 mm",
+                    "Dimensi Outdoor": "460 x 650 x 240 mm",
+                    Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Daikin AC Split 3/4 PK Beta Inverter ",
+                  desc: "AC split Daikin inverter 3/4 PK bertenaga besar, pendinginan optimal untuk ruangan luas.",
+                  price: "Rp 5.395.000",
+                  oldPrice: "Rp 5.450.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Daikin+Beta+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Daikin+Beta+Inverter",
+                  features: [
+                    "Mode Inverter Bertenaga",
+                    "Filter Gin Ion",
+                    "Super PCB",
+                    "Mode Econo",
+                    "Intelligent Eye",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "7,000 (3,400 - 8,200) Btu/h",
+                    "Daya Listrik": "615 (245 - 750) Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "280 x 730 x 219 mm",
+                    "Dimensi Outdoor": "460 x 650 x 240 mm",
+                    Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Daikin AC Split 1 PK Beta Inverter",
+                  desc: "AC split Daikin inverter 1 PK bertenaga besar, pendinginan optimal untuk ruangan Sedang.",
+                  price: "Rp 5.680.000",
+                  oldPrice: "Rp 5.750.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Daikin+Beta+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Daikin+Beta+Inverter",
+                  features: [
+                    "Mode Inverter Bertenaga",
+                    "Filter Gin Ion",
+                    "Super PCB",
+                    "Mode Econo",
+                    "Intelligent Eye",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "9,000 (3,400 - 9,200) Btu/h",
+                    "Daya Listrik": "900 (245 - 930) Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "280 x 730 x 219 mm",
+                    "Dimensi Outdoor": "460 x 650 x 240 mm",
+                    Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Daikin AC Split 1.5 Beta PK Inverter",
+                  desc: "AC split Daikin inverter 1.5 PK bertenaga besar, pendinginan optimal untuk ruangan Sedang.",
+                  price: "Rp 6.850.000",
+                  oldPrice: "Rp 7.000.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Daikin+Beta+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Daikin+Beta+Inverter",
+                  features: [
+                    "Mode Inverter Bertenaga",
+                    "Filter Gin Ion",
+                    "Super PCB",
+                    "Mode Econo",
+                    "Intelligent Eye",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "12,300 (4,100 - 13,000) Btu/h",
+                    "Daya Listrik": "1,190 (320 - 1,215) Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "288 x 770 x 246 mm",
+                    "Dimensi Outdoor": "550 x 650 x 284 mm",
+                    Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Daikin AC Split 2 Beta PK Inverter",
+                  desc: "AC split Daikin inverter 2 PK bertenaga besar, pendinginan optimal untuk ruangan Sedang.",
+                  price: "Rp 9.100.000",
+                  oldPrice: "Rp 9.300.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Daikin+Beta+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Daikin+Beta+Inverter",
+                  features: [
+                    "Mode Inverter Bertenaga",
+                    "Filter Gin Ion",
+                    "Super PCB",
+                    "Mode Econo",
+                    "Intelligent Eye",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "18,000 (5,600 - 18,500) Btu/h",
+                    "Daya Listrik": "1,520 (410 - 1,560) Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "288 x 770 x 246 mm",
+                    "Dimensi Outdoor": "595 x 845 x 300 mm",
+                    Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+                  },
+                },
+              ],
+            },
+            {
+              name: "SMS Series",
+              products: [
+                {
+                  name: "Daikin AC Split 1/2 PK Standar",
+                  desc: "AC split standar dari Daikin 1/2 PK, pendinginan handal untuk ruangan sedang.",
+                  price: "Rp 4.450.000",
+                  oldPrice: "Rp 4.500.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Daikin+SMS",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Daikin+SMS",
+                  features: [
+                    "Blue Fin Coating",
+                    "Filter Gin-ION",
+                    "Low Voltage Protection",
+                    "Pengoperasian Hening",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "5,000 Btu/h",
+                    "Daya Listrik": "390 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "280 x 730 x 219 mm",
+                    "Dimensi Outdoor": "460 x 650 x 240 mm",
+                    Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Daikin AC Split 1 PK Standar",
+                  desc: "AC split standar dari Daikin 1 PK, pendinginan handal untuk ruangan sedang.",
+                  price: "Rp 5.200.000",
+                  oldPrice: "Rp 5.300.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Daikin+SMS",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Daikin+SMS",
+                  features: [
+                    "Blue Fin Coating",
+                    "Filter Gin ION",
+                    "Low Voltage Protection",
+                    "Pengoperasian Hening",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "9,000 Btu/h",
+                    "Daya Listrik": "750 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "280 x 730 x 219 mm",
+                    "Dimensi Outdoor": "460 x 650 x 240 mm",
+                    Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Daikin AC Split 1.5 PK Standar",
+                  desc: "AC split standar dari Daikin 1.5 PK, pendinginan handal untuk ruangan sedang.",
+                  price: "Rp 6.300.000",
+                  oldPrice: "Rp 6.500.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Daikin+SMS",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Daikin+SMS",
+                  features: [
+                    "Blue Fin Coating",
+                    "Filter Gin ION",
+                    "Low Voltage Protection",
+                    "Pengoperasian Hening",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "12,000 Btu/h",
+                    "Daya Listrik": "1,040 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "288 x 770 x 246 mm",
+                    "Dimensi Outdoor": "550 x 675 x 284 mm",
+                    Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Daikin AC Split 2 PK Standar",
+                  desc: "AC split standar dari Daikin 2 PK, pendinginan handal untuk ruangan sedang.",
+                  price: "Rp 8.250.000",
+                  oldPrice: "Rp 8.500.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Daikin+SMS",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Daikin+SMS",
+                  features: [
+                    "Blue Fin Coating",
+                    "Filter Gin ION",
+                    "Low Voltage Protection",
+                    "Pengoperasian Hening",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "18,000 Btu/h",
+                    "Daya Listrik": "1,525 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "288 x 770 x 246 mm",
+                    "Dimensi Outdoor": "595 x 845 x 300 mm",
+                    Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+                  },
+                },
+              ],
+            },
+            {
+              name: "Alpha Inverter Series",
+              products: [
+                {
+                  name: "Daikin AC Split 1/2 PK Alpha Inverter",
+                  desc: "AC split standar dari Daikin 1/2 PK, pendinginan handal untuk ruangan sedang.",
+                  price: "Rp 6.450.000",
+                  oldPrice: "Rp 6.550.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Daikin+Alpha+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Daikin+Alpha+Inverter",
+                  features: [
+                    "3D AirFlow",
+                    "Theknologi STREAMER",
+                    "Mulai Ulang Otomatis",
+                    "Pengoperasian Hening",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "5,100 (2,400 - 6,500) Btu/h",
+                    "Daya Listrik": "310  Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "288 x 770 x 246 mm",
+                    "Dimensi Outdoor": "460 x 650 x 240 mm",
+                    Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Daikin AC Split 3/4 PK Alpha Inverter",
+                  desc: "AC split standar dari Daikin 3/4 PK, pendinginan handal untuk ruangan sedang.",
+                  price: "Rp 6.650.000",
+                  oldPrice: "Rp 6.750.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Daikin+Alpha+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Daikin+Alpha+Inverter",
+                  features: [
+                    "3D AirFlow",
+                    "Theknologi STREAMER",
+                    "Mulai Ulang Otomatis",
+                    "Pengoperasian Hening",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "6,800 (3,400 - 9,000) Btu/h",
+                    "Daya Listrik": "199 (190 - 1,080) Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "288 x 770 x 246 mm",
+                    "Dimensi Outdoor": "550 x 675 x 284 mm",
+                    Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Daikin AC Split 1 PK Alpha Inverter",
+                  desc: "AC split standar dari Daikin 1 PK, pendinginan handal untuk ruangan sedang.",
+                  price: "Rp 6.950.000",
+                  oldPrice: "Rp 7.100.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Daikin+Alpha+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Daikin+Alpha+Inverter",
+                  features: [
+                    "3D AirFlow",
+                    "Theknologi STREAMER",
+                    "Mulai Ulang Otomatis",
+                    "Pengoperasian Hening",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "9,700 (3,400 - 11,600) Btu/h",
+                    "Daya Listrik": "760 (190 - 1,130) Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "288 x 770 x 246 mm",
+                    "Dimensi Outdoor": "550 x 675 x 284 mm",
+                    Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Daikin AC Split 1.5 PK Alpha Inverter",
+                  desc: "AC split standar dari Daikin 1.5 PK, pendinginan handal untuk ruangan sedang.",
+                  price: "Rp 8.450.000",
+                  oldPrice: "Rp 8.500.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Daikin+Alpha+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Daikin+Alpha+Inverter",
+                  features: [
+                    "3D AirFlow",
+                    "Theknologi STREAMER",
+                    "Mulai Ulang Otomatis",
+                    "Pengoperasian Hening",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "12,100 (4,000 - 13,000) Btu/h",
+                    "Daya Listrik": "1,020 (250 - 1,100) Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "288 x 770 x 246 mm",
+                    "Dimensi Outdoor": "550 x 675 x 284 mm",
+                    Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Daikin AC Split 2 PK Alpha Inverter",
+                  desc: "AC split standar dari Daikin 2 PK, pendinginan handal untuk ruangan Besar.",
+                  price: "Rp 11.125.000",
+                  oldPrice: "Rp 11.200.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Daikin+Alpha+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Daikin+Alpha+Inverter",
+                  features: [
+                    "3D AirFlow",
+                    "Theknologi STREAMER",
+                    "Mulai Ulang Otomatis",
+                    "Pengoperasian Hening",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "19,000 (6,000 - 21,200) Btu/h",
+                    "Daya Listrik": "1,700 (420 - 2,200) Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "288 x 730 x 219 mm",
+                    "Dimensi Outdoor": "595 x 895 x 300 mm",
+                    Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          brand: "Panasonic",
+          imageUrl: "https://placehold.co/300x200/005baa/ffffff?text=Panasonic",
+          types: [
+            {
+              name: "Standar Series",
+              products: [
+                {
+                  name: "Panasonic AC Split 1/2 PK Standar",
+                  desc: "AC split standar Panasonic 1/2 PK, pilihan ekonomis dan handal.",
+                  price: "Rp 4.050.000",
+                  oldPrice: "Rp 4.150.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Panasonic+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Panasonic+Standar",
+                  features: [
+                    "Powerful Mode",
+                    "iAUTO",
+                    "Evaporator Blue Fin",
+                    "Rangka Outdoor Ecotough",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "5,000 Btu/h",
+                    "Daya Listrik": "390 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "290 x 799 x 209 mm",
+                    "Dimensi Outdoor": "490 x 650 x 230 mm",
+                    Garansi: "1 Tahun Sparepart, 3 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Panasonic AC Split 3/4 PK Standar",
+                  desc: "AC split standar Panasonic 3/4 PK, pilihan ekonomis dan handal.",
+                  price: "Rp 4.200.000",
+                  oldPrice: "Rp 4.300.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Panasonic+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Panasonic+Standar",
+                  features: [
+                    "Powerful Mode",
+                    "iAUTO",
+                    "Evaporator Blue Fin",
+                    "Rangka Outdoor Ecotough",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "7,000 Btu/h",
+                    "Daya Listrik": "550 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "290 x 799 x 209 mm",
+                    "Dimensi Outdoor": "490 x 650 x 230 mm",
+                    Garansi: "1 Tahun Sparepart, 3 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Panasonic AC Split 1 PK Standar",
+                  desc: "AC split standar Panasonic 1 PK, pilihan ekonomis dan handal.",
+                  price: "Rp 4.450.000",
+                  oldPrice: "Rp 4.600.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Panasonic+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Panasonic+Standar",
+                  features: [
+                    "Powerful Mode",
+                    "iAUTO",
+                    "Evaporator Blue Fin",
+                    "Rangka Outdoor Ecotough",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "9,000 Btu/h",
+                    "Daya Listrik": "760 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "290 x 799 x 209 mm",
+                    "Dimensi Outdoor": "490 x 650 x 230 mm",
+                    Garansi: "1 Tahun Sparepart, 3 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Panasonic AC Split 1.5 PK Standar",
+                  desc: "AC split standar Panasonic 1.5 PK, pilihan ekonomis dan handal.",
+                  price: "Rp 5.950.000",
+                  oldPrice: "Rp 6.000.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Panasonic+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Panasonic+Standar",
+                  features: [
+                    "Powerful Mode",
+                    "iAUTO",
+                    "Evaporator Blue Fin",
+                    "Rangka Outdoor Ecotough",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "12,000 Btu/h",
+                    "Daya Listrik": "1030 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "290 x 799 x 209 mm",
+                    "Dimensi Outdoor": "490 x 650 x 230 mm",
+                    Garansi: "1 Tahun Sparepart, 3 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Panasonic AC Split 2 PK Standar",
+                  desc: "AC split standar Panasonic 1.5 PK, pilihan ekonomis dan handal.",
+                  price: "Rp 7.500.000",
+                  oldPrice: "Rp 7.700.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Panasonic+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Panasonic+Standar",
+                  features: [
+                    "Powerful Mode",
+                    "iAUTO",
+                    "Evaporator Blue Fin",
+                    "Rangka Outdoor Ecotough",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "18,000 Btu/h",
+                    "Daya Listrik": "1600 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "290 x 799 x 209 mm",
+                    "Dimensi Outdoor": "490 x 650 x 230 mm",
+                    Garansi: "1 Tahun Sparepart, 3 Tahun Kompresor",
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          brand: "Flife",
+          imageUrl: "https://placehold.co/300x200/d6001c/ffffff?text=Flife",
+          types: [
+            {
+              name: "Low Watt Series",
+              products: [
+                {
+                  name: "Flife AC Split 1/2 PK Low Watt",
+                  desc: "AC split Flife 1/2 PK hemat daya, cocok untuk penghematan listrik.",
+                  price: "Rp 3.550.000",
+                  oldPrice: "Rp 3.600.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Flife+Low+Watt",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Flife+Low+Watt",
+                  features: [
+                    "Mode Hemat Energi",
+                    "Pengingat Jadwal",
+                    "Self-Diagnosis",
+                    "Filter Kesehatan",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "5,000 Btu/h",
+                    "Daya Listrik": "325 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "292 x 877 x 222 mm",
+                    "Dimensi Outdoor": "598 x 495 x 265 mm",
+                    Garansi: "3 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Flife AC Split 1 PK Low Watt",
+                  desc: "AC split Flife 1 PK hemat daya, cocok untuk penghematan listrik.",
+                  price: "Rp 4.000.000",
+                  oldPrice: "Rp 4.200.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Flife+Low+Watt",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Flife+Low+Watt",
+                  features: [
+                    "Mode Hemat Energi",
+                    "Pengingat Jadwal",
+                    "Self-Diagnosis",
+                    "Filter Kesehatan",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "9,000 Btu/h",
+                    "Daya Listrik": "720 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "292 x 877 x 222 mm",
+                    "Dimensi Outdoor": "598 x 495 x 265 mm",
+                    Garansi: "3 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Flife AC Split 1.5 PK Low Watt",
+                  desc: "AC split Flife 1.5 PK hemat daya, cocok untuk penghematan listrik.",
+                  price: "Rp 4.850.000",
+                  oldPrice: "Rp 4.950.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Flife+Low+Watt",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Flife+Low+Watt",
+                  features: [
+                    "Mode Hemat Energi",
+                    "Pengingat Jadwal",
+                    "Self-Diagnosis",
+                    "Filter Kesehatan",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "12,000 Btu/h",
+                    "Daya Listrik": "950 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "292 x 877 x 222 mm",
+                    "Dimensi Outdoor": "761 x 334 x 470 mm",
+                    Garansi: "3 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+              ],
+            },
+            {
+              name: "Standar Series",
+              products: [
+                {
+                  name: "Flife AC Split 1/2 PK Standar",
+                  desc: "AC split standar Fife 1/2 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 3.400.000",
+                  oldPrice: "Rp 3.500.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Flife+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Flife+Standar",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "5,000 Btu/h",
+                    "Daya Listrik": "360 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "704 x 185 x 260 mm",
+                    "Dimensi Outdoor": "500 x 720 x 240 mm",
+                    Garansi: "3 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Flife AC Split 3/4 PK Standar",
+                  desc: "AC split standar Fife 3/4 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 3.700.000",
+                  oldPrice: "Rp 3.800.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Flife+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Flife+Standar",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "7,000 Btu/h",
+                    "Daya Listrik": "580 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "704 x 185 x 260mm",
+                    "Dimensi Outdoor": "761 x 334 x 470 mm",
+                    Garansi: "3 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Flife AC Split 1 PK Standar",
+                  desc: "AC split standar Fife 1 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 3.900.000",
+                  oldPrice: "Rp 3.950.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Flife+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Flife+Standar",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "9,000 Btu/h",
+                    "Daya Listrik": "725 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "704 x 185 x 260 mm",
+                    "Dimensi Outdoor": "866 x 352 x 581 mm",
+                    Garansi: "3 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Flife AC Split 1.5 PK Standar",
+                  desc: "AC split standar Fife 1.5 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 5.050.000",
+                  oldPrice: "Rp 5.100.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Flife+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Flife+Standar",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "12,000 Btu/h",
+                    "Daya Listrik": "1000 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "845 x 209 x 289 mm",
+                    "Dimensi Outdoor": "866 x 352 x 581 mm",
+                    Garansi: "3 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Flife AC Split 2 PK Standar",
+                  desc: "AC split standar Fife 2 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 6.700.000",
+                  oldPrice: "Rp 6.800.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Flife+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Flife+Standar",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "18,000 Btu/h",
+                    "Daya Listrik": "1500 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "982 x 221 x 311 mm",
+                    "Dimensi Outdoor": "930 x 400 x 643 mm",
+                    Garansi: "3 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          brand: "Gree",
+          imageUrl: "https://placehold.co/300x200/0079c2/ffffff?text=Gree",
+          types: [
+            {
+              name: "Inverter Series",
+              products: [
+                {
+                  name: "Gree AC Split 1/2 PK Inverter",
+                  desc: "AC split inverter Gree 1/2 PK dengan teknologi hemat energi.",
+                  price: "Rp 4.800.000",
+                  oldPrice: "Rp 4.900.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Inverter",
+                  features: [
+                    "Fast Cooling 'Turbo'",
+                    "Hemat Energi",
+                    "Pengingat Pintar",
+                    "Filter DIY",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "5,000 (1,760 - 8,018) Btu/h",
+                    "Daya Listrik": "350 (190 - 630) Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "704 x 250 x 196 mm",
+                    "Dimensi Outdoor": "450 x 710 x 293 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Gree AC Split 1 PK Inverter",
+                  desc: "AC split inverter Gree 1 PK, performa tinggi dan sangat efisien.",
+                  price: "Rp 5.050.000",
+                  oldPrice: "Rp 5.150.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Inverter",
+                  features: [
+                    "Fast Cooling 'Turbo'",
+                    "Hemat Energi",
+                    "Pengingat Pintar",
+                    "Filter DIY",
+                    "I-Feel Technology",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "9,000 (1,706 - 10,918) Btu/h",
+                    "Daya Listrik": "655 (330 - 950) Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "779 x 260 x 185 mm",
+                    "Dimensi Outdoor": "732 x 550 x 330 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Gree AC Split 1.5 PK Inverter",
+                  desc: "AC split inverter Gree 1.5 PK dengan teknologi hemat energi.",
+                  price: "Rp 6.100.000",
+                  oldPrice: "Rp 6.200.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Inverter",
+                  features: [
+                    "Fast Cooling 'Turbo'",
+                    "Hemat Energi",
+                    "Pengingat Pintar",
+                    "Filter DIY",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "12,100 (1,200 - 14,330) Btu/h",
+                    "Daya Listrik": "1170 (320 - 1,600) Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "293 x 825 x 196 mm",
+                    "Dimensi Outdoor": "545 x 776 x 320 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Gree AC Split 2 PK Inverter",
+                  desc: "AC split inverter Gree 2 PK dengan teknologi hemat energi.",
+                  price: "Rp 8.500.000",
+                  oldPrice: "Rp 8.750.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Inverter",
+                  features: [
+                    "Fast Cooling 'Turbo'",
+                    "Hemat Energi",
+                    "Pengingat Pintar",
+                    "Filter DIY",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "18,000 (1,500 - 19,963) Btu/h",
+                    "Daya Listrik": "1500 (300 - 1,750) Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "982 x 311 x 221 mm",
+                    "Dimensi Outdoor": "732 x 550 x 330 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+              ],
+            },
+            {
+              name: "Low Watt Series",
+              products: [
+                {
+                  name: "Gree AC Split 1/2 PK Low Watt",
+                  desc: "AC split Gree 1/2 PK hemat daya, cocok untuk penghematan listrik.",
+                  price: "Rp 4.100.000",
+                  oldPrice: "Rp 4.200.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Low+Watt",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Low+Watt",
+                  features: [
+                    "Mode Hemat Energi",
+                    "Pengingat Jadwal",
+                    "Self-Diagnosis",
+                    "Filter Kesehatan",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "5,000 Btu/h",
+                    "Daya Listrik": "325 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "260 x 704 x 185 mm",
+                    "Dimensi Outdoor": "450 x 705 x 270 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Gree AC Split 3/4 PK Low Watt",
+                  desc: "AC split Gree 3/4 PK hemat daya, cocok untuk penghematan listrik.",
+                  price: "Rp 4.350.000",
+                  oldPrice: "Rp 5.400.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Low+Watt",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Low+Watt",
+                  features: [
+                    "Mode Hemat Energi",
+                    "Pengingat Jadwal",
+                    "Self-Diagnosis",
+                    "Filter Kesehatan",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "7,000 Btu/h",
+                    "Daya Listrik": "505 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "260 x 704 x 185 mm",
+                    "Dimensi Outdoor": "450 x 705 x 270 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Gree AC Split 1 PK Low Watt",
+                  desc: "AC split Gree 1 PK hemat daya, cocok untuk penghematan listrik.",
+                  price: "Rp 4.650.000",
+                  oldPrice: "Rp 4.750.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Low+Watt",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Low+Watt",
+                  features: [
+                    "Mode Hemat Energi",
+                    "Pengingat Jadwal",
+                    "Self-Diagnosis",
+                    "Filter Kesehatan",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "9,000 Btu/h",
+                    "Daya Listrik": "690 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "260 x 704 x 185 mm",
+                    "Dimensi Outdoor": "450 x 705 x 270 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+              ],
+            },
+            {
+              name: "Standar Series",
+              products: [
+                {
+                  name: "Gree AC Split 1/2 PK Standar",
+                  desc: "AC split Gree 1/2 PK hemat daya, cocok untuk penghematan listrik.",
+                  price: "Rp 3.750.000",
+                  oldPrice: "Rp 3.900.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Standar",
+                  features: [
+                    "Mode Hemat Energi",
+                    "Pengingat Jadwal",
+                    "Self-Diagnosis",
+                    "Filter Kesehatan",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "5,000 Btu/h",
+                    "Daya Listrik": "370 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "260 x 704 x 185 mm",
+                    "Dimensi Outdoor": "450 x 705 x 270 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Gree AC Split 3/4 PK Standar",
+                  desc: "AC split Gree 3/4 PK hemat daya, cocok untuk penghematan listrik.",
+                  price: "Rp 4.000.000",
+                  oldPrice: "Rp 4.150.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Standar",
+                  features: [
+                    "Mode Hemat Energi",
+                    "Pengingat Jadwal",
+                    "Self-Diagnosis",
+                    "Filter Kesehatan",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "7,000 Btu/h",
+                    "Daya Listrik": "550 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "260 x 704 x 185 mm",
+                    "Dimensi Outdoor": "450 x 705 x 270 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Gree AC Split 1 PK Standar",
+                  desc: "AC split Gree 1 PK hemat daya, cocok untuk penghematan listrik.",
+                  price: "Rp 4.250.000",
+                  oldPrice: "Rp 4.400.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Standar",
+                  features: [
+                    "Mode Hemat Energi",
+                    "Pengingat Jadwal",
+                    "Self-Diagnosis",
+                    "Filter Kesehatan",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "9,000 Btu/h",
+                    "Daya Listrik": "725 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "260 x 704 x 185 mm",
+                    "Dimensi Outdoor": "450 x 705 x 270 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Gree AC Split 1.5 PK Standar",
+                  desc: "AC split Gree 1.5 PK hemat daya, cocok untuk penghematan listrik.",
+                  price: "Rp 5.500.000",
+                  oldPrice: "Rp 5.600.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Standar",
+                  features: [
+                    "Mode Hemat Energi",
+                    "Pengingat Jadwal",
+                    "Self-Diagnosis",
+                    "Filter Kesehatan",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "12,000 Btu/h",
+                    "Daya Listrik": "1050 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "260 x 704 x 185 mm",
+                    "Dimensi Outdoor": "450 x 705 x 270 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Gree AC Split 2 PK Standar",
+                  desc: "AC split Gree 2 PK hemat daya, cocok untuk penghematan listrik.",
+                  price: "Rp 7.300.000",
+                  oldPrice: "Rp 7.500.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Standar",
+                  features: [
+                    "Mode Hemat Energi",
+                    "Pengingat Jadwal",
+                    "Self-Diagnosis",
+                    "Filter Kesehatan",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "18,000 Btu/h",
+                    "Daya Listrik": "1550 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "260 x 704 x 185 mm",
+                    "Dimensi Outdoor": "450 x 705 x 270 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+              ],
+            },
+            {
+              name: "Delux Standar Series",
+              products: [
+                {
+                  name: "Gree AC Split 1/2 PK Delux Standar",
+                  desc: "AC split standar Gree 1/2 PK, pendinginan stabil dan kuat.",
+                  price: "Rp 3.800.000",
+                  oldPrice: "Rp 3.900.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Delux",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Delux",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "5,000 Btu/h",
+                    "Daya Listrik": "380 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "260 x 704 x 185 mm",
+                    "Dimensi Outdoor": "450 x 705 x 270 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Gree AC Split 3/4 PK Delux Standar",
+                  desc: "AC split standar Gree 3/4 PK, pendinginan stabil dan kuat.",
+                  price: "Rp 4.100.000",
+                  oldPrice: "Rp 4.300.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Delux",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Delux",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "7,000 Btu/h",
+                    "Daya Listrik": "590 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "260 x 704 x 185 mm",
+                    "Dimensi Outdoor": "450 x 705 x 270 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Gree AC Split 1 PK Delux Standar",
+                  desc: "AC split standar Gree 1 PK, pendinginan stabil dan kuat.",
+                  price: "Rp 4.300.000",
+                  oldPrice: "Rp 4.400.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Delux",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Delux",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "9,000 Btu/h",
+                    "Daya Listrik": "780 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "260 x 704 x 185 mm",
+                    "Dimensi Outdoor": "450 x 705 x 270 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Gree AC Split 1.5 PK Delux Standar",
+                  desc: "AC split standar Gree 1.5 PK, pendinginan stabil dan kuat.",
+                  price: "Rp 5.650.000",
+                  oldPrice: "Rp 5.800.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Delux",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Delux",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "12,000 Btu/h",
+                    "Daya Listrik": "1000 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "260 x 704 x 185 mm",
+                    "Dimensi Outdoor": "450 x 705 x 270 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Gree AC Split 2 PK Delux Standar",
+                  desc: "AC split standar Gree 2 PK, pendinginan stabil dan kuat.",
+                  price: "Rp 7.350.000",
+                  oldPrice: "Rp 7.500.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Gree+Delux",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Gree+Delux",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "18,000 Btu/h",
+                    "Daya Listrik": "1450 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "260 x 704 x 185 mm",
+                    "Dimensi Outdoor": "450 x 705 x 270 mm",
+                    Garansi:
+                      "1 Tahun Ganti Baru, 5 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          brand: "Sansui",
+          imageUrl: "https://placehold.co/300x200/1c1c1c/ffffff?text=Sansui",
+          types: [
+            {
+              name: "Standar Series",
+              products: [
+                {
+                  name: "Sansui AC Split 1/2 PK Standar",
+                  desc: "AC split standar 1/2 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 3.200.000",
+                  oldPrice: "Rp 3.300.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Sansui+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Sansui+Standar",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "5,000 Btu/h",
+                    "Daya Listrik": "450 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "698 x 225 x 190 mm",
+                    "Dimensi Outdoor": "712 x 276 x 459 mm",
+                    Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Sansui AC Split 1 PK Standar",
+                  desc: "AC split standar 1 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 3.650.000",
+                  oldPrice: "Rp 3.700.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Sansui+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Sansui+Standar",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "9,000 Btu/h",
+                    "Daya Listrik": "750 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "777 x 250 x 201 mm",
+                    "Dimensi Outdoor": "712 x 276 x 459 mm",
+                    Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Sansui AC Split 1.5 PK Standar",
+                  desc: "AC split standar 1.5 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 4.300.000",
+                  oldPrice: "Rp 4.400.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Sansui+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Sansui+Standar",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "12,000 Btu/h",
+                    "Daya Listrik": "1030 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "777 x 250 x 201 mm",
+                    "Dimensi Outdoor": "777 x 294 x 498 mm",
+                    Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Sansui AC Split 2 PK Standar",
+                  desc: "AC split standar 2 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 6.150.000",
+                  oldPrice: "Rp 6.250.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Sansui+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Sansui+Standar",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "18,000 Btu/h",
+                    "Daya Listrik": "1528 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "910 x 294 x 206 mm",
+                    "Dimensi Outdoor": "853 x 349 x 602 mm",
+                    Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          brand: "Midea",
+          imageUrl: "https://placehold.co/300x200/004b8d/ffffff?text=Midea",
+          types: [
+            {
+              name: "Standar Series",
+              products: [
+                {
+                  name: "Midea AC Split 1/2 PK Standar",
+                  desc: "AC split standar 1/2 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 3.200.000",
+                  oldPrice: "Rp 3.300.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Midea+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Midea+Standar",
+                  features: [
+                    "Hyper Grid",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "5,000 Btu/h",
+                    "Daya Listrik": "330 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "250 x 730 x 190 mm",
+                    "Dimensi Outdoor": "500 x 720 x 240 mm",
+                    Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Midea AC Split 3/4 PK Standar",
+                  desc: "AC split standar 3/4 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 3.400.000",
+                  oldPrice: "Rp 3.500.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Midea+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Midea+Standar",
+                  features: [
+                    "Hyper Grid",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "7,000 Btu/h",
+                    "Daya Listrik": "530 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "250 x 730 x 190 mm",
+                    "Dimensi Outdoor": "500 x 720 x 240 mm",
+                    Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Midea AC Split 1 PK Standar",
+                  desc: "AC split standar 1 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 3.600.000",
+                  oldPrice: "Rp 3.750.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Midea+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Midea+Standar",
+                  features: [
+                    "Hyper Grid",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "9,000 Btu/h",
+                    "Daya Listrik": "750 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "250 x 730 x 190 mm",
+                    "Dimensi Outdoor": "500 x 720 x 240 mm",
+                    Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Midea AC Split 1.5 PK Standar",
+                  desc: "AC split standar 1.5 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 4.775.000",
+                  oldPrice: "Rp 4.850.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Midea+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Midea+Standar",
+                  features: [
+                    "Hyper Grid",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "12,000 Btu/h",
+                    "Daya Listrik": "1.000 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "250 x 730 x 190 mm",
+                    "Dimensi Outdoor": "500 x 720 x 240 mm",
+                    Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+                {
+                  name: "Midea AC Split 2 PK Standar",
+                  desc: "AC split standar 2 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 6.300.000",
+                  oldPrice: "Rp 6.450.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Midea+Standar",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Midea+Standar",
+                  features: [
+                    "Hyper Grid",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "18,000 Btu/h",
+                    "Daya Listrik": "1.500 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "250 x 730 x 190 mm",
+                    "Dimensi Outdoor": "500 x 720 x 240 mm",
+                    Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+              ],
+            },
+            {
+              name: "Inverter Series",
+              products: [
+                {
+                  name: "Midea AC Split 1 PK Inverter",
+                  desc: "AC split inverter Midea 1 PK, pendinginan efektif dan tahan lama.",
+                  price: "Rp 3.700.000",
+                  oldPrice: "Rp 4.100.000",
+                  imgList:
+                    "https://placehold.co/300x200/cccccc/ffffff?text=Midea+Inverter",
+                  imgDetail:
+                    "https://placehold.co/400x300/cccccc/ffffff?text=Midea+Inverter",
+                  features: [
+                    "Frozen Power",
+                    "Gold Fin & Blue Fin",
+                    "Smart Cleaner",
+                    "Mode Turbo",
+                  ],
+                  specs: {
+                    "Kapasitas Pendingin": "9,000 Btu/h",
+                    "Daya Listrik": "750 Watt",
+                    "Tipe Freon": "R32",
+                    "Dimensi Indoor": "250 x 730 x 190 mm",
+                    "Dimensi Outdoor": "500 x 720 x 240 mm",
+                    Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ];
+
+      // --- DOM ELEMENTS ---
+      const mainContent = document.getElementById("main-content");
+      const contactSection = document.getElementById("contact-section");
+      const contactLink = document.getElementById("contact-link");
+      const homeLink = document.getElementById("home-link");
+      const homeNavLink = document.getElementById("home-nav-link");
+      const productModal = document.getElementById("product-modal");
+      const detailModal = document.getElementById("product-detail-modal");
+
+      // --- NAVIGATION ---
+      function showContactPage() {
+        mainContent.classList.add("hidden");
+        contactSection.classList.remove("hidden");
+        closeProductModal();
+        closeDetailModal();
+      }
+
+      function showHomePage() {
+        contactSection.classList.add("hidden");
+        mainContent.classList.remove("hidden");
+      }
+
+      contactLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        showContactPage();
+      });
+      homeLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        showHomePage();
+      });
+      homeNavLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        showHomePage();
+      });
+
+      // --- BRAND & PRODUCT DISPLAY ---
+      function populateBrandGrid() {
+        const brandGrid = document.getElementById("brand-grid");
+        brandGrid.innerHTML = "";
+        acData.forEach((brand) => {
+          const brandCard = document.createElement("div");
+          brandCard.className =
+            "brand-card bg-white rounded-xl shadow-md overflow-hidden p-6 flex flex-col items-center text-center";
+          brandCard.onclick = () => showProductModal(brand.brand);
+          brandCard.innerHTML = `
+                            <img src="${brand.imageUrl}" alt="Logo ${brand.brand}" class="w-full h-48 object-contain rounded-lg mb-4" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image+Error';">
+                            <h3 class="text-2xl font-semibold text-gray-900">${brand.brand}</h3>
+                        `;
+          brandGrid.appendChild(brandCard);
+        });
+      }
+
+      function showProductModal(brandName) {
+        const brand = acData.find((b) => b.brand === brandName);
+        if (!brand) return;
+
+        document.getElementById(
+          "modal-brand-title"
+        ).textContent = `Produk AC Split ${brand.brand}`;
+        const productList = document.getElementById("modal-product-list");
+        productList.innerHTML = "";
+
+        const sortedTypes = [...brand.types].sort((a, b) => {
+          const order = [
+            "Inverter Series",
+            "Low Watt Series",
+            "Standar Series",
+            "Delux Standar Series",
+            "SMS Series",
+            "Alpha Inverter Series",
+            "Beta Inverter Series",
+          ];
+          return order.indexOf(a.name) - order.indexOf(b.name);
+        });
+
+        sortedTypes.forEach((type) => {
+          const typeSection = document.createElement("div");
+          typeSection.className = "mb-8";
+          typeSection.innerHTML = `<h4 class="text-2xl font-semibold text-gray-700 mb-4 ml-2 border-b border-gray-300 pb-1">Tipe: ${type.name}</h4>
+                                                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6"></div>`;
+          const productGrid = typeSection.querySelector(".grid");
+
+          const sortedProducts = [...type.products].sort((a, b) => {
+            const matchA = a.name.match(/(\d+\.?\d*)\s*PK/);
+            const matchB = b.name.match(/(\d+\.?\d*)\s*PK/);
+            const pkA = matchA ? parseFloat(matchA[1]) : 0;
+            const pkB = matchB ? parseFloat(matchB[1]) : 0;
+            return pkA - pkB;
+          });
+
+          sortedProducts.forEach((product) => {
+            const productCard = document.createElement("div");
+            productCard.className =
+              "product-card bg-white rounded-xl shadow-sm overflow-hidden p-4 flex flex-col items-center text-center border border-gray-200";
+            productCard.onclick = () =>
+              showProductDetailModal(brand.brand, type.name, product.name);
+            productCard.innerHTML = `
+                                <img src="${product.imgList}" alt="${
+              product.name
+            }" class="w-full h-32 object-cover rounded-lg mb-3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image+Error';">
+                                <h5 class="text-lg font-semibold text-gray-900 mb-1">${
+                                  product.name
+                                }</h5>
+                                <p class="text-gray-600 text-xs mb-3 line-clamp-2">${
+                                  product.desc
+                                }</p>
+                                <div class="flex items-baseline mb-3">
+                                    <span class="text-2xl font-bold text-blue-700">${
+                                      product.price
+                                    }</span>
+                                    ${
+                                      product.oldPrice
+                                        ? `<span class="text-sm text-gray-500 ml-1 line-through">${product.oldPrice}</span>`
+                                        : ""
+                                    }
+                                </div>
+                            `;
+            productGrid.appendChild(productCard);
+          });
+          productList.appendChild(typeSection);
+        });
+
+        productModal.classList.add("show");
+        productModal.classList.remove("hidden");
+      }
+
+      function showProductDetailModal(brandName, typeName, productName) {
+        const brand = acData.find((b) => b.brand === brandName);
+        const type = brand?.types.find((t) => t.name === typeName);
+        const product = type?.products.find((p) => p.name === productName);
+        if (!product) return;
+
+        const detailContent = document.getElementById("product-detail-content");
+        detailContent.innerHTML = `
+                        <button class="close-button" onclick="closeDetailModal()">&times;</button>
+                        <div class="flex flex-col md:flex-row items-start gap-8">
+                            <div class="w-full md:w-1/2">
+                                <img src="${product.imgDetail}" alt="${
+          product.name
+        }" class="w-full h-auto object-cover rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/ffffff?text=Image+Error';">
+                            </div>
+                            <div class="w-full md:w-1/2">
+                                <h3 class="text-3xl font-bold text-gray-900 mb-2">${
+                                  product.name
+                                }</h3>
+                                <p class="text-gray-700 text-lg mb-4">${
+                                  product.desc
+                                }</p>
+                                <div class="flex items-baseline mb-4">
+                                    <span class="text-4xl font-extrabold text-blue-700">${
+                                      product.price
+                                    }</span>
+                                    ${
+                                      product.oldPrice
+                                        ? `<span class="text-lg text-gray-500 ml-3 line-through">${product.oldPrice}</span>`
+                                        : ""
+                                    }
+                                </div>
+
+                                ${
+                                  product.features &&
+                                  product.features.length > 0
+                                    ? `
+                                    <h4 class="text-xl font-semibold text-gray-800 mb-3">Fitur Unggulan:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 mb-5 pl-4 space-y-1">
+                                        ${product.features
+                                          .map(
+                                            (feature) => `<li>${feature}</li>`
+                                          )
+                                          .join("")}
+                                    </ul>`
+                                    : ""
+                                }
+
+                                ${
+                                  product.specs
+                                    ? `
+                                    <h4 class="text-xl font-semibold text-gray-800 mb-3">Spesifikasi:</h4>
+                                    <table class="spec-table text-gray-700 rounded-lg overflow-hidden w-full">
+                                        <tbody>
+                                            ${Object.entries(product.specs)
+                                              .map(
+                                                ([key, value]) => `
+                                                <tr>
+                                                    <td class="py-2 px-3 bg-gray-50">${key}</td>
+                                                    <td class="py-2 px-3">${value}</td>
+                                                </tr>`
+                                              )
+                                              .join("")}
+                                        </tbody>
+                                    </table>`
+                                    : ""
+                                }
+                            </div>
+                        </div>`;
+
+        detailModal.classList.add("show");
+        detailModal.classList.remove("hidden");
+      }
+
+      function closeProductModal() {
+        productModal.classList.remove("show");
+        productModal.classList.add("hidden");
+      }
+
+      function closeDetailModal() {
+        detailModal.classList.remove("show");
+        detailModal.classList.add("hidden");
+      }
+
+      // Event listeners to close modals
+      productModal.addEventListener("click", (e) => {
+        if (e.target === productModal) {
+          closeProductModal();
+        }
+      });
+
+      detailModal.addEventListener("click", (e) => {
+        if (e.target === detailModal) {
+          closeDetailModal();
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeDetailModal();
+          closeProductModal();
+        }
+      });
+
+      // Initial population of the brand grid
+      document.addEventListener("DOMContentLoaded", populateBrandGrid);
+    </script>
+  </body>
+</html>
