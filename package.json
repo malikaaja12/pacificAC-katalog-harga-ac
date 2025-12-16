@@ -1,0 +1,24 @@
+{
+  "name": "katalog-harga-ac-pacifc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malikaaja12/pacificAC-katalog-harga-ac.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malikaaja12/pacificAC-katalog-harga-ac/issues"
+  },
+  "homepage": "https://github.com/malikaaja12/pacificAC-katalog-harga-ac#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}

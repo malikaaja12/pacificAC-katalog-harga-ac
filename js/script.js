@@ -492,10 +492,8 @@ const acData = [
             desc: "AC split Flife 1/2 PK hemat daya, cocok untuk penghematan listrik.",
             price: "Rp 3.550.000",
             oldPrice: "Rp 3.600.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241205/website_flife/website_flife_802/zXqFQaOD0O05122024101652.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20240711/website_flife/website_flife_57/wzwYokRoOb11072024101614.JPEG", // Image for detail view
+            imgList: "img/flife/fcoo.png", // Image for list view
+            imgDetail: "img/flife/d.fcoo.jpeg", // Image for detail view
             features: [
               "Mode Hemat Energi",
               "Pengingat Jadwal",
@@ -516,10 +514,8 @@ const acData = [
             desc: "AC split Flife 1 PK hemat daya, cocok untuk penghematan listrik.",
             price: "Rp 4.000.000",
             oldPrice: "Rp 4.200.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241205/website_flife/website_flife_802/zXqFQaOD0O05122024101652.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20240711/website_flife/website_flife_57/J1nXeI8wY511072024101657.JPEG", // Image for detail view
+            imgList: "img/flife/fcoo.png", // Image for list view
+            imgDetail: "img/flife/d.fcoo.jpeg", // Image for detail view
             features: [
               "Mode Hemat Energi",
               "Pengingat Jadwal",
@@ -540,10 +536,8 @@ const acData = [
             desc: "AC split Flife 1.5 PK hemat daya, cocok untuk penghematan listrik.",
             price: "Rp 4.850.000",
             oldPrice: "Rp 4.950.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241205/website_flife/website_flife_802/zXqFQaOD0O05122024101652.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20240711/website_flife/website_flife_57/zMm74uuAYX11072024101643.JPEG", // Image for detail view
+            imgList: "img/flife/fcoo.png", // Image for list view
+            imgDetail: "img/flife/d.fcoo.jpeg", // Image for detail view
             features: [
               "Mode Hemat Energi",
               "Pengingat Jadwal",
@@ -569,10 +563,8 @@ const acData = [
             desc: "AC split standar Fife 1/2 PK, pendinginan efektif dan tahan lama.",
             price: "Rp 3.400.000",
             oldPrice: "Rp 3.500.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241205/website_flife/website_flife_803/SzBnrAnJqc05122024174654.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20240711/website_flife/website_flife_57/XQLlYNXxG811072024101651.JPEG", // Image for detail view
+            imgList: "img/flife/fmoo2.png", // Image for list view
+            imgDetail: "img/flife/d.fmoo2.jpeg", // Image for detail view
             features: [
               "Frozen Power",
               "Gold Fin & Blue Fin",
@@ -593,10 +585,8 @@ const acData = [
             desc: "AC split standar Fife 3/4 PK, pendinginan efektif dan tahan lama.",
             price: "Rp 3.700.000",
             oldPrice: "Rp 3.800.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241205/website_flife/website_flife_803/SzBnrAnJqc05122024174654.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20240711/website_flife/website_flife_57/J1nXeI8wY511072024101657.JPEG", // Image for detail view
+            imgList: "img/flife/fmoo2.png", // Image for list view
+            imgDetail: "img/flife/d.fmoo2", // Image for detail view
             features: [
               "Frozen Power",
               "Gold Fin & Blue Fin",
@@ -617,10 +607,8 @@ const acData = [
             desc: "AC split standar Fife 1 PK, pendinginan efektif dan tahan lama.",
             price: "Rp 3.900.000",
             oldPrice: "Rp 3.950.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241205/website_flife/website_flife_803/SzBnrAnJqc05122024174654.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20240711/website_flife/website_flife_57/XQLlYNXxG811072024101651.JPEG", // Image for detail view
+            imgList: "img/flife/fmoo2.png", // Image for list view
+            imgDetail: "img/flife/d.fmoo2.jpeg", // Image for detail view
             features: [
               "Frozen Power",
               "Gold Fin & Blue Fin",
@@ -641,10 +629,8 @@ const acData = [
             desc: "AC split standar Fife 1.5 PK, pendinginan efektif dan tahan lama.",
             price: "Rp 5.050.000",
             oldPrice: "Rp 5.100.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241205/website_flife/website_flife_803/SzBnrAnJqc05122024174654.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20240711/website_flife/website_flife_57/J1nXeI8wY511072024101657.JPEG", // Image for detail view
+            imgList: "img/flife/fmoo2.png", // Image for list view
+            imgDetail: "img/flife/d.fmoo2.jpeg", // Image for detail view
             features: [
               "Frozen Power",
               "Gold Fin & Blue Fin",
@@ -665,10 +651,8 @@ const acData = [
             desc: "AC split standar Fife 2 PK, pendinginan efektif dan tahan lama.",
             price: "Rp 6.700.000",
             oldPrice: "Rp 6.800.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241205/website_flife/website_flife_803/SzBnrAnJqc05122024174654.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20240711/website_flife/website_flife_57/J1nXeI8wY511072024101657.JPEG", // Image for detail view
+            imgList: "img/flife/fmoo2.png", // Image for list view
+            imgDetail: "img/flife/d.fmoo2.jpeg", // Image for detail view
             features: [
               "Frozen Power",
               "Gold Fin & Blue Fin",
@@ -700,10 +684,8 @@ const acData = [
             desc: "AC split inverter Gree 1/2 PK dengan teknologi hemat energi.",
             price: "Rp 4.800.000",
             oldPrice: "Rp 4.900.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241212/website_gree/website_gree_9180/6sH4xwDn2812122024091455.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20250203/website_gree/website_gree_10482/WCQRLq1s0U03022025152830.JPEG", // Image for detail view
+            imgList: "img/gree/f5s.png", // Image for list view
+            imgDetail: "img/gree/d.f5s.jpeg", // Image for detail view
             features: [
               "Fast Cooling 'Turbo'",
               "Hemat Energi",
@@ -725,10 +707,8 @@ const acData = [
             desc: "AC split inverter Gree 1 PK, performa tinggi dan sangat efisien.",
             price: "Rp 5.0500.000",
             oldPrice: "Rp 5.150.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241212/website_gree/website_gree_9180/6sH4xwDn2812122024091455.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20250203/website_gree/website_gree_10482/WCQRLq1s0U03022025152830.JPEG", // Image for detail view
+            imgList: "img/gree/f5s.png", // Image for list view
+            imgDetail: "img/gree/d.f5s.jpeg", // Image for detail view
             features: [
               "Fast Cooling 'Turbo'",
               "Hemat Energi",
@@ -751,10 +731,8 @@ const acData = [
             desc: "AC split inverter Gree 1.5 PK dengan teknologi hemat energi.",
             price: "Rp 6.100.000",
             oldPrice: "Rp 6.200.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241212/website_gree/website_gree_9180/6sH4xwDn2812122024091455.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20250203/website_gree/website_gree_10482/WCQRLq1s0U03022025152830.JPEG", // Image for detail view
+            imgList: "img/gree/f5s.png", // Image for list view
+            imgDetail: "img/gree/d.f5s.jpeg", // Image for detail view
             features: [
               "Fast Cooling 'Turbo'",
               "Hemat Energi",
@@ -776,10 +754,8 @@ const acData = [
             desc: "AC split inverter Gree 2 PK dengan teknologi hemat energi.",
             price: "Rp 8.500.000",
             oldPrice: "Rp 8.750.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241212/website_gree/website_gree_9180/6sH4xwDn2812122024091455.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20250203/website_gree/website_gree_10482/WCQRLq1s0U03022025152830.JPEG", // Image for detail view
+            imgList: "img/gree/f5s.png", // Image for list view
+            imgDetail: "img/gree/d.f5s.jpeg", // Image for detail view
             features: [
               "Fast Cooling 'Turbo'",
               "Hemat Energi",
@@ -806,10 +782,8 @@ const acData = [
             desc: "AC split Gree 1/2 PK hemat daya, cocok untuk penghematan listrik.",
             price: "Rp 4.100.000",
             oldPrice: "Rp 4.200.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241212/website_gree/website_gree_9172/i3ZbtfFYS112122024090856.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20250203/website_gree/website_gree_10485/GgS3r9uIYi03022025160735.JPEG", // Image for detail view
+            imgList: "img/gree/c3s.png", // Image for list view
+            imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
             features: [
               "Mode Hemat Energi",
               "Pengingat Jadwal",
@@ -831,10 +805,8 @@ const acData = [
             desc: "AC split Gree 3/4 PK hemat daya, cocok untuk penghematan listrik.",
             price: "Rp 4.350.000",
             oldPrice: "Rp 5.400.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241212/website_gree/website_gree_9172/i3ZbtfFYS112122024090856.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20250203/website_gree/website_gree_10485/GgS3r9uIYi03022025160735.JPEG", // Image for detail view
+            imgList: "img/gree/c3s.png", // Image for list view
+            imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
             features: [
               "Mode Hemat Energi",
               "Pengingat Jadwal",
@@ -856,10 +828,8 @@ const acData = [
             desc: "AC split Gree 1 PK hemat daya, cocok untuk penghematan listrik.",
             price: "Rp 4.650.000",
             oldPrice: "Rp 4.750.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20241212/website_gree/website_gree_9172/i3ZbtfFYS112122024090856.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20250203/website_gree/website_gree_10485/GgS3r9uIYi03022025160735.JPEG", // Image for detail view
+            imgList: "img/gree/c3s.png", // Image for list view
+            imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
             features: [
               "Mode Hemat Energi",
               "Pengingat Jadwal",
@@ -1017,10 +987,8 @@ const acData = [
             desc: "AC split standar Gree 1/2 PK, pendinginan stabil dan kuat.",
             price: "Rp 3.800.000",
             oldPrice: "Rp 3.900.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20250221/website_gree/website_gree_10578/6d3MsIo49d21022025094036.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20250203/website_gree/website_gree_10483/pwVnbeQ6c603022025154308.JPEG", // Image for detail view
+            imgList: "img/gree/N1A.png", // Image for list view
+            imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
             features: [
               "Frozen Power",
               "Gold Fin & Blue Fin",
@@ -1042,10 +1010,8 @@ const acData = [
             desc: "AC split standar Gree 3/4 PK, pendinginan stabil dan kuat.",
             price: "Rp 4.100.000",
             oldPrice: "Rp 4.300.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20250221/website_gree/website_gree_10578/6d3MsIo49d21022025094036.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20250203/website_gree/website_gree_10483/pwVnbeQ6c603022025154308.JPEG", // Image for detail view
+            imgList: "img/gree/N1A.png", // Image for list view
+            imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
             features: [
               "Frozen Power",
               "Gold Fin & Blue Fin",
@@ -1067,10 +1033,8 @@ const acData = [
             desc: "AC split standar Gree 1 PK, pendinginan stabil dan kuat.",
             price: "Rp 4.300.000",
             oldPrice: "Rp 4.400.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20250221/website_gree/website_gree_10578/6d3MsIo49d21022025094036.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20250203/website_gree/website_gree_10483/pwVnbeQ6c603022025154308.JPEG", // Image for detail view
+            imgList: "img/gree/N1A.png", // Image for list view
+            imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
             features: [
               "Frozen Power",
               "Gold Fin & Blue Fin",
@@ -1092,10 +1056,8 @@ const acData = [
             desc: "AC split standar Gree 1.5 PK, pendinginan stabil dan kuat.",
             price: "Rp 5.650.000",
             oldPrice: "Rp 5.800.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20250221/website_gree/website_gree_10578/6d3MsIo49d21022025094036.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20250203/website_gree/website_gree_10483/pwVnbeQ6c603022025154308.JPEG", // Image for detail view
+            imgList: "img/gree/N1A.png", // Image for list view
+            imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
             features: [
               "Frozen Power",
               "Gold Fin & Blue Fin",
@@ -1117,10 +1079,8 @@ const acData = [
             desc: "AC split standar Gree 2 PK, pendinginan stabil dan kuat.",
             price: "Rp 7.350.000",
             oldPrice: "Rp 7.500.000",
-            imgList:
-              "https://img.greeindonesia.com/website_images/20250221/website_gree/website_gree_10578/6d3MsIo49d21022025094036.png", // Image for list view
-            imgDetail:
-              "https://img.greeindonesia.com/website_images/20250203/website_gree/website_gree_10483/pwVnbeQ6c603022025154308.JPEG", // Image for detail view
+            imgList: "img/gree/N1A.png", // Image for list view
+            imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
             features: [
               "Frozen Power",
               "Gold Fin & Blue Fin",
