@@ -1561,7 +1561,7 @@ function showProductModal(brandName) {
     const typeSection = document.createElement("div");
     typeSection.className = "mb-8";
     typeSection.innerHTML = `<h4 class="text-2xl font-semibold text-gray-900 mb-4 ml-2 border-b border-gray-300 pb-1">Tipe: ${type.name}</h4>
-                                             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>`;
+                                             <div class="grid grid-cols sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6"></div>`;
     const productGrid = typeSection.querySelector(".grid");
 
     const sortedProducts = [...type.products].sort((a, b) => {
@@ -1586,15 +1586,15 @@ function showProductModal(brandName) {
       productCard.innerHTML = `
                         <img src="${product.imgList}" alt="${
                           product.name
-                        }" class="w-full h-32 object-cover rounded-lg mb-3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image+Error';">
-                        <h5 class="text-lg font-semibold text-gray-900 mb-1">${
+                        }" class="w-full h-42 object-cover rounded-lg mb-3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image+Error';">
+                        <h5 class="text-1xl font-semibold text-gray-900 mb-2">${
                           product.name
                         }</h5>
-                        <p class="text-gray-600 text-xs mb-3 line-clamp-2">${
+                        <p class="text-gray-600 text-sm mb-3 line-clamp-2">${
                           product.desc
                         }</p>
                         <div class="flex items-baseline mb-3">
-                            <span class="text-2xl font-bold text-blue-700">${
+                            <span class="text-xl font-bold text-blue-700">${
                               product.price
                             }</span>
                             <span class="text-sm text-gray-500 ml-1 line-through">${
