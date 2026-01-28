@@ -1547,9 +1547,8 @@ function showProductModal(brandName) {
   const brand = acData.find((b) => b.brand === brandName);
   if (!brand) return;
 
-  document.getElementById(
-    "modal-brand-title"
-  ).textContent = `Produk AC Split ${brand.brand}`;
+  document.getElementById("modal-brand-title").textContent =
+    `Produk AC Split ${brand.brand}`;
   const productList = document.getElementById("modal-product-list");
   productList.innerHTML = "";
 
@@ -1561,8 +1560,8 @@ function showProductModal(brandName) {
   sortedTypes.forEach((type) => {
     const typeSection = document.createElement("div");
     typeSection.className = "mb-8";
-    typeSection.innerHTML = `<h4 class="text-2xl font-semibold text-gray-700 mb-4 ml-2 border-b border-gray-300 pb-1">Tipe: ${type.name}</h4>
-                                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6"></div>`;
+    typeSection.innerHTML = `<h4 class="text-2xl font-semibold text-gray-900 mb-4 ml-2 border-b border-gray-300 pb-1">Tipe: ${type.name}</h4>
+                                             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>`;
     const productGrid = typeSection.querySelector(".grid");
 
     const sortedProducts = [...type.products].sort((a, b) => {
@@ -1586,8 +1585,8 @@ function showProductModal(brandName) {
         showProductDetailModal(brand.brand, type.name, product.name); // Add click handler to the card
       productCard.innerHTML = `
                         <img src="${product.imgList}" alt="${
-        product.name
-      }" class="w-full h-32 object-cover rounded-lg mb-3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image+Error';">
+                          product.name
+                        }" class="w-full h-32 object-cover rounded-lg mb-3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image+Error';">
                         <h5 class="text-lg font-semibold text-gray-900 mb-1">${
                           product.name
                         }</h5>
@@ -1626,8 +1625,8 @@ function showProductDetailModal(brandName, typeName, productName) {
                 <div class="flex flex-col md:flex-col items-center"> <!-- Changed to flex-col for consistent stacking -->
                     <div class="w-full mb-6"> <!-- Image always takes full width and has bottom margin -->
                         <img src="${product.imgDetail}" alt="${
-    product.name
-  }" class="w-full h-auto object-cover rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/ffffff?text=Image+Error';">
+                          product.name
+                        }" class="w-full h-auto object-cover rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/ffffff?text=Image+Error';">
                     </div>
                     <div class="w-full"> <!-- Details section also takes full width -->
                         <h3 class="text-3xl font-bold text-gray-900 mb-2">${
@@ -1673,7 +1672,7 @@ function showProductDetailModal(brandName, typeName, productName) {
                                             <td>${key}</td>
                                             <td>${value}</td>
                                         </tr>
-                                    `
+                                    `,
                                       )
                                       .join("")}
                                 </tbody>
