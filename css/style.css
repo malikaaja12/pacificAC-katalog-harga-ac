@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 body {
   font-family: "Inter", sans-serif;
   background-color: #f0f2f5;
@@ -5,7 +7,9 @@ body {
 }
 
 .brand-card {
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
   cursor: pointer;
 }
 
@@ -15,7 +19,9 @@ body {
 }
 
 .product-card {
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
   cursor: pointer;
   /* Add cursor pointer to indicate clickability */
 }
@@ -38,7 +44,9 @@ body {
   align-items: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
 }
 
 #product-modal {
@@ -203,5 +211,3 @@ body {
     font-size: 14px;
   }
 }
-
-;

@@ -19,6 +19,7 @@
   "homepage": "https://github.com/malikaaja12/pacificAC-katalog-harga-ac#readme",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.17",
+    "next": "^16.1.6",
     "tailwindcss": "^4.1.17"
   }
 }
