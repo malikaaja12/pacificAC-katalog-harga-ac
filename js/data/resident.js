@@ -1100,7 +1100,7 @@ const ResidentialAC = [
             price: "Rp 4.300.000",
             oldPrice: "Rp 4.400.000",
             imgList: "img/modena/ac.png", // Image for list view
-            imgDetail: "img/modena/dt.jpg", // Image for detail view
+            imgDetail: "img/modena/dt2.png", // Image for detail view
             features: [
               "Frozen Power",
               "Gold Fin & Blue Fin",
