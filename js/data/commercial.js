@@ -85,29 +85,6 @@ const commercialAC = [
       {
         name: "Commercial Series",
         products: [
-          // {
-          //   name: "Daikin Standing Floor 3 PK",
-          //   desc: "AC Standing Floor Daikin 3 PK untuk ruangan besar dan komersial.",
-          //   price: "Rp 12.000.000",
-          //   oldPrice: "Rp 12.500.000",
-          //   imgList: "img/commercial/daikin.st/standing.png",
-          //   imgDetail: "img/commercial/daikin.st/desc.png",
-          //   features: [
-          //     "High Capacity Cooling",
-          //     "Durable Design",
-          //     "Energy Efficient",
-          //     "Low Noise Operation",
-          //   ],
-          //   specs: {
-          //     "Kapasitas Pendingin": "24,000 Btu/h",
-          //     "Daya Listrik": "2,200 Watt",
-          //     "Tipe Freon": "R410A",
-          //     "Dimensi Indoor": "1100 x 350 x 250 mm",
-          //     "Dimensi Outdoor": "900 x 700 x 400 mm",
-          //     Garansi:
-          //       "1 Tahun Ganti Baru, 3 Tahun Sparepart, 5 Tahun Kompresor",
-          //   },
-          // },
           {
             name: "Daikin Standing Floor AC 3.5 PK",
             desc: "AC Standing Floor  Daikin 3.5 PK untuk ruangan sangat besar.",

@@ -1,5 +1,5 @@
 import ResidentialAC from "../data/resident.js";
-import CommercialAC from "../data/commercial.js";
+import commercialAC from "../data/commercial.js";
 import sewaStnading from "../data/sewa.js";
 
 import { populateBrandGrid } from "../componnet/Card.js";
@@ -26,21 +26,36 @@ document.addEventListener("DOMContentLoaded", function () {
         // Tombol Residential
         button.classList.add("bg-blue-900", "text-white");
 
+        document.getElementById("desc-res").classList.remove("hidden")
+      
+        document.getElementById("pneglakan").classList.add("hidden");
+        // document.getElementById("desc-com").classList.add("hidden");
+        //   document.getElementById("desc-stand").classList.add("hidden");
+      
         populateBrandGrid(ResidentialAC);
       } else if (index === 1) {
         // Tombol Commercial
         button.classList.add("bg-blue-900", "text-white");
 
+        document.getElementById("pneglakan").classList.remove("hidden");
+        
+          document.getElementById("desc-res").classList.add("hidden");
+          // document.getElementById("desc-stand").classList.add("hidden");
+        
         populateBrandGrid(adalah);
       } else if (index === 2) {
         // Tombol Sewa
         button.classList.add("bg-blue-900", "text-white");
+        
+          document.getElementById("pneglakan").classList.remove("hidden")
 
+          document.getElementById("desc-res").classList.add("hidden");
+          // document.getElementById("desc-com").classList.add("hidden");
+        
         populateBrandGrid(adalah);
       }
     });
   });
 
-  buttons[0].classList.add("bg-blue-900", "text-white");
-  populateBrandGrid(ResidentialAC);
+  populateBrandGrid("");
 });

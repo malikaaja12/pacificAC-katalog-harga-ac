@@ -76,7 +76,7 @@ const ResidentialAC = [
             },
           },
           {
-            name: "Daikin AC Split 1.5 Beta PK Inverter",
+            name: "Daikin AC Split 1.5 PK Beta Inverter",
             desc: "AC split Daikin inverter 1.5 PK bertenaga besar, pendinginan optimal untuk ruangan Sedang.",
             price: "Rp 6.850.000",
             oldPrice: "Rp 7.000.000",
@@ -99,7 +99,7 @@ const ResidentialAC = [
             },
           },
           {
-            name: "Daikin AC Split 2 Beta PK Inverter",
+            name: "Daikin AC Split 2 PK Beta Inverter",
             desc: "AC split Daikin inverter 2 PK bertenaga besar, pendinginan optimal untuk ruangan Sedang.",
             price: "Rp 9.100.000",
             oldPrice: "Rp 9.300.000",
@@ -562,7 +562,7 @@ const ResidentialAC = [
             price: "Rp 3.700.000",
             oldPrice: "Rp 3.800.000",
             imgList: "img/flife/fmoo2.png", // Image for list view
-            imgDetail: "img/flife/d.fmoo2", // Image for detail view
+            imgDetail: "img/flife/d.fmoo2.jpeg", // Image for detail view
             features: [
               "Frozen Power",
               "Gold Fin & Blue Fin",

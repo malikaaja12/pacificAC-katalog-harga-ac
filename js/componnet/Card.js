@@ -132,7 +132,7 @@ function showProductModal(brandName) {
       productCard.innerHTML = `
                         <img src="${product.imgList}" alt="${
                           product.name
-                        }" class="w-full h-32  md:h-32  object-cover rounded-lg mb-3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image+Error';">
+                        }" class="w-full h-48 md:h-32 object-cover rounded-lg mb-3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image+Error';">
                         <h5 class="text-lg font-semibold text-gray-900 mb-2">${
                           product.name
                         }</h5>
@@ -145,7 +145,7 @@ function showProductModal(brandName) {
                             }</span>
                              ${
                                product.oldPrice
-                                 ? `<span class="text-md text-gray-500 ml-3 line-through">${product.oldPrice}</span>`
+                                 ? `<span class="text-sm text-gray-500 ml-3 line-through">${product.oldPrice}</span>`
                                  : ""
                              }
                            
@@ -182,7 +182,7 @@ function showProductDetailModal(brandName, typeName, productName) {
                         <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">${
                           product.name
                         }</h3>
-                        <p class="text-gray-700 text-md  md:text-lg mb-4">${
+                        <p class="text-gray-700 text-sm md:text-lg mb-4">${
                           product.desc
                         }</p>
                         <div class="flex items-baseline mb-4">
