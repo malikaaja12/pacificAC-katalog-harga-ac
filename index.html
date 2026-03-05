@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pacific AC - Katalog Harga</title>
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -24,7 +24,7 @@
             <img src="img/logo/logo.png" alt="logoHeader" />
           </h1>
           <nav>
-            <ul class="flex space-x-5 font-bold text-lg md:text-lg">
+            <ul class="flex space-x-6 font-bold text-lg md:text-lg">
               <li>
                 <a
                   href="#"
@@ -47,56 +47,55 @@
       </header>
 
       <!-- Main Content Area (Product Catalog) -->
-      <main id="main-content" class="container mx-auto grow p-6">
+      <main id="main-content" class="container mx-auto grow p-4">
         <h1
           class="font-extrabold text-center text-gray-800 mb-10 md:text-4xl sm:text-4xl text-2xl"
         >
           Pilihan AC Unggulan Kami Berdasarkan Merek dan Kategori
         </h1>
         <section class="mb-8">
-          <div class="flex flex-wrap justify-center gap-6 mb-8">
-            <div
-              id="fiter-product"
-              class="flex flex-wrap justify-center gap-4 md:gap-x-8 lg:gap-x-14 mb-8 cursor-pointer"
+          <div
+            id="fiter-product"
+            class="flex flex-wrap justify-center p-6 gap-6 cursor-pointer"
+          >
+            <button
+              class="filter-btn text-sm hover:bg-gray-500 hover:text-white not-only-of-type:border-0 rounded-lg p-4 font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
             >
-              <button
-                class="filter-btn text-sm hover:bg-gray-500 hover:text-white border-0 rounded-lg p-3 font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
-              >
-                Residential AC
-              </button>
-              <button
-                class="filter-btn text-sm hover:bg-gray-500 hover:text-white border-0 rounded-lg p-3 font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
-              >
-                Commercial AC
-              </button>
-              <button
-                class="filter-btn text-sm hover:bg-gray-500 hover:text-white border-0 rounded-lg p-3 font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
-              >
-                Penyewaan Standing
-              </button>
-            </div>
-            <div
-              id="brand-grid"
-              class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+              Residential AC
+            </button>
+            <button
+              class="filter-btn text-sm hover:bg-gray-500 hover:text-white border-0 rounded-lg p-4 font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
             >
-              <video width="320" height="240" controls autoplay loop></video>
-              <!-- Product cards will be dynamically inserted here -->
-            </div>
+              Commercial AC
+            </button>
+            <button
+              class="filter-btn text-sm hover:bg-gray-500 hover:text-white border-0 rounded-lg p-4 font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
+            >
+              Penyewaan Standing
+            </button>
           </div>
           <div
-            id="desc-res"
-            class="text-center text-xl text-gray-900 italic font-bold hidden"
+            id="brand-grid"
+            class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
           >
-            <p>
+            <!-- Product cards will be dynamically inserted here -->
+          </div>
+
+          <div>
+            <h2
+              id="desc-res"
+              class="text-center text-xl text-gray-900 italic font-bold hidden"
+            >
               harga <span class="underline">sudah</span> termasuk jasa pasang
               dan material standar
-            </p>
-          </div>
-          <div
-            id="pneglakan"
-            class="text-center text-2xl text-gray-900 italic font-bold hidden"
-          >
-            Sedang dalam proses pengerjaan
+            </h2>
+
+            <h2
+              id="pneglakan"
+              class="text-red-500 text-2xl text-center italic font-semibold hidden"
+            >
+              Sedang dalam proses pengerjaan
+            </h2>
           </div>
           <!-- <div
             id="desc-com"

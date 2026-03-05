@@ -658,8 +658,8 @@ const ResidentialAC = [
           {
             name: "Gree AC Split 0.5 PK Inverter",
             desc: "AC split inverter Gree 1/2 PK dengan teknologi hemat energi.",
-            price: "Rp 4.800.000",
-            oldPrice: "Rp 4.900.000",
+            price: "Rp 5.000.000",
+            oldPrice: "Rp 5.150.000",
             imgList: "img/gree/f5s.png", // Image for list view
             imgDetail: "img/gree/d.f5s.jpeg", // Image for detail view
             features: [
@@ -680,8 +680,8 @@ const ResidentialAC = [
           {
             name: "Gree AC Split 1 PK Inverter",
             desc: "AC split inverter Gree 1 PK, performa tinggi dan sangat efisien.",
-            price: "Rp 5.050.000",
-            oldPrice: "Rp 5.150.000",
+            price: "Rp 5.300.000",
+            oldPrice: "Rp 5.400.000",
             imgList: "img/gree/f5s.png", // Image for list view
             imgDetail: "img/gree/d.f5s.jpeg", // Image for detail view
             features: [
@@ -703,8 +703,8 @@ const ResidentialAC = [
           {
             name: "Gree AC Split 1.5 PK Inverter",
             desc: "AC split inverter Gree 1.5 PK dengan teknologi hemat energi.",
-            price: "Rp 6.100.000",
-            oldPrice: "Rp 6.200.000",
+            price: "Rp 6.300.000",
+            oldPrice: "Rp 6.399.000",
             imgList: "img/gree/f5s.png", // Image for list view
             imgDetail: "img/gree/d.f5s.jpeg", // Image for detail view
             features: [
@@ -725,8 +725,8 @@ const ResidentialAC = [
           {
             name: "Gree AC Split 2 PK Inverter",
             desc: "AC split inverter Gree 2 PK dengan teknologi hemat energi.",
-            price: "Rp 8.500.000",
-            oldPrice: "Rp 8.750.000",
+            price: "Rp 8.750.000",
+            oldPrice: "Rp 8.850.000",
             imgList: "img/gree/f5s.png", // Image for list view
             imgDetail: "img/gree/d.f5s.jpeg", // Image for detail view
             features: [
@@ -746,77 +746,77 @@ const ResidentialAC = [
           },
         ],
       },
-      {
-        name: "Low Watt Series",
-        products: [
-          {
-            name: "Gree AC Split 0.5 PK Low Watt",
-            desc: "AC split Gree 1/2 PK hemat daya, cocok untuk penghematan listrik.",
-            price: "Rp 4.100.000",
-            oldPrice: "Rp 4.200.000",
-            imgList: "img/gree/c3s.png", // Image for list view
-            imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
-            features: [
-              "Mode Hemat Energi",
-              "Pengingat Jadwal",
-              "Self-Diagnosis",
-              "Filter Kesehatan",
-            ],
-            specs: {
-              "Kapasitas Pendingin": "5,000 Btu/h",
-              "Daya Listrik": "325 Watt",
-              "Tipe Freon": "R32",
-              "Dimensi Indoor": "260 x 704 x 185 mm",
-              "Dimensi Outdoor": "450 x 705 x 270 mm",
-              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
-            },
-          },
-          {
-            name: "Gree AC Split 0.7 PK Low Watt",
-            desc: "AC split Gree 3/4 PK hemat daya, cocok untuk penghematan listrik.",
-            price: "Rp 4.350.000",
-            oldPrice: "Rp 5.400.000",
-            imgList: "img/gree/c3s.png", // Image for list view
-            imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
-            features: [
-              "Mode Hemat Energi",
-              "Pengingat Jadwal",
-              "Self-Diagnosis",
-              "Filter Kesehatan",
-            ],
-            specs: {
-              "Kapasitas Pendingin": "7,000 Btu/h",
-              "Daya Listrik": "505 Watt",
-              "Tipe Freon": "R32",
-              "Dimensi Indoor": "260 x 704 x 185 mm",
-              "Dimensi Outdoor": "450 x 705 x 270 mm",
-              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
-            },
-          },
-          {
-            name: "Gree AC Split 1 PK Low Watt",
-            desc: "AC split Gree 1 PK hemat daya, cocok untuk penghematan listrik.",
-            price: "Rp 4.650.000",
-            oldPrice: "Rp 4.750.000",
-            imgList: "img/gree/c3s.png", // Image for list view
-            imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
-            features: [
-              "Mode Hemat Energi",
-              "Pengingat Jadwal",
-              "Self-Diagnosis",
-              "Filter Kesehatan",
-            ],
-            specs: {
-              "Kapasitas Pendingin": "9,000 Btu/h",
-              "Daya Listrik": "690 Watt",
-              "Tipe Freon": "R32",
-              "Dimensi Indoor": "260 x 704 x 185 mm",
-              "Dimensi Outdoor": "450 x 705 x 270 mm",
-              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
-            },
-          },
-        ],
-      },
+      // {
+      //   name: "Low Watt Series",
+      //   products: [
+      //     {
+      //       name: "Gree AC Split 0.5 PK Low Watt",
+      //       desc: "AC split Gree 1/2 PK hemat daya, cocok untuk penghematan listrik.",
+      //       price: "Rp 4.100.000",
+      //       oldPrice: "Rp 4.200.000",
+      //       imgList: "img/gree/c3s.png", // Image for list view
+      //       imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
+      //       features: [
+      //         "Mode Hemat Energi",
+      //         "Pengingat Jadwal",
+      //         "Self-Diagnosis",
+      //         "Filter Kesehatan",
+      //       ],
+      //       specs: {
+      //         "Kapasitas Pendingin": "5,000 Btu/h",
+      //         "Daya Listrik": "325 Watt",
+      //         "Tipe Freon": "R32",
+      //         "Dimensi Indoor": "260 x 704 x 185 mm",
+      //         "Dimensi Outdoor": "450 x 705 x 270 mm",
+      //         Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
+      //       },
+      //     },
+      //     {
+      //       name: "Gree AC Split 0.7 PK Low Watt",
+      //       desc: "AC split Gree 3/4 PK hemat daya, cocok untuk penghematan listrik.",
+      //       price: "Rp 4.350.000",
+      //       oldPrice: "Rp 5.400.000",
+      //       imgList: "img/gree/c3s.png", // Image for list view
+      //       imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
+      //       features: [
+      //         "Mode Hemat Energi",
+      //         "Pengingat Jadwal",
+      //         "Self-Diagnosis",
+      //         "Filter Kesehatan",
+      //       ],
+      //       specs: {
+      //         "Kapasitas Pendingin": "7,000 Btu/h",
+      //         "Daya Listrik": "505 Watt",
+      //         "Tipe Freon": "R32",
+      //         "Dimensi Indoor": "260 x 704 x 185 mm",
+      //         "Dimensi Outdoor": "450 x 705 x 270 mm",
+      //         Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
+      //       },
+      //     },
+      //     {
+      //       name: "Gree AC Split 1 PK Low Watt",
+      //       desc: "AC split Gree 1 PK hemat daya, cocok untuk penghematan listrik.",
+      //       price: "Rp 4.650.000",
+      //       oldPrice: "Rp 4.750.000",
+      //       imgList: "img/gree/c3s.png", // Image for list view
+      //       imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
+      //       features: [
+      //         "Mode Hemat Energi",
+      //         "Pengingat Jadwal",
+      //         "Self-Diagnosis",
+      //         "Filter Kesehatan",
+      //       ],
+      //       specs: {
+      //         "Kapasitas Pendingin": "9,000 Btu/h",
+      //         "Daya Listrik": "690 Watt",
+      //         "Tipe Freon": "R32",
+      //         "Dimensi Indoor": "260 x 704 x 185 mm",
+      //         "Dimensi Outdoor": "450 x 705 x 270 mm",
+      //         Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
+      //       },
+      //     },
+      //   ],
+      // },
 
       {
         name: " Standar Series",
@@ -824,8 +824,8 @@ const ResidentialAC = [
           {
             name: "Gree AC Split 0.5 PK Standar",
             desc: "AC split standar Gree 1/2 PK, pendinginan stabil dan kuat.",
-            price: "Rp 3.800.000",
-            oldPrice: "Rp 3.900.000",
+            price: "Rp 3.900.000",
+            oldPrice: "Rp 3.999.000",
             imgList: "img/gree/N1A.png", // Image for list view
             imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
             features: [
@@ -846,8 +846,8 @@ const ResidentialAC = [
           {
             name: "Gree AC Split 0.7 PK Standar",
             desc: "AC split standar Gree 3/4 PK, pendinginan stabil dan kuat.",
-            price: "Rp 4.100.000",
-            oldPrice: "Rp 4.300.000",
+            price: "Rp 4.400.000",
+            oldPrice: "Rp 4.450.000",
             imgList: "img/gree/N1A.png", // Image for list view
             imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
             features: [
@@ -868,8 +868,8 @@ const ResidentialAC = [
           {
             name: "Gree AC Split 1 PK Standar",
             desc: "AC split standar Gree 1 PK, pendinginan stabil dan kuat.",
-            price: "Rp 4.300.000",
-            oldPrice: "Rp 4.400.000",
+            price: "Rp 4.500.000",
+            oldPrice: "Rp 4.600.000",
             imgList: "img/gree/N1A.png", // Image for list view
             imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
             features: [
@@ -890,8 +890,8 @@ const ResidentialAC = [
           {
             name: "Gree AC Split 1.5 PK Standar",
             desc: "AC split standar Gree 1.5 PK, pendinginan stabil dan kuat.",
-            price: "Rp 5.650.000",
-            oldPrice: "Rp 5.800.000",
+            price: "Rp 5.900.000",
+            oldPrice: "Rp 5.999.000",
             imgList: "img/gree/N1A.png", // Image for list view
             imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
             features: [
@@ -912,8 +912,8 @@ const ResidentialAC = [
           {
             name: "Gree AC Split 2 PK Standar",
             desc: "AC split standar Gree 2 PK, pendinginan stabil dan kuat.",
-            price: "Rp 7.350.000",
-            oldPrice: "Rp 7.500.000",
+            price: "Rp 7.550.000",
+            oldPrice: "Rp 7.650.000",
             imgList: "img/gree/N1A.png", // Image for list view
             imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
             features: [
@@ -946,8 +946,8 @@ const ResidentialAC = [
           {
             name: "Sansui AC Split 0.5 PK Standar",
             desc: "AC split standar 1/2 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 3.200.000",
-            oldPrice: "Rp 3.300.000",
+            price: "Rp 3.400.000",
+            oldPrice: "Rp 3.450.000",
             imgList:
               "https://sansui-indonesia.com/wp-content/uploads/2020/01/3-4-2.jpg", // Image for list view
             imgDetail:
@@ -970,8 +970,8 @@ const ResidentialAC = [
           {
             name: "Sansui AC Split 1 PK Standar",
             desc: "AC split standar 1 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 3.650.000",
-            oldPrice: "Rp 3.700.000",
+            price: "Rp 3.900.000",
+            oldPrice: "Rp 3.950.000",
             imgList:
               "https://sansui-indonesia.com/wp-content/uploads/2020/01/3-4-2.jpg", // Image for list view
             imgDetail:
@@ -994,8 +994,8 @@ const ResidentialAC = [
           {
             name: "Sansui AC Split 1.5 PK Standar",
             desc: "AC split standar 1.5 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 4.300.000",
-            oldPrice: "Rp 4.400.000",
+            price: "Rp 4.800.000",
+            oldPrice: "Rp 4.850.000",
             imgList:
               "https://sansui-indonesia.com/wp-content/uploads/2020/01/3-4-2.jpg", // Image for list view
             imgDetail:
@@ -1018,8 +1018,8 @@ const ResidentialAC = [
           {
             name: "Sansui AC Split 2 PK Standar",
             desc: "AC split standar 2 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 6.150.000",
-            oldPrice: "Rp 6.250.000",
+            price: "Rp 6.650.000",
+            oldPrice: "Rp 6.750.000",
             imgList:
               "https://sansui-indonesia.com/wp-content/uploads/2020/01/3-4-2.jpg", // Image for list view
             imgDetail:
@@ -1100,7 +1100,7 @@ const ResidentialAC = [
             price: "Rp 4.300.000",
             oldPrice: "Rp 4.400.000",
             imgList: "img/modena/ac.png", // Image for list view
-            imgDetail: "img/modena/dt2.png", // Image for detail view
+            images: "img/modena/dt2.png", // Image for detail view
             features: [
               "Frozen Power",
               "Gold Fin & Blue Fin",

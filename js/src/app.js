@@ -18,41 +18,28 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     });
   }
+
+  const categoryMap = {
+    0: { descId: "desc-res", data: ResidentialAC },
+    1: { descId: "pneglakan", data: adalah },
+    2: { descId: "pneglakan", data: adalah },
+  };
+  const allDescIds = ["desc-res", "pneglakan", "desc-com", "desc-stand"];
+
   buttons.forEach((button, index) => {
     button.addEventListener("click", function () {
       resetButtons();
-
-      if (index === 0) {
-        // Tombol Residential
+      allDescIds.forEach((id) =>
+        document.getElementById(id)?.classList.add("hidden"),
+      );
+      const config = categoryMap[index];
+      if (config) {
         button.classList.add("bg-blue-900", "text-white");
 
-        document.getElementById("desc-res").classList.remove("hidden")
-      
-        document.getElementById("pneglakan").classList.add("hidden");
-        // document.getElementById("desc-com").classList.add("hidden");
-        //   document.getElementById("desc-stand").classList.add("hidden");
-      
-        populateBrandGrid(ResidentialAC);
-      } else if (index === 1) {
-        // Tombol Commercial
-        button.classList.add("bg-blue-900", "text-white");
+        const targetDesc = document.getElementById(config.descId);
+        if (targetDesc) targetDesc.classList.remove("hidden");
 
-        document.getElementById("pneglakan").classList.remove("hidden");
-        
-          document.getElementById("desc-res").classList.add("hidden");
-          // document.getElementById("desc-stand").classList.add("hidden");
-        
-        populateBrandGrid(adalah);
-      } else if (index === 2) {
-        // Tombol Sewa
-        button.classList.add("bg-blue-900", "text-white");
-        
-          document.getElementById("pneglakan").classList.remove("hidden")
-
-          document.getElementById("desc-res").classList.add("hidden");
-          // document.getElementById("desc-com").classList.add("hidden");
-        
-        populateBrandGrid(adalah);
+        populateBrandGrid(config.data);
       }
     });
   });

@@ -132,7 +132,7 @@ function showProductModal(brandName) {
       productCard.innerHTML = `
                         <img src="${product.imgList}" alt="${
                           product.name
-                        }" class="w-full h-32 md:h-32 object-cover rounded-lg mb-3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image+Error';">
+                        }" class="w-full h-32 object-cover rounded-lg mb-3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image+Error';">
                         <h5 class="text-lg font-semibold text-gray-900 mb-2">${
                           product.name
                         }</h5>
@@ -140,7 +140,7 @@ function showProductModal(brandName) {
                           product.desc
                         }</p>
                         <div class="flex items-baseline mb-3">
-                            <span class="text-lg md:text-xl font-bold text-blue-700">${
+                            <span class="text-xl md:text-xl font-bold text-blue-700">${
                               product.price
                             }</span>
                              ${
@@ -172,13 +172,22 @@ function showProductDetailModal(brandName, typeName, productName) {
   // Modified structure to ensure image is always at the top and fills its column
   detailContent.innerHTML = `
                 <button class="close-button" onclick="closeDetailModal()">&times;</button>
-                <div class="flex flex-col md:flex-col items-center"> <!-- Changed to flex-col for consistent stacking -->
-                    <div class="w-full mb-6"> <!-- Image always takes full width and has bottom margin -->
-                        <img src="${product.imgDetail}" alt="${
-                          product.name
-                        }" class="w-full h-auto object-cover rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/ffffff?text=Image+Error';">
-                    </div>
-                    <div class="w-full"> <!-- Details section also takes full width -->
+                <div class="w-full">
+                 <img id="mainProductImage" src="${product.images[0]}" class="w-full h-auto rounded-lg">
+   
+                      <div class="flex gap-0 mt-4 overflow-x-auto">
+                     ${product.images
+                       .map(
+                         (img, index) => `
+                       <img src="${img}" 
+                          onclick="document.getElementById('mainProductImage').src='${img}'"
+                                class="w-20 h-20 object-cover cursor-pointer hover:border-blue-700 border-2 rounded">
+                            `,
+                       )
+                       .join("")}
+                        </div>
+                      </div>
+                    <div class="w-full"> 
                         <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">${
                           product.name
                         }</h3>
@@ -252,11 +261,9 @@ function closeDetailModal() {
   }
 }
 
-// Make functions globally accessible for onclick handlers in HTML
 window.closeProductModal = closeProductModal;
 window.closeDetailModal = closeDetailModal;
 
-// Event listeners to close modals when clicking outside
 function initModalListeners() {
   if (productModal) {
     productModal.addEventListener("click", (e) => {
@@ -275,7 +282,6 @@ function initModalListeners() {
   }
 }
 
-// Initialize when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   initElements();
   initModalListeners();
