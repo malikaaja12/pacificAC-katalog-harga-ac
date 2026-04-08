@@ -173,19 +173,13 @@ function showProductDetailModal(brandName, typeName, productName) {
   detailContent.innerHTML = `
                 <button class="close-button" onclick="closeDetailModal()">&times;</button>
                 <div class="w-full">
-                 <img id="mainProductImage" src="${product.images[0]}" class="w-full h-auto rounded-lg">
+                 <div class="flex flex-col md:flex-col items-center">
    
-                      <div class="flex gap-0 mt-4 overflow-x-auto">
-                     ${product.images
-                       .map(
-                         (img, index) => `
-                       <img src="${img}" 
-                          onclick="document.getElementById('mainProductImage').src='${img}'"
-                                class="w-20 h-20 object-cover cursor-pointer hover:border-blue-700 border-2 rounded">
-                            `,
-                       )
-                       .join("")}
-                        </div>
+                      <div class="w-full mb-6">
+                     <img src="${product.imgDetail}" alt="${
+                       product.name
+                     }" class="w-full h-auto object-cover rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/ffffff?text=Image+Error';">
+                    </div>
                       </div>
                     <div class="w-full"> 
                         <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">${

@@ -10,12 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function resetButtons() {
     buttons.forEach((btn) => {
-      btn.classList.remove(
-        "bg-blue-900",
-        "bg-blue-900",
-        "bg-blue-900",
-        "text-white",
-      );
+      btn.classList.remove("bg-gray-500", "text-gray-600");
     });
   }
 
@@ -34,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       const config = categoryMap[index];
       if (config) {
-        button.classList.add("bg-blue-900", "text-white");
+        button.classList.add("bg-gray-500", "text-gray-700");
 
         const targetDesc = document.getElementById(config.descId);
         if (targetDesc) targetDesc.classList.remove("hidden");
