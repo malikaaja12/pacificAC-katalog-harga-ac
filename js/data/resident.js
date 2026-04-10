@@ -26,7 +26,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "280 x 730 x 219 mm",
               "Dimensi Outdoor": "460 x 650 x 240 mm",
-              Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+              Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
             },
           },
           {
@@ -49,7 +49,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "280 x 730 x 219 mm",
               "Dimensi Outdoor": "460 x 650 x 240 mm",
-              Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+              Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
             },
           },
           {
@@ -72,7 +72,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "280 x 730 x 219 mm",
               "Dimensi Outdoor": "460 x 650 x 240 mm",
-              Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+              Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
             },
           },
           {
@@ -95,7 +95,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "288 x 770 x 246 mm",
               "Dimensi Outdoor": "550 x 650 x 284 mm",
-              Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+              Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
             },
           },
           {
@@ -118,7 +118,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "288 x 770 x 246 mm",
               "Dimensi Outdoor": "595 x 845 x 300 mm",
-              Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+              Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
             },
           },
         ],
@@ -146,7 +146,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "280 x 730 x 219 mm",
               "Dimensi Outdoor": "460 x 650 x 240 mm",
-              Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+              Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
             },
           },
           {
@@ -168,7 +168,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "280 x 730 x 219 mm",
               "Dimensi Outdoor": "460 x 650 x 240 mm",
-              Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+              Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
             },
           },
           {
@@ -190,7 +190,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "288 x 770 x 246 mm",
               "Dimensi Outdoor": "550 x 675 x 284 mm",
-              Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+              Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
             },
           },
           {
@@ -212,7 +212,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "288 x 770 x 246 mm",
               "Dimensi Outdoor": "595 x 845 x 300 mm",
-              Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+              Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
             },
           },
         ],
@@ -240,7 +240,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "288 x 770 x 246 mm",
               "Dimensi Outdoor": "460 x 650 x 240 mm",
-              Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+              Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
             },
           },
           {
@@ -262,7 +262,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "288 x 770 x 246 mm",
               "Dimensi Outdoor": "550 x 675 x 284 mm",
-              Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+              Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
             },
           },
           {
@@ -284,7 +284,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "288 x 770 x 246 mm",
               "Dimensi Outdoor": "550 x 675 x 284 mm",
-              Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+              Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
             },
           },
           {
@@ -306,7 +306,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "288 x 770 x 246 mm",
               "Dimensi Outdoor": "550 x 675 x 284 mm",
-              Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+              Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
             },
           },
           {
@@ -328,7 +328,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "288 x 730 x 219 mm",
               "Dimensi Outdoor": "595 x 895 x 300 mm",
-              Garansi: "3 Tahun Sparepart, 5 Tahun Kompresor",
+              Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
             },
           },
         ],
@@ -746,77 +746,77 @@ const ResidentialAC = [
           },
         ],
       },
-      // {
-      //   name: "Low Watt Series",
-      //   products: [
-      //     {
-      //       name: "Gree AC Split 0.5 PK Low Watt",
-      //       desc: "AC split Gree 1/2 PK hemat daya, cocok untuk penghematan listrik.",
-      //       price: "Rp 4.100.000",
-      //       oldPrice: "Rp 4.200.000",
-      //       imgList: "img/gree/c3s.png", // Image for list view
-      //       imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
-      //       features: [
-      //         "Mode Hemat Energi",
-      //         "Pengingat Jadwal",
-      //         "Self-Diagnosis",
-      //         "Filter Kesehatan",
-      //       ],
-      //       specs: {
-      //         "Kapasitas Pendingin": "5,000 Btu/h",
-      //         "Daya Listrik": "325 Watt",
-      //         "Tipe Freon": "R32",
-      //         "Dimensi Indoor": "260 x 704 x 185 mm",
-      //         "Dimensi Outdoor": "450 x 705 x 270 mm",
-      //         Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
-      //       },
-      //     },
-      //     {
-      //       name: "Gree AC Split 0.7 PK Low Watt",
-      //       desc: "AC split Gree 3/4 PK hemat daya, cocok untuk penghematan listrik.",
-      //       price: "Rp 4.350.000",
-      //       oldPrice: "Rp 5.400.000",
-      //       imgList: "img/gree/c3s.png", // Image for list view
-      //       imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
-      //       features: [
-      //         "Mode Hemat Energi",
-      //         "Pengingat Jadwal",
-      //         "Self-Diagnosis",
-      //         "Filter Kesehatan",
-      //       ],
-      //       specs: {
-      //         "Kapasitas Pendingin": "7,000 Btu/h",
-      //         "Daya Listrik": "505 Watt",
-      //         "Tipe Freon": "R32",
-      //         "Dimensi Indoor": "260 x 704 x 185 mm",
-      //         "Dimensi Outdoor": "450 x 705 x 270 mm",
-      //         Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
-      //       },
-      //     },
-      //     {
-      //       name: "Gree AC Split 1 PK Low Watt",
-      //       desc: "AC split Gree 1 PK hemat daya, cocok untuk penghematan listrik.",
-      //       price: "Rp 4.650.000",
-      //       oldPrice: "Rp 4.750.000",
-      //       imgList: "img/gree/c3s.png", // Image for list view
-      //       imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
-      //       features: [
-      //         "Mode Hemat Energi",
-      //         "Pengingat Jadwal",
-      //         "Self-Diagnosis",
-      //         "Filter Kesehatan",
-      //       ],
-      //       specs: {
-      //         "Kapasitas Pendingin": "9,000 Btu/h",
-      //         "Daya Listrik": "690 Watt",
-      //         "Tipe Freon": "R32",
-      //         "Dimensi Indoor": "260 x 704 x 185 mm",
-      //         "Dimensi Outdoor": "450 x 705 x 270 mm",
-      //         Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
-      //       },
-      //     },
-      //   ],
-      // },
+      {
+        name: "Low Watt Series",
+        products: [
+          {
+            name: "Gree AC Split 0.5 PK Low Watt",
+            desc: "AC split Gree 1/2 PK hemat daya, cocok untuk penghematan listrik.",
+            price: "Rp 4.300.000",
+            oldPrice: "Rp 4.350.000",
+            imgList: "img/gree/c3s.png", // Image for list view
+            imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
+            features: [
+              "Mode Hemat Energi",
+              "Pengingat Jadwal",
+              "Self-Diagnosis",
+              "Filter Kesehatan",
+            ],
+            specs: {
+              "Kapasitas Pendingin": "5,000 Btu/h",
+              "Daya Listrik": "325 Watt",
+              "Tipe Freon": "R32",
+              "Dimensi Indoor": "260 x 704 x 185 mm",
+              "Dimensi Outdoor": "450 x 705 x 270 mm",
+              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
+            },
+          },
+          {
+            name: "Gree AC Split 0.7 PK Low Watt",
+            desc: "AC split Gree 3/4 PK hemat daya, cocok untuk penghematan listrik.",
+            price: "Rp 4.700.000",
+            oldPrice: "Rp 4.800.000",
+            imgList: "img/gree/c3s.png", // Image for list view
+            imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
+            features: [
+              "Mode Hemat Energi",
+              "Pengingat Jadwal",
+              "Self-Diagnosis",
+              "Filter Kesehatan",
+            ],
+            specs: {
+              "Kapasitas Pendingin": "7,000 Btu/h",
+              "Daya Listrik": "505 Watt",
+              "Tipe Freon": "R32",
+              "Dimensi Indoor": "260 x 704 x 185 mm",
+              "Dimensi Outdoor": "450 x 705 x 270 mm",
+              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
+            },
+          },
+          {
+            name: "Gree AC Split 1 PK Low Watt",
+            desc: "AC split Gree 1 PK hemat daya, cocok untuk penghematan listrik.",
+            price: "Rp 4.750.000",
+            oldPrice: "Rp 4.850.000",
+            imgList: "img/gree/c3s.png", // Image for list view
+            imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
+            features: [
+              "Mode Hemat Energi",
+              "Pengingat Jadwal",
+              "Self-Diagnosis",
+              "Filter Kesehatan",
+            ],
+            specs: {
+              "Kapasitas Pendingin": "9,000 Btu/h",
+              "Daya Listrik": "690 Watt",
+              "Tipe Freon": "R32",
+              "Dimensi Indoor": "260 x 704 x 185 mm",
+              "Dimensi Outdoor": "450 x 705 x 270 mm",
+              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
+            },
+          },
+        ],
+      },
 
       {
         name: " Standar Series",

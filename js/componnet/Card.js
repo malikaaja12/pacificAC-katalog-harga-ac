@@ -136,16 +136,16 @@ function showProductModal(brandName) {
                         <h5 class="text-lg font-semibold text-gray-900 mb-2">${
                           product.name
                         }</h5>
-                        <p class="text-gray-600 text-sm sm:text-md mb-3 line-clamp-2">${
+                        <p class="text-gray-600 text-xs sm:text-xs mb-3 line-clamp-2">${
                           product.desc
                         }</p>
                         <div class="flex items-baseline mb-3">
-                            <span class="text-xl md:text-xl font-bold text-blue-700">${
+                            <span class="text-sm md:text-sm  font-bold text-blue-700">${
                               product.price
                             }</span>
                              ${
                                product.oldPrice
-                                 ? `<span class="text-sm text-gray-500 ml-3 line-through">${product.oldPrice}</span>`
+                                 ? `<span class="text-xs text-gray-500 ml-3 line-through">${product.oldPrice}</span>`
                                  : ""
                              }
                            
@@ -185,16 +185,16 @@ function showProductDetailModal(brandName, typeName, productName) {
                         <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">${
                           product.name
                         }</h3>
-                        <p class="text-gray-700 text-sm md:text-lg mb-4">${
+                        <p class="text-gray-700 text-xs md:text-lg mb-4">${
                           product.desc
                         }</p>
                         <div class="flex items-baseline mb-4">
-                            <span class="text-2xl md:text-2xl  font-extrabold text-blue-700">${
+                            <span class="text-lg md:text-2xl  font-extrabold text-blue-700">${
                               product.price
                             }</span>
                             ${
                               product.oldPrice
-                                ? `<span class="text-md text-gray-500 ml-3 line-through">${product.oldPrice}</span>`
+                                ? `<span class="text-xs text-gray-500 ml-3 line-through">${product.oldPrice}</span>`
                                 : ""
                             }
                         </div>
@@ -202,8 +202,8 @@ function showProductDetailModal(brandName, typeName, productName) {
                         ${
                           product.features && product.features.length > 0
                             ? `
-                            <h4 class="text-lg md:text-lg font-semibold text-gray-800 mb-3">Fitur Unggulan:</h4>
-                            <ul class="text-sm md:text-lg list-disc list-inside text-gray-700 mb-5 pl-4">
+                            <h4 class="text-md md:text-lg font-semibold text-gray-800 mb-3">Fitur Unggulan:</h4>
+                            <ul class="text-xs md:text-lg list-disc list-inside text-gray-700 mb-5 pl-4">
                                 ${product.features
                                   .map((feature) => `<li>${feature}</li>`)
                                   .join("")}
@@ -215,7 +215,7 @@ function showProductDetailModal(brandName, typeName, productName) {
                         ${
                           product.specs
                             ? `
-                            <h4 class="text-lg md:text-xl font-semibold text-gray-800 mb-3">Spesifikasi:</h4>
+                            <h4 class="text-md md:text-xl font-semibold text-gray-800 mb-3">Spesifikasi:</h4>
                             <table class="text-xs md:text-sm spec-table text-gray-700 rounded-lg overflow-hidden">
                                 <tbody>
                                     ${Object.entries(product.specs)
