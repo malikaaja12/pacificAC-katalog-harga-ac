@@ -76,7 +76,7 @@ export function populateBrandGrid(acData) {
     brandCard.onclick = () => showProductModal(brand.brand);
     brandCard.innerHTML = `
                     <img src="${brand.imageUrl}" alt="Logo ${brand.brand}" class="w-48 h-32 object-contain rounded-lg mb-4" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image+Error';">
-                    <h3 class="text-xl font-bold text-gray-700">${brand.brand}</h3>
+                    <h3 class="text-md font-bold text-gray-700">${brand.brand}</h3>
                 `;
     brandGrid.appendChild(brandCard);
   });
@@ -136,16 +136,16 @@ function showProductModal(brandName) {
                         <h5 class="text-lg font-semibold text-gray-900 mb-2">${
                           product.name
                         }</h5>
-                        <p class="text-gray-600 text-xs sm:text-xs mb-3 line-clamp-2">${
+                        <p class="text-gray-600 text-xs md:text-sm mb-3 line-clamp-2">${
                           product.desc
                         }</p>
                         <div class="flex items-baseline mb-3">
-                            <span class="text-sm md:text-sm  font-bold text-blue-700">${
+                            <span class="text-sm md:text-2xl  font-bold text-blue-700">${
                               product.price
                             }</span>
                              ${
                                product.oldPrice
-                                 ? `<span class="text-xs text-gray-500 ml-3 line-through">${product.oldPrice}</span>`
+                                 ? `<span class="text-xs md:text-sm text-gray-500 ml-3 line-through">${product.oldPrice}</span>`
                                  : ""
                              }
                            
