@@ -10,8 +10,8 @@ const ResidentialAC = [
           {
             name: "Daikin AC Split 0.5 PK Beta Inverter",
             desc: "AC split Daikin hemat energi 1/2 PK, cocok untuk kamar tidur atau ruang keluarga Sedang.",
-            price: "Rp 5.200.000",
-            oldPrice: "Rp 5.300.000",
+            price: "Rp 5.300.000",
+            oldPrice: "Rp 5.350.000",
             imgList: "img/daikin/beta.webp", // Image for list view
             imgDetail: "img/daikin/Beta.png", // Image for detail view
             features: [
@@ -32,8 +32,8 @@ const ResidentialAC = [
           {
             name: "Daikin AC Split 0.7 PK Beta Inverter ",
             desc: "AC split Daikin inverter 3/4 PK bertenaga besar, pendinginan optimal untuk ruangan luas.",
-            price: "Rp 5.395.000",
-            oldPrice: "Rp 5.450.000",
+            price: "Rp 5.450.000",
+            oldPrice: "Rp 5.500.000",
             imgList: "img/daikin/beta.webp", // Image for list view
             imgDetail: "img/daikin/Beta.png", // Image for detail view
             features: [
@@ -55,8 +55,8 @@ const ResidentialAC = [
           {
             name: "Daikin AC Split 1 PK Beta Inverter",
             desc: "AC split Daikin inverter 1 PK bertenaga besar, pendinginan optimal untuk ruangan Sedang.",
-            price: "Rp 5.680.000",
-            oldPrice: "Rp 5.750.000",
+            price: "Rp 5.750.000",
+            oldPrice: "Rp 5.850.000",
             imgList: "img/daikin/beta.webp", // Image for list view
             imgDetail: "img/daikin/Beta.png", // Image for detail view
             features: [
@@ -78,8 +78,8 @@ const ResidentialAC = [
           {
             name: "Daikin AC Split 1.5 PK Beta Inverter",
             desc: "AC split Daikin inverter 1.5 PK bertenaga besar, pendinginan optimal untuk ruangan Sedang.",
-            price: "Rp 6.850.000",
-            oldPrice: "Rp 7.000.000",
+            price: "Rp 7.150.000",
+            oldPrice: "Rp 7.300.000",
             imgList: "img/daikin/beta.webp", // Image for list view
             imgDetail: "img/daikin/Beta.png", // Image for detail view
             features: [
@@ -101,8 +101,8 @@ const ResidentialAC = [
           {
             name: "Daikin AC Split 2 PK Beta Inverter",
             desc: "AC split Daikin inverter 2 PK bertenaga besar, pendinginan optimal untuk ruangan Sedang.",
-            price: "Rp 9.100.000",
-            oldPrice: "Rp 9.300.000",
+            price: "Rp 9.350.000",
+            oldPrice: "Rp 9.550.000",
             imgList: "img/daikin/beta.webp", // Image for list view
             imgDetail: "img/daikin/Beta.png", // Image for detail view
             features: [
@@ -130,8 +130,8 @@ const ResidentialAC = [
           {
             name: "Daikin AC Split 0.5 PK Standar",
             desc: "AC split standar dari Daikin 1/2 PK, pendinginan handal untuk ruangan sedang.",
-            price: "Rp 4.450.000",
-            oldPrice: "Rp 4.500.000",
+            price: "Rp 4.500.000",
+            oldPrice: "Rp 4.600.000",
             imgList: "img/daikin/sms.webp", // Image for list view
             imgDetail: "img/daikin/ind.png", // Image for detail view
             features: [
@@ -152,8 +152,8 @@ const ResidentialAC = [
           {
             name: "Daikin AC Split 1 PK Standar",
             desc: "AC split standar dari Daikin 1 PK, pendinginan handal untuk ruangan sedang.",
-            price: "Rp 5.200.000",
-            oldPrice: "Rp 5.300.000",
+            price: "Rp 5.250.000",
+            oldPrice: "Rp 5.350.000",
             imgList: "img/daikin/sms.webp", // Image for list view
             imgDetail: "img/daikin/ind.png", // Image for detail view
             features: [
@@ -174,8 +174,8 @@ const ResidentialAC = [
           {
             name: "Daikin AC Split 1.5 PK Standar",
             desc: "AC split standar dari Daikin 1.5 PK, pendinginan handal untuk ruangan sedang.",
-            price: "Rp 6.350.000",
-            oldPrice: "Rp 6.450.000",
+            price: "Rp 6.650.000",
+            oldPrice: "Rp 6.550.000",
             imgList: "img/daikin/sms.webp", // Image for list view
             imgDetail: "img/daikin/ind.png", // Image for detail view
             features: [
@@ -196,8 +196,8 @@ const ResidentialAC = [
           {
             name: "Daikin AC Split 2 PK Standar",
             desc: "AC split standar dari Daikin 2 PK, pendinginan handal untuk ruangan sedang.",
-            price: "Rp 8.250.000",
-            oldPrice: "Rp 8.500.000",
+            price: "Rp 8.500.000",
+            oldPrice: "Rp 8.750.000",
             imgList: "img/daikin/sms.webp", // Image for list view
             imgDetail: "img/daikin/ind.png", // Image for detail view
             features: [
@@ -224,8 +224,8 @@ const ResidentialAC = [
           {
             name: "Daikin AC Split 0.5 PK Alpha Inverter",
             desc: "AC split standar dari Daikin 1/2 PK, pendinginan handal untuk ruangan sedang.",
-            price: "Rp 6.450.000",
-            oldPrice: "Rp 6.650.000",
+            price: "Rp 6.650.000",
+            oldPrice: "Rp 6.850.000",
             imgList: "img/daikin/ftkh.webp", // Image for list view
             imgDetail: "img/daikin/Alpha.png", // Image for detail view
             features: [
@@ -246,7 +246,7 @@ const ResidentialAC = [
           {
             name: "Daikin AC Split 0.7 PK Alpha Inverter",
             desc: "AC split standar dari Daikin 3/4 PK, pendinginan handal untuk ruangan sedang.",
-            price: "Rp 6.800.000",
+            price: "Rp 6.850.000",
             oldPrice: "Rp 7.000.000",
             imgList: "img/daikin/ftkh.webp", // Image for list view
             imgDetail: "img/daikin/Alpha.png", // Image for detail view
@@ -268,8 +268,8 @@ const ResidentialAC = [
           {
             name: "Daikin AC Split 1 PK Alpha Inverter",
             desc: "AC split standar dari Daikin 1 PK, pendinginan handal untuk ruangan sedang.",
-            price: "Rp 6.950.000",
-            oldPrice: "Rp 7.200.000",
+            price: "Rp 7.150.000",
+            oldPrice: "Rp 7.250.000",
             imgList: "img/daikin/ftkh.webp", // Image for list view
             imgDetail: "img/daikin/Alpha.png", // Image for detail view
             features: [
@@ -290,8 +290,8 @@ const ResidentialAC = [
           {
             name: "Daikin AC Split 1.5 PK Alpha Inverter",
             desc: "AC split standar dari Daikin 1.5 PK, pendinginan handal untuk ruangan sedang.",
-            price: "Rp 8.900.000",
-            oldPrice: "Rp 9.100.000",
+            price: "Rp 9.000.000",
+            oldPrice: "Rp 9.150.000",
             imgList: "img/daikin/ftkh.webp", // Image for list view
             imgDetail: "img/daikin/Alpha.png", // Image for detail view
             features: [
@@ -312,8 +312,8 @@ const ResidentialAC = [
           {
             name: "Daikin AC Split 2 PK Alpha Inverter",
             desc: "AC split standar dari Daikin 2 PK, pendinginan handal untuk ruangan Besar.",
-            price: "Rp 11.125.000",
-            oldPrice: "Rp 11.200.000",
+            price: "Rp 11.650.000",
+            oldPrice: "Rp 11.850.000",
             imgList: "img/daikin/ftkh.webp", // Image for list view
             imgDetail: "img/daikin/Alpha.png", // Image for detail view
             features: [
@@ -1146,7 +1146,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "250 x 730 x 190 mm",
               "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
             },
           },
           {
@@ -1168,7 +1168,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "250 x 730 x 190 mm",
               "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
             },
           },
           {
@@ -1190,7 +1190,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "250 x 730 x 190 mm",
               "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
             },
           },
           {
@@ -1212,7 +1212,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "250 x 730 x 190 mm",
               "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
             },
           },
           {
@@ -1234,7 +1234,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "250 x 730 x 190 mm",
               "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
             },
           },
         ],
@@ -1262,7 +1262,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "250 x 730 x 190 mm",
               "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
             },
           },
           {
@@ -1285,7 +1285,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "250 x 730 x 190 mm",
               "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
             },
           },
           {
@@ -1308,7 +1308,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "250 x 730 x 190 mm",
               "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
             },
           },
           {
@@ -1331,7 +1331,7 @@ const ResidentialAC = [
               "Tipe Freon": "R32",
               "Dimensi Indoor": "250 x 730 x 190 mm",
               "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+              Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor",
             },
           },
         ],
@@ -1339,216 +1339,43 @@ const ResidentialAC = [
     ],
   },
   {
-    brand: "Mitsubishi Hevy Duty",
-    imageUrl: "img/MHI/logo.png",
+    brand: "Samsung",
+    imageUrl: "img/Samsung/logo.png",
     types: [
       {
         name: "Standar Series",
         products: [
           {
-            name: "Mitsubishi Hevy Duty AC Split 1 PK Standar",
-            desc: "AC split standar  1 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 3.600.000",
+            name: "Samsung AC Split 0.5 PK Neo Alpha Inverter",
+            desc: "AC split Neo Alpha Inverter  1/2 PK, pendinginan efektif dan tahan lama.",
+            price: "Rp 3.500.000",
             oldPrice: "Rp 3.750.000",
-            imgList: "img/Midea/ST.webp", // Image for list view
-            imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
-            features: [
-              "Frozen Power",
-              "Gold Fin & Blue Fin",
-              "Smart Cleaner",
-              "Mode Turbo",
-            ],
-            specs: {
-              "Kapasitas Pendingin": "9,000 Btu/h",
-              "Daya Listrik": "750 Watt",
-              "Tipe Freon": "R32",
-              "Dimensi Indoor": "250 x 730 x 190 mm",
-              "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
-            },
-          },
-          {
-            name: "Midea AC Split 0.5 PK Standar",
-            desc: "AC split standar 1/2 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 3.200.000",
-            oldPrice: "Rp 3.300.000",
-            imgList: "img/Midea/ST.webp", // Image for list view
-            imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
-            features: [
-              "Frozen Power",
-              "Gold Fin & Blue Fin",
-              "Smart Cleaner",
-              "Mode Turbo",
-            ],
+            imgList: "img/Samsung/NEO.webp", // Image for list view
+            imgDetail: "img/Samsung/DESC.webp", // Image for detail view
+            features: ["HD Filter", "DuraFin+", "Smart Saver", "Fast Cooling"],
             specs: {
               "Kapasitas Pendingin": "5,000 Btu/h",
-              "Daya Listrik": "330 Watt",
+              "Daya Listrik": "381 Watt",
               "Tipe Freon": "R32",
-              "Dimensi Indoor": "250 x 730 x 190 mm",
-              "Dimensi Outdoor": "500 x 720 x 240 mm",
+              "Dimensi Indoor": "715 x 285 x 194 mm",
+              "Dimensi Outdoor": "668 x 469 x 252 mm",
               Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
             },
           },
           {
-            name: "Midea AC Split 0.7 PK Standar",
-            desc: "AC split standar 3/4 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 3.400.000",
-            oldPrice: "Rp 3.500.000",
-            imgList: "img/Midea/ST.webp", // Image for list view
-            imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
-            features: [
-              "Hyper Grid",
-              "Gold Fin & Blue Fin",
-              "Smart Cleaner",
-              "Mode Turbo",
-            ],
-            specs: {
-              "Kapasitas Pendingin": "7,000 Btu/h",
-              "Daya Listrik": "530 Watt",
-              "Tipe Freon": "R32",
-              "Dimensi Indoor": "250 x 730 x 190 mm",
-              "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
-            },
-          },
-          {
-            name: "Midea AC Split 1.5 PK Standar",
-            desc: "AC split standar 1.5 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 4.775.000",
-            oldPrice: "Rp 4.850.000",
-            imgList: "img/Midea/ST.webp", // Image for list view
-            imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
-            features: [
-              "Hyper Grid",
-              "Gold Fin & Blue Fin",
-              "Smart Cleaner",
-              "Mode Turbo",
-            ],
-            specs: {
-              "Kapasitas Pendingin": "12,000 Btu/h",
-              "Daya Listrik": "1.000 Watt",
-              "Tipe Freon": "R32",
-              "Dimensi Indoor": "250 x 730 x 190 mm",
-              "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
-            },
-          },
-          {
-            name: "Midea AC Split 2 PK Standar",
-            desc: "AC split standar 2 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 6.300.000",
-            oldPrice: "Rp 6.450.000",
-            imgList: "img/Midea/ST.webp", // Image for list view
-            imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
-            features: [
-              "Hyper Grid",
-              "Gold Fin & Blue Fin",
-              "Smart Cleaner",
-              "Mode Turbo",
-            ],
-            specs: {
-              "Kapasitas Pendingin": "18,000 Btu/h",
-              "Daya Listrik": "1.500 Watt",
-              "Tipe Freon": "R32",
-              "Dimensi Indoor": "250 x 730 x 190 mm",
-              "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
-            },
-          },
-        ],
-      },
-      {
-        name: "Inverter Series",
-        products: [
-          {
-            name: "Midea AC Split 1 PK Inverter",
-            desc: "AC split standar 1 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 0",
-            oldPrice: "Rp 0",
-            imgList: "img/Midea/INV.webp", // Image for list view
-            imgDetail:
-              "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
-            features: [
-              "Frozen Power",
-              "Gold Fin & Blue Fin",
-              "Smart Cleaner",
-              "Mode Turbo",
-            ],
+            name: "Samsung AC Split 1 PK Neo Alpha Inverter",
+            desc: "AC split Neo Alpha Inverter 1 PK, pendinginan efektif dan tahan lama.",
+            price: "Rp 4.000.000",
+            oldPrice: "Rp 4.150.000",
+            imgList: "img/Samsung/NEO.webp", // Image for list view
+            imgDetail: "img/Samsung/DESC.webp", // Image for detail view
+            features: ["HD Filter", "DuraFin+", "Smart Saver", "Fast Cooling"],
             specs: {
               "Kapasitas Pendingin": "9,000 Btu/h",
-              "Daya Listrik": "750 Watt",
+              "Daya Listrik": "861 Watt",
               "Tipe Freon": "R32",
-              "Dimensi Indoor": "250 x 730 x 190 mm",
-              "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
-            },
-          },
-          {
-            name: "Midea AC Split 1 PK Inverter",
-            desc: "AC split standar  1 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 0",
-            oldPrice: "Rp 0",
-            imgList: "img/Midea/INV.webp", // Image for list view
-            imgDetail:
-              "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
-            features: [
-              "Frozen Power",
-              "Gold Fin & Blue Fin",
-              "Smart Cleaner",
-              "Mode Turbo",
-            ],
-            specs: {
-              "Kapasitas Pendingin": "9,000 Btu/h",
-              "Daya Listrik": "750 Watt",
-              "Tipe Freon": "R32",
-              "Dimensi Indoor": "250 x 730 x 190 mm",
-              "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
-            },
-          },
-          {
-            name: "Midea AC Split 1 PK Inverter",
-            desc: "AC split standar Fife 1 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 0",
-            oldPrice: "Rp 0",
-            imgList: "img/Midea/INV.webp", // Image for list view
-            imgDetail:
-              "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
-            features: [
-              "Frozen Power",
-              "Gold Fin & Blue Fin",
-              "Smart Cleaner",
-              "Mode Turbo",
-            ],
-            specs: {
-              "Kapasitas Pendingin": "9,000 Btu/h",
-              "Daya Listrik": "750 Watt",
-              "Tipe Freon": "R32",
-              "Dimensi Indoor": "250 x 730 x 190 mm",
-              "Dimensi Outdoor": "500 x 720 x 240 mm",
-              Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
-            },
-          },
-          {
-            name: "Midea AC Split 1 PK Inverter",
-            desc: "AC split standar 1 PK, pendinginan efektif dan tahan lama.",
-            price: "Rp 0",
-            oldPrice: "Rp 0",
-            imgList: "img/Midea/INV.webp", // Image for list view
-            imgDetail:
-              "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
-            features: [
-              "Frozen Power",
-              "Gold Fin & Blue Fin",
-              "Smart Cleaner",
-              "Mode Turbo",
-            ],
-            specs: {
-              "Kapasitas Pendingin": "9,000 Btu/h",
-              "Daya Listrik": "750 Watt",
-              "Tipe Freon": "R32",
-              "Dimensi Indoor": "250 x 730 x 190 mm",
-              "Dimensi Outdoor": "500 x 720 x 240 mm",
+              "Dimensi Indoor": "715 x 285 x 194 mm",
+              "Dimensi Outdoor": "668 x 469 x 252 mm",
               Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
             },
           },
@@ -1556,5 +1383,224 @@ const ResidentialAC = [
       },
     ],
   },
+
+  // {
+  //   brand: "Mitsubishi Hevy Duty",
+  //   imageUrl: "img/MHI/logo.png",
+  //   types: [
+  //     {
+  //       name: "Standar Series",
+  //       products: [
+  //         {
+  //           name: "Mitsubishi Hevy Duty AC Split 1 PK Standar",
+  //           desc: "AC split standar  1 PK, pendinginan efektif dan tahan lama.",
+  //           price: "Rp 3.600.000",
+  //           oldPrice: "Rp 3.750.000",
+  //           imgList: "img/Midea/ST.webp", // Image for list view
+  //           imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
+  //           features: [
+  //             "Frozen Power",
+  //             "Gold Fin & Blue Fin",
+  //             "Smart Cleaner",
+  //             "Mode Turbo",
+  //           ],
+  //           specs: {
+  //             "Kapasitas Pendingin": "9,000 Btu/h",
+  //             "Daya Listrik": "750 Watt",
+  //             "Tipe Freon": "R32",
+  //             "Dimensi Indoor": "250 x 730 x 190 mm",
+  //             "Dimensi Outdoor": "500 x 720 x 240 mm",
+  //             Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+  //           },
+  //         },
+  //         {
+  //           name: "Midea AC Split 0.5 PK Standar",
+  //           desc: "AC split standar 1/2 PK, pendinginan efektif dan tahan lama.",
+  //           price: "Rp 3.200.000",
+  //           oldPrice: "Rp 3.300.000",
+  //           imgList: "img/Midea/ST.webp", // Image for list view
+  //           imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
+  //           features: [
+  //             "Frozen Power",
+  //             "Gold Fin & Blue Fin",
+  //             "Smart Cleaner",
+  //             "Mode Turbo",
+  //           ],
+  //           specs: {
+  //             "Kapasitas Pendingin": "5,000 Btu/h",
+  //             "Daya Listrik": "330 Watt",
+  //             "Tipe Freon": "R32",
+  //             "Dimensi Indoor": "250 x 730 x 190 mm",
+  //             "Dimensi Outdoor": "500 x 720 x 240 mm",
+  //             Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+  //           },
+  //         },
+  //         {
+  //           name: "Midea AC Split 0.7 PK Standar",
+  //           desc: "AC split standar 3/4 PK, pendinginan efektif dan tahan lama.",
+  //           price: "Rp 3.400.000",
+  //           oldPrice: "Rp 3.500.000",
+  //           imgList: "img/Midea/ST.webp", // Image for list view
+  //           imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
+  //           features: [
+  //             "Hyper Grid",
+  //             "Gold Fin & Blue Fin",
+  //             "Smart Cleaner",
+  //             "Mode Turbo",
+  //           ],
+  //           specs: {
+  //             "Kapasitas Pendingin": "7,000 Btu/h",
+  //             "Daya Listrik": "530 Watt",
+  //             "Tipe Freon": "R32",
+  //             "Dimensi Indoor": "250 x 730 x 190 mm",
+  //             "Dimensi Outdoor": "500 x 720 x 240 mm",
+  //             Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+  //           },
+  //         },
+  //         {
+  //           name: "Midea AC Split 1.5 PK Standar",
+  //           desc: "AC split standar 1.5 PK, pendinginan efektif dan tahan lama.",
+  //           price: "Rp 4.775.000",
+  //           oldPrice: "Rp 4.850.000",
+  //           imgList: "img/Midea/ST.webp", // Image for list view
+  //           imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
+  //           features: [
+  //             "Hyper Grid",
+  //             "Gold Fin & Blue Fin",
+  //             "Smart Cleaner",
+  //             "Mode Turbo",
+  //           ],
+  //           specs: {
+  //             "Kapasitas Pendingin": "12,000 Btu/h",
+  //             "Daya Listrik": "1.000 Watt",
+  //             "Tipe Freon": "R32",
+  //             "Dimensi Indoor": "250 x 730 x 190 mm",
+  //             "Dimensi Outdoor": "500 x 720 x 240 mm",
+  //             Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+  //           },
+  //         },
+  //         {
+  //           name: "Midea AC Split 2 PK Standar",
+  //           desc: "AC split standar 2 PK, pendinginan efektif dan tahan lama.",
+  //           price: "Rp 6.300.000",
+  //           oldPrice: "Rp 6.450.000",
+  //           imgList: "img/Midea/ST.webp", // Image for list view
+  //           imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
+  //           features: [
+  //             "Hyper Grid",
+  //             "Gold Fin & Blue Fin",
+  //             "Smart Cleaner",
+  //             "Mode Turbo",
+  //           ],
+  //           specs: {
+  //             "Kapasitas Pendingin": "18,000 Btu/h",
+  //             "Daya Listrik": "1.500 Watt",
+  //             "Tipe Freon": "R32",
+  //             "Dimensi Indoor": "250 x 730 x 190 mm",
+  //             "Dimensi Outdoor": "500 x 720 x 240 mm",
+  //             Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+  //           },
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       name: "Inverter Series",
+  //       products: [
+  //         {
+  //           name: "Midea AC Split 1 PK Inverter",
+  //           desc: "AC split standar 1 PK, pendinginan efektif dan tahan lama.",
+  //           price: "Rp 0",
+  //           oldPrice: "Rp 0",
+  //           imgList: "img/Midea/INV.webp", // Image for list view
+  //           imgDetail:
+  //             "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
+  //           features: [
+  //             "Frozen Power",
+  //             "Gold Fin & Blue Fin",
+  //             "Smart Cleaner",
+  //             "Mode Turbo",
+  //           ],
+  //           specs: {
+  //             "Kapasitas Pendingin": "9,000 Btu/h",
+  //             "Daya Listrik": "750 Watt",
+  //             "Tipe Freon": "R32",
+  //             "Dimensi Indoor": "250 x 730 x 190 mm",
+  //             "Dimensi Outdoor": "500 x 720 x 240 mm",
+  //             Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+  //           },
+  //         },
+  //         {
+  //           name: "Midea AC Split 1 PK Inverter",
+  //           desc: "AC split standar  1 PK, pendinginan efektif dan tahan lama.",
+  //           price: "Rp 0",
+  //           oldPrice: "Rp 0",
+  //           imgList: "img/Midea/INV.webp", // Image for list view
+  //           imgDetail:
+  //             "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
+  //           features: [
+  //             "Frozen Power",
+  //             "Gold Fin & Blue Fin",
+  //             "Smart Cleaner",
+  //             "Mode Turbo",
+  //           ],
+  //           specs: {
+  //             "Kapasitas Pendingin": "9,000 Btu/h",
+  //             "Daya Listrik": "750 Watt",
+  //             "Tipe Freon": "R32",
+  //             "Dimensi Indoor": "250 x 730 x 190 mm",
+  //             "Dimensi Outdoor": "500 x 720 x 240 mm",
+  //             Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+  //           },
+  //         },
+  //         {
+  //           name: "Midea AC Split 1 PK Inverter",
+  //           desc: "AC split standar Fife 1 PK, pendinginan efektif dan tahan lama.",
+  //           price: "Rp 0",
+  //           oldPrice: "Rp 0",
+  //           imgList: "img/Midea/INV.webp", // Image for list view
+  //           imgDetail:
+  //             "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
+  //           features: [
+  //             "Frozen Power",
+  //             "Gold Fin & Blue Fin",
+  //             "Smart Cleaner",
+  //             "Mode Turbo",
+  //           ],
+  //           specs: {
+  //             "Kapasitas Pendingin": "9,000 Btu/h",
+  //             "Daya Listrik": "750 Watt",
+  //             "Tipe Freon": "R32",
+  //             "Dimensi Indoor": "250 x 730 x 190 mm",
+  //             "Dimensi Outdoor": "500 x 720 x 240 mm",
+  //             Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+  //           },
+  //         },
+  //         {
+  //           name: "Midea AC Split 1 PK Inverter",
+  //           desc: "AC split standar 1 PK, pendinginan efektif dan tahan lama.",
+  //           price: "Rp 0",
+  //           oldPrice: "Rp 0",
+  //           imgList: "img/Midea/INV.webp", // Image for list view
+  //           imgDetail:
+  //             "https://web-res.midea.com/content/dam/midea-aem/id/id-new/pdp/air-conditioner/residential/msiaf-05crdn2x/Super-Nyaman-1920x1080.jpg/jcr:content/renditions/Super-Nyaman-1920x1080.webp", // Image for detail view
+  //           features: [
+  //             "Frozen Power",
+  //             "Gold Fin & Blue Fin",
+  //             "Smart Cleaner",
+  //             "Mode Turbo",
+  //           ],
+  //           specs: {
+  //             "Kapasitas Pendingin": "9,000 Btu/h",
+  //             "Daya Listrik": "750 Watt",
+  //             "Tipe Freon": "R32",
+  //             "Dimensi Indoor": "250 x 730 x 190 mm",
+  //             "Dimensi Outdoor": "500 x 720 x 240 mm",
+  //             Garansi: "1 Tahun Sparepart, 10 Tahun Kompresor",
+  //           },
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
 ];
 export default ResidentialAC;
