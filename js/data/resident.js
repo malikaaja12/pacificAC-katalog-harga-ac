@@ -1340,7 +1340,7 @@ const ResidentialAC = [
   },
   {
     brand: "Samsung",
-    imageUrl: "img/Samsung/logo.png",
+    imageUrl: "img/samsung/logo.png",
     types: [
       {
         name: "Standar Series",
@@ -1350,8 +1350,8 @@ const ResidentialAC = [
             desc: "AC split Neo Alpha Inverter  1/2 PK, pendinginan efektif dan tahan lama.",
             price: "Rp 3.500.000",
             oldPrice: "Rp 3.750.000",
-            imgList: "img/Samsung/NEO.webp", // Image for list view
-            imgDetail: "img/Samsung/DESC.webp", // Image for detail view
+            imgList: "img/samsung/NEO.webp", // Image for list view
+            imgDetail: "img/samsung/DESC.webp", // Image for detail view
             features: ["HD Filter", "DuraFin+", "Smart Saver", "Fast Cooling"],
             specs: {
               "Kapasitas Pendingin": "5,000 Btu/h",
@@ -1367,8 +1367,8 @@ const ResidentialAC = [
             desc: "AC split Neo Alpha Inverter 1 PK, pendinginan efektif dan tahan lama.",
             price: "Rp 4.000.000",
             oldPrice: "Rp 4.150.000",
-            imgList: "img/Samsung/NEO.webp", // Image for list view
-            imgDetail: "img/Samsung/DESC.webp", // Image for detail view
+            imgList: "img/samsung/NEO.webp", // Image for list view
+            imgDetail: "img/samsung/DESC.webp", // Image for detail view
             features: ["HD Filter", "DuraFin+", "Smart Saver", "Fast Cooling"],
             specs: {
               "Kapasitas Pendingin": "9,000 Btu/h",
