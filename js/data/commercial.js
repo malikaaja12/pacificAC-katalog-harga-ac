@@ -10,10 +10,10 @@ const commercialAC = [
           {
             name: "Gree Standing Floor 2 PK",
             desc: "AC Standing Floor Gree 2 PK untuk ruangan besar dan komersial.",
-            price: "Rp 12.000.000",
-            oldPrice: "Rp 12.500.000",
-            imgList: "img/commercial/gree.st/st.png",
-            imgDetail: "img/gree/d.f5s.jpeg",
+            price: "Rp 0",
+            oldPrice: "Rp 0",
+            imgList: "img/commercial/gree.st/standing.png",
+            imgDetail: "img/commercial/gree.st/st.png",
             features: [
               "High Capacity Cooling",
               "Durable Design",
@@ -32,10 +32,10 @@ const commercialAC = [
           {
             name: "Gree Standing Floor 3 PK",
             desc: "AC Standing Floor Gree 3 PK untuk ruangan besar dan komersial.",
-            price: "Rp 12.000.000",
-            oldPrice: "Rp 12.500.000",
-            imgList: "img/commercial/gree.st/st.png",
-            imgDetail: "img/gree/d.f5s.jpeg",
+            price: "Rp 0",
+            oldPrice: "Rp 0",
+            imgList: "img/commercial/gree.st/standing.png",
+            imgDetail: "img/commercial/gree.st/st.png",
             features: [
               "High Capacity Cooling",
               "Durable Design",
@@ -54,10 +54,10 @@ const commercialAC = [
           {
             name: "Gree Standing Floor  5 PK",
             desc: "AC Standing Floor Gree 5 PK untuk ruangan sangat besar.",
-            price: "Rp 18.000.000",
-            oldPrice: "Rp 18.500.000",
-            imgList: "img/commercial/gree.st/st.png",
-            imgDetail: "img/gree/d.f5s.jpeg",
+            price: "Rp 0",
+            oldPrice: "Rp 0",
+            imgList: "img/commercial/gree.st/standing.png",
+            imgDetail: "img/commercial/gree.st/st.png",
             features: [
               "High Capacity Cooling",
               "Durable Design",
@@ -88,9 +88,9 @@ const commercialAC = [
           {
             name: "Daikin Standing Floor AC 3.5 PK",
             desc: "AC Standing Floor  Daikin 3.5 PK untuk ruangan sangat besar.",
-            price: "Rp 18.000.000",
-            oldPrice: "Rp 18.500.000",
-            imgList: "img/commercial/daikin.st/standing.png",
+            price: "Rp 0",
+            oldPrice: "Rp 0",
+            imgList: "img/commercial/daikin.st/st.png",
             imgDetail: "img/commercial/daikin.st/desc.png",
             features: [
               "High Capacity Cooling",
@@ -110,9 +110,9 @@ const commercialAC = [
           {
             name: "Daikin Standing Floor  AC 4 PK",
             desc: "AC Standing Floor Daikin 4 PK untuk ruangan sangat besar.",
-            price: "Rp 18.000.000",
-            oldPrice: "Rp 18.500.000",
-            imgList: "img/commercial/daikin.st/standing.png",
+            price: "Rp 0",
+            oldPrice: "Rp 0",
+            imgList: "img/commercial/daikin.st/st.png",
             imgDetail: "img/commercial/daikin.st/desc.png",
             features: [
               "High Capacity Cooling",
@@ -132,9 +132,9 @@ const commercialAC = [
           {
             name: "Daikin Standing Floor  AC 5 PK",
             desc: "AC Standing Floor Daikin 5 PK untuk ruangan sangat besar.",
-            price: "Rp 18.000.000",
-            oldPrice: "Rp 18.500.000",
-            imgList: "img/commercial/daikin.st/standing.png",
+            price: "Rp 0",
+            oldPrice: "Rp 0",
+            imgList: "img/commercial/daikin.st/st.png",
             imgDetail: "img/commercial/daikin.st/desc.png",
             features: [
               "High Capacity Cooling",

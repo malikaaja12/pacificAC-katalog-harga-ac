@@ -3,337 +3,1247 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pacific AC Solo - Katalog Harga</title>
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Pacific AC - Katalog Harga AC & Paket Pemasangan Resmi</title>
+    <meta name="description" content="Temukan unit AC Residential, Commercial, Rental Event, hingga Paket Pemasangan Bergaransi Resmi dengan harga transparan." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="src/output.css" />
+    <style>
+      /* Force 3 columns layout on desktop for installation packages section */
+      @media (min-width: 768px) {
+        #paket-pasang-section-grid {
+          display: grid !important;
+          grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+          gap: 1.5rem !important;
+        }
+      }
+
+      /* Custom styles to make packages look extremely clean, neat and compact */
+      #paket-pasang-section-grid .package-card {
+        background-color: #ffffff !important;
+        border-radius: 1.25rem !important;
+        padding: 1.25rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        transition: all 0.3s ease !important;
+        position: relative !important;
+        height: 100% !important;
+      }
+      #paket-pasang-section-grid .package-card.card-hemat {
+        border: 1px solid #e2e8f0 !important;
+      }
+      #paket-pasang-section-grid .package-card.card-hemat:hover {
+        border-color: #06b6d4 !important;
+        box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.08) !important;
+      }
+      #paket-pasang-section-grid .package-card.card-nyaman {
+        border: 2px solid #22d3ee !important;
+        box-shadow: 0 8px 20px -8px rgba(6, 182, 212, 0.15) !important;
+      }
+      #paket-pasang-section-grid .package-card.card-premium {
+        border: 2px solid #f59e0b !important;
+        box-shadow: 0 8px 20px -8px rgba(245, 158, 11, 0.15) !important;
+      }
+      #paket-pasang-section-grid .package-title {
+        font-size: 1.05rem !important;
+        font-weight: 800 !important;
+        color: #0f172a !important;
+        letter-spacing: -0.02em !important;
+      }
+      #paket-pasang-section-grid .package-subtitle {
+        font-size: 0.7rem !important;
+        color: #64748b !important;
+        font-weight: 500 !important;
+        margin-top: 0.125rem !important;
+        margin-bottom: 1rem !important;
+      }
+      #paket-pasang-section-grid .price-container {
+        background-color: #f8fafc !important;
+        border: 1px solid #f1f5f9 !important;
+        border-radius: 0.75rem !important;
+        padding: 0.625rem 0.75rem !important;
+        margin-bottom: 1rem !important;
+      }
+      #paket-pasang-section-grid .price-row {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+      }
+      #paket-pasang-section-grid .price-row:not(:last-child) {
+        border-bottom: 1px dashed #e2e8f0 !important;
+        padding-bottom: 0.375rem !important;
+        margin-bottom: 0.375rem !important;
+      }
+      #paket-pasang-section-grid .price-label {
+        font-size: 0.7rem !important;
+        font-weight: 600 !important;
+        color: #64748b !important;
+      }
+      #paket-pasang-section-grid .price-val {
+        font-size: 0.825rem !important;
+        font-weight: 800 !important;
+        color: #0f172a !important;
+      }
+      #paket-pasang-section-grid .features-list {
+        margin-bottom: 1.25rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+      }
+      #paket-pasang-section-grid .feature-item {
+        font-size: 0.7rem !important;
+        color: #475569 !important;
+        font-weight: 500 !important;
+        display: flex !important;
+        align-items: start !important;
+        gap: 0.375rem !important;
+      }
+      #paket-pasang-section-grid .feature-item svg {
+        margin-top: 0.125rem !important;
+      }
+      #paket-pasang-section-grid .feature-item-bold {
+        color: #059669 !important;
+        font-weight: 700 !important;
+      }
+      #paket-pasang-section-grid .badge-capsule {
+        background-color: #ecfeff !important;
+        border: 1px solid #cffafe !important;
+        color: #0891b2 !important;
+        font-size: 0.625rem !important;
+        font-weight: 700 !important;
+        padding: 0.0625rem 0.375rem !important;
+        border-radius: 9999px !important;
+        display: inline-block !important;
+      }
+      #paket-pasang-section-grid .btn-wa {
+        width: 100% !important;
+        font-size: 0.7rem !important;
+        font-weight: 700 !important;
+        padding: 0.5rem 0.75rem !important;
+        border-radius: 0.625rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.25rem !important;
+        transition: all 0.2s ease !important;
+        text-decoration: none !important;
+        margin-top: 0.375rem !important;
+      }
+      #paket-pasang-section-grid .btn-wa-green {
+        background-color: #07a670 !important;
+        color: #ffffff !important;
+      }
+      #paket-pasang-section-grid .btn-wa-green:hover {
+        background-color: #059262 !important;
+      }
+      #paket-pasang-section-grid .btn-wa-dark {
+        background-color: #1e293b !important;
+        color: #ffffff !important;
+      }
+      #paket-pasang-section-grid .btn-wa-dark:hover {
+        background-color: #0f172a !important;
+      }
+
+      /* Dark theme styling for simulasi calculator card */
+      #sim-calculator-card {
+        background-color: #0d1527 !important;
+        border: 1px solid #1e293b !important;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.3) !important;
+      }
+      #sim-calculator-card select, 
+      #sim-calculator-card input {
+        background-color: #16223f !important;
+        border: 1px solid #2d3d5f !important;
+        color: #ffffff !important;
+        padding: 0 0.75rem !important;
+        border-radius: 0.75rem !important;
+        font-weight: 600 !important;
+        font-size: 0.75rem !important;
+        height: 38px !important;
+        transition: all 0.2s ease-in-out !important;
+      }
+      #sim-calculator-card select:focus, 
+      #sim-calculator-card input:focus {
+        border-color: #06b6d4 !important;
+        box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.2) !important;
+        outline: none !important;
+      }
+      #sim-calculator-card label {
+        font-size: 10px !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+        color: #94a3b8 !important; /* slate-400 */
+        margin-bottom: 0.25rem !important;
+        display: block !important;
+      }
+      #sim-calculator-card .summary-box {
+        background-color: #080f1d !important;
+        border: 1px solid #1e293b !important;
+        border-radius: 0.875rem !important;
+      }
+      #sim-calculator-card #sim-display-grand-total {
+        font-size: 1.125rem !important;
+        font-weight: 900 !important;
+        color: #22d3ee !important;
+        text-shadow: 0 0 10px rgba(34, 211, 238, 0.2) !important;
+      }
+      #sim-calculator-card .summary-box div {
+        transition: all 0.2s ease !important;
+      }
+      #sim-calculator-card #sim-wa-btn {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      }
+      #sim-calculator-card #sim-wa-btn:hover {
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 12px rgba(7, 166, 112, 0.3) !important;
+      }
+
+      /* Force 2 columns layout on desktop for addon section */
+      @media (min-width: 1024px) {
+        #paket-pasang-addon-layout {
+          display: grid !important;
+          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+          gap: 2.5rem !important;
+        }
+      }
+
+      /* Checked state styling for comparison button circle */
+      .btn-toggle-compare:checked + .compare-label {
+        background-color: #ecfeff !important;
+        border-color: #06b6d4 !important;
+        color: #06b6d4 !important;
+      }
+
+      /* Product Detail Image Styling */
+      .detail-image-container {
+        background-color: #f8fafc !important; /* bg-slate-50 */
+        border: 1px solid #e2e8f0 !important; /* border-slate-200 */
+        border-radius: 1rem !important; /* rounded-2xl */
+        padding: 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        overflow: hidden !important;
+        min-height: 250px !important;
+      }
+      @media (min-width: 640px) {
+        .detail-image-container {
+          min-height: 380px !important;
+        }
+      }
+      .detail-image-img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 75vh !important;
+        object-fit: contain !important;
+        border-radius: 0.75rem !important; /* rounded-xl */
+        cursor: zoom-in !important;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      }
+      .detail-image-img:hover {
+        transform: scale(1.02) !important;
+      }
+
+      /* Fullscreen Image Lightbox overlay */
+      .image-lightbox {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background-color: rgba(15, 23, 42, 0.95) !important; /* slate-900 with 95% opacity */
+        backdrop-filter: blur(8px) !important;
+        z-index: 2200 !important; /* overlay above ordinary modal overlays */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: zoom-out !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: opacity 0.3s ease, visibility 0.3s ease !important;
+      }
+      .image-lightbox.show {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      .image-lightbox-close {
+        position: absolute !important;
+        top: 1.5rem !important;
+        right: 1.5rem !important;
+        color: #ffffff !important;
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        border: none !important;
+        width: 3rem !important;
+        height: 3rem !important;
+        border-radius: 9999px !important;
+        font-size: 1.75rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        transition: background-color 0.2s, transform 0.2s !important;
+        z-index: 2210 !important;
+      }
+      .image-lightbox-close:hover {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        transform: scale(1.05) !important;
+      }
+      .image-lightbox-img {
+        max-width: 95vw !important;
+        max-height: 92vh !important;
+        object-fit: contain !important;
+        border-radius: 0.5rem !important;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+        transform: scale(0.95) !important;
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+      }
+      .image-lightbox.show .image-lightbox-img {
+        transform: scale(1) !important;
+      }
+      
+      /* Fix close button covered by image/z-index issues */
+      .close-button {
+        z-index: 50 !important;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+      }
+    </style>
   </head>
 
-  <body class="antialiased">
-    <div class="min-h-screen flex flex-col">
-      <!-- Header -->
-      <header
-        class="bg-linear-to-r bg-gray-900 text-gray-300 p-4 shadow-lg rounded-b-lg"
-      >
-        <div class="container mx-auto flex justify-between items-center">
-          <h1 class="w-16" id="home-link">
-            <img src="img/logo/logo.png" alt="logoHeader" />
-          </h1>
-          <nav>
-            <ul class="flex space-x-6 font-bold text-lg md:text-lg">
-              <li>
-                <a
-                  href="#"
-                  id="home-nav-link"
-                  class="hover:text-gray-600 transition duration-003"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  id="contact-link"
-                  class="hover:text-gray-600 transition duration-003"
-                  >Kontak</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+  <body class="antialiased bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+    <!-- Top Main Navigation Bar -->
+    <header class="header-navy sticky top-0 z-40 text-white shadow-xl border-b border-cyan-900/40">
+      <div class="container mx-auto px-4 py-3 flex flex-wrap lg:flex-nowrap items-center justify-between gap-3 sm:gap-4">
+        
+        <!-- Brand & Logo -->
+        <a href="#" id="home-link" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-full bg-cyan-500/20 border border-cyan-400/50 flex items-center justify-center glow-cyan shrink-0 transition-transform group-hover:scale-105">
+            <!-- Snowflake Icon -->
+             <img src="img/logo/logo.png" alt="logo">
+          </div>
+          <div>
+            <h1 class="text-lg sm:text-xl font-extrabold tracking-wider text-white leading-tight">PACIFIC AC</h1>
+            <p class="text-[10px] sm:text-xs text-cyan-300/80 font-medium">Katalog Price List & Paket Pasang</p>
+          </div>
+        </a>
 
-      <!-- Main Content Area (Product Catalog) -->
-      <main id="main-content" class="container mx-auto grow p-4">
-        <h1
-          class="font-extrabold text-center text-gray-800 mb-10 md:text-4xl sm:text-4xl text-2xl"
-        >
-          Pilihan AC Unggulan Kami Berdasarkan Merek dan Kategori
-        </h1>
-        <section class="mb-8">
-          <div
-            id="fiter-product"
-            class="flex flex-wrap justify-center p-6 gap-6 cursor-pointer"
+        <!-- Global Search Bar -->
+        <div class="w-full lg:w-auto lg:flex-1 max-w-xl order-last lg:order-none">
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </span>
+            <input
+              type="text"
+              id="global-search"
+              placeholder="Cari tipe AC, merk (Daikin, Gree, Midea...), PK, atau fitur..."
+              class="w-full bg-slate-950/60 border border-slate-700/80 text-white placeholder-slate-400 text-xs sm:text-sm rounded-xl pl-10 pr-4 py-2.5 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30 transition-all"
+            />
+          </div>
+        </div>
+
+        <!-- Quick Action Buttons -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0 ml-auto lg:ml-0">
+          <button
+            id="btn-pk-calc-header"
+            class="bg-slate-800/90 hover:bg-slate-700 text-cyan-300 hover:text-cyan-200 border border-cyan-500/30 hover:border-cyan-400 text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2 rounded-xl flex items-center gap-2 transition-all cursor-pointer shadow-sm"
           >
-            <button
-              class="filter-btn text-sm hover:bg-gray-500 hover:text-gray-700 not-only-of-type:border-0 rounded-lg p-4 font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
-            >
+            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m-6 4h6m-6 4h6M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <span class="hidden sm:inline">Kalkulator PK</span>
+          </button>
+
+          <button
+            id="btn-compare-header"
+            class="bg-slate-800/90 hover:bg-slate-700 text-cyan-300 hover:text-cyan-200 border border-cyan-500/30 hover:border-cyan-400 text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2 rounded-xl flex items-center gap-2 transition-all cursor-pointer shadow-sm relative"
+          >
+            <!-- Scale/Balance Icon -->
+            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l9-4 9 4M3 6v14a1 1 0 001 1h16a1 1 0 001-1V6M3 6l9 6 9-6" />
+            </svg>
+            <span class="hidden sm:inline">Kategori Komparasi</span>
+            <span id="compare-badge" class="bg-cyan-500 text-slate-950 text-[10px] font-extrabold px-1.5 py-0.5 rounded-full hidden">0</span>
+          </button>
+
+          <button
+            id="btn-wishlist-header"
+            class="bg-slate-800/90 hover:bg-slate-700 text-rose-300 hover:text-rose-200 border border-rose-500/30 hover:border-rose-400 text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2 rounded-xl flex items-center gap-2 transition-all cursor-pointer shadow-sm relative"
+          >
+            <svg class="w-4 h-4 text-rose-400 fill-rose-400/20" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+            <span class="hidden sm:inline">Wishlist</span>
+            <span id="wishlist-badge" class="bg-rose-500 text-white text-[10px] font-extrabold px-1.5 py-0.5 rounded-full hidden">0</span>
+          </button>
+
+          <button
+            id="contact-link"
+            class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs sm:text-sm font-bold px-3 sm:px-4 py-2 rounded-xl transition-all cursor-pointer shadow-md"
+          >
+            Kontak
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container mx-auto px-4 py-6 flex-grow">
+      
+      <!-- Catalog Page Wrapper -->
+      <div id="main-content">
+        <!-- Hero Banner Section -->
+        <section class="hero-navy-card rounded-2xl p-6 sm:p-8 mb-8 text-white relative overflow-hidden shadow-2xl border border-cyan-500/20">
+          <div class="relative z-10">
+            <!-- Warranty Pill Badge -->
+            <div class="inline-flex items-center gap-2 bg-cyan-950/80 border border-cyan-400/40 text-cyan-300 text-xs font-bold px-3.5 py-1.5 rounded-full mb-4 shadow-sm">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              GARANSI RESMI BRAND & INSTALASI
+            </div>
+
+            <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-3 text-white">
+              Katalog Harga AC & Paket Pemasangan
+            </h1>
+
+            <!-- Lightbulb Simulator Banner Card -->
+            <div class="glass-banner rounded-xl p-4 sm:p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border border-cyan-400/30">
+              <div class="flex  text-center items-center gap-3.5">
+                <div>
+                  <h3 class="font-light text-white text-sm sm:text-base">Coba cari tahu sendiri berapa ukruan AC yang cocok untuk runagan anda</h3>
+                  
+                </div>
+              </div>
+
+              <button
+                id="btn-hero-pk-calc"
+                class="bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-extrabold text-xs sm:text-sm px-5 py-2.5 rounded-xl flex items-center gap-2 shadow-lg shadow-cyan-400/20 transition-all cursor-pointer whitespace-nowrap self-stretch md:self-auto justify-center"
+              >
+                <svg class="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m-6 4h6m-6 4h6M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Hitung Kebutuhan AC Anda
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Category Buttons Bar -->
+        <section class="mb-6">
+          <div id="fiter-product" class="flex flex-wrap justify-center sm:justify-start gap-2.5">
+            <button class="cat-tab-btn active bg-cyan-600 text-white font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl shadow-sm transition-all cursor-pointer" data-cat="all">
+              Semua Kategori
+            </button>
+            <button class="cat-tab-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl shadow-sm transition-all cursor-pointer" data-cat="ResidentialAC">
               Residential AC
             </button>
-            <button
-              class="filter-btn text-sm hover:bg-gray-500 hover:text-gray-700 not-only-of-type:border-0 rounded-lg p-4 font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
-            >
+            <button class="cat-tab-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl shadow-sm transition-all cursor-pointer" data-cat="CommercialAC">
               Commercial AC
             </button>
-            <button
-              class="filter-btn text-sm hover:bg-gray-500 hover:text-gray-700 not-only-of-type:border-0 rounded-lg p-4 font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
-            >
-              Penyewaan Standing
+            <button class="cat-tab-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl shadow-sm transition-all cursor-pointer" data-cat="SewaStandingAC">
+              Penyewaan Standing AC
+            </button>
+            <button class="cat-tab-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl shadow-sm transition-all cursor-pointer" data-cat="PaketPasang">
+              Paket Pemasangan
             </button>
           </div>
-          <div
-            id="brand-grid"
-            class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-          >
-            <!-- Product cards will be dynamically inserted here -->
-          </div>
-
-          <div>
-            <h2
-              id="desc-res"
-              class="p-6 text-center text-xl text-gray-900 italic font-bold hidden"
-            >
-              harga <span class="underline">sudah</span> termasuk jasa pasang
-              dan material standar
-            </h2>
-
-            <h2
-              id="pneglakan"
-              class="text-red-500 text-2xl p-6 text-center italic font-semibold hidden"
-            >
-              Sedang dalam proses pengerjaan
-            </h2>
-          </div>
-          <!-- <div
-            id="desc-com"
-            class="text-center text-xl text-gray-900 italic font-bold hidden"
-          >
-            <p>
-              harga <span class="underline">belum</span> termasuk jasa pasang
-              dan material standar
-            </p>
-          </div>
-           <div
-            id="desc-stand"
-            class="text-center text-xl text-gray-900 italic font-bold hidden"
-          >
-            <p>
-              harga <span class="underline"> sudah </span> termasuk jasa pasang tetapi <span class="underline">Belum</span> termasuk Genset 
-            </p>
-            </div> -->
         </section>
-      </main>
+
+        <!-- Main Catalog Layout (Sidebar Filter + Product Grid) -->
+        <div id="catalog-main-layout" class="flex flex-col lg:flex-row gap-6 items-start">
+          
+          <!-- Filter Sidebar -->
+          <aside class="w-full lg:w-72 shrink-0 filter-sidebar p-5 shadow-sm space-y-6">
+            
+            <div class="flex items-center justify-between border-b border-slate-100 pb-3.5">
+              <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+                <svg class="w-5 h-5 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                </svg>
+                Filter Katalog
+              </h3>
+              <button id="btn-reset-filters" class="text-xs font-bold text-rose-500 hover:text-rose-600 hover:underline transition-colors cursor-pointer">
+                Reset
+              </button>
+            </div>
+
+            <!-- Filter 1: MERK / BRAND -->
+            <div>
+              <h4 class="filter-group-title">MERK / BRAND</h4>
+              <div id="filter-brand-container" class="space-y-2 max-h-48 overflow-y-auto pr-1">
+                <!-- Checkboxes will be populated dynamically -->
+              </div>
+            </div>
+
+            <!-- Filter 2: KAPASITAS (PK) -->
+            <div>
+              <h4 class="filter-group-title">KAPASITAS (PK)</h4>
+              <div id="filter-pk-container" class="grid grid-cols-2 gap-2">
+                <label class="flex items-center gap-2 text-xs font-medium text-slate-700 cursor-pointer hover:text-slate-900">
+                  <input type="checkbox" value="0.5" class="filter-pk-checkbox rounded text-cyan-600 focus:ring-cyan-500" />
+                  0.5 PK
+                </label>
+                <label class="flex items-center gap-2 text-xs font-medium text-slate-700 cursor-pointer hover:text-slate-900">
+                  <input type="checkbox" value="0.7" class="filter-pk-checkbox rounded text-cyan-600 focus:ring-cyan-500" />
+                  0.75 PK
+                </label>
+                <label class="flex items-center gap-2 text-xs font-medium text-slate-700 cursor-pointer hover:text-slate-900">
+                  <input type="checkbox" value="1" class="filter-pk-checkbox rounded text-cyan-600 focus:ring-cyan-500" />
+                  1 PK
+                </label>
+                <label class="flex items-center gap-2 text-xs font-medium text-slate-700 cursor-pointer hover:text-slate-900">
+                  <input type="checkbox" value="1.5" class="filter-pk-checkbox rounded text-cyan-600 focus:ring-cyan-500" />
+                  1.5 PK
+                </label>
+                <label class="flex items-center gap-2 text-xs font-medium text-slate-700 cursor-pointer hover:text-slate-900">
+                  <input type="checkbox" value="2" class="filter-pk-checkbox rounded text-cyan-600 focus:ring-cyan-500" />
+                  2 PK
+                </label>
+                <label class="flex items-center gap-2 text-xs font-medium text-slate-700 cursor-pointer hover:text-slate-900">
+                  <input type="checkbox" value="3" class="filter-pk-checkbox rounded text-cyan-600 focus:ring-cyan-500" />
+                  3+ PK
+                </label>
+              </div>
+            </div>
+
+            <!-- Filter 3: TIPE / TEKNOLOGI -->
+            <div>
+              <h4 class="filter-group-title">TIPE / TEKNOLOGI</h4>
+              <div class="space-y-2">
+                <label class="flex items-center gap-2 text-xs font-medium text-slate-700 cursor-pointer hover:text-slate-900">
+                  <input type="checkbox" value="Inverter" class="filter-tech-checkbox rounded text-cyan-600 focus:ring-cyan-500" />
+                  Inverter Series
+                </label>
+                <label class="flex items-center gap-2 text-xs font-medium text-slate-700 cursor-pointer hover:text-slate-900">
+                  <input type="checkbox" value="Low Watt" class="filter-tech-checkbox rounded text-cyan-600 focus:ring-cyan-500" />
+                  Low Watt Series
+                </label>
+                <label class="flex items-center gap-2 text-xs font-medium text-slate-700 cursor-pointer hover:text-slate-900">
+                  <input type="checkbox" value="Standard" class="filter-tech-checkbox rounded text-cyan-600 focus:ring-cyan-500" />
+                  Standard Series
+                </label>
+                <label class="flex items-center gap-2 text-xs font-medium text-slate-700 cursor-pointer hover:text-slate-900">
+                  <input type="checkbox" value="Commercial" class="filter-tech-checkbox rounded text-cyan-600 focus:ring-cyan-500" />
+                  Commercial & Standing
+                </label>
+              </div>
+            </div>
+
+            <!-- Filter 4: MAKS. HARGA UNIT -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="filter-group-title !mb-0">MAKS. HARGA UNIT</h4>
+                <span id="price-slider-val" class="text-xs font-extrabold text-cyan-700">Rp 25.000.000</span>
+              </div>
+              <input
+                type="range"
+                id="price-range"
+                min="1000000"
+                max="35000000"
+                step="500000"
+                value="35000000"
+                class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer"
+              />
+              <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-semibold">
+                <span>Rp 1 Juta</span>
+                <span>Rp 35 Juta+</span>
+              </div>
+            </div>
+
+          </aside>
+
+          <!-- Main Product Listing Section -->
+          <section class="flex-1 w-full">
+            
+            <!-- Top Controls (Count + Sort) -->
+            <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <h2 class="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2">
+                  Daftar Produk AC
+                  <span id="product-count-badge" class="bg-cyan-100 text-cyan-800 text-xs font-extrabold px-2.5 py-1 rounded-full">
+                    0 Unit
+                  </span>
+                </h2>
+                <p class="text-xs text-slate-500 mt-0.5">Menampilkan harga unit AC dan spesifikasi teknis bergaransi resmi.</p>
+              </div>
+
+              <!-- Sorting Selector -->
+              <div class="flex items-center gap-2 text-xs sm:text-sm text-slate-600 self-end sm:self-auto shrink-0">
+                <label for="sort-selector" class="font-medium whitespace-nowrap">Urutkan:</label>
+                <select
+                  id="sort-selector"
+                  class="bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-slate-800 text-xs sm:text-sm font-semibold focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 cursor-pointer"
+                >
+                  <option value="popular">Paling Populer</option>
+                  <option value="price-asc">Harga Termurah</option>
+                  <option value="price-desc">Harga Tertinggi</option>
+                  <option value="pk-asc">PK Terkecil</option>
+                  <option value="pk-desc">PK Terbesar</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Product Grid Container -->
+            <div id="catalog-products-grid" class="grid grid-cols-2 xl:grid-cols-3 gap-3 mt-3">
+              <!-- Dynamically populated product cards -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="hidden bg-white rounded-2xl p-10 border border-slate-200 text-center mt-6">
+              <svg class="w-16 h-16 text-slate-300 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <h3 class="text-base font-bold text-slate-800">Tidak ada unit AC yang sesuai filter</h3>
+              <p class="text-xs text-slate-500 mt-1 max-w-sm mx-auto">Coba atur ulang kata kunci pencarian, sesuaikan filter kapasitas PK, atau klik tombol Reset.</p>
+              <button id="btn-reset-empty" class="mt-4 bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-xs px-4 py-2 rounded-xl transition-all cursor-pointer">
+                Reset Semua Filter
+              </button>
+            </div>
+
+        </div>
+      </div>
+
+      <!-- Paket Pemasangan Section -->
+      <section id="paket-pasang-section" class="hidden space-y-8">
+        <div class="text-center max-w-2xl mx-auto space-y-2 mb-8">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Pilihan Paket Pemasangan AC Resmi</h2>
+          <p class="text-xs sm:text-sm text-slate-500">Pilih paket pemasangan yang sesuai dengan kebutuhan dan perlindungan yang Anda inginkan.</p>
+        </div>
+
+        <div id="paket-pasang-section-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          
+          <!-- Paket 1: Hemat -->
+          <div class="package-card card-hemat">
+            <div>
+              <!-- Header Badge & Number -->
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-7 h-7 rounded-xl bg-pacific-100 text-pacific-700 font-extrabold text-xs flex items-center justify-center">1</div>
+                <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-3 py-1 rounded-full">Hemat Best-Value</span>
+              </div>
+              
+              <!-- Title -->
+              <h3 class="package-title">PAKET HEMAT</h3>
+              <p class="package-subtitle">Solusi Ekonomis Pemasangan Standar</p>
+              
+              <!-- Prices Grid -->
+              <div class="price-container">
+                <div class="price-row">
+                  <span class="price-label">🔰 1/2 - 1 PK:</span>
+                  <span class="price-val">Rp 500.000</span>
+                </div>
+                <div class="price-row">
+                  <span class="price-label">🔰 1.5 - 2 PK:</span>
+                  <span class="price-val">Rp 750.000</span>
+                </div>
+              </div>
+
+              <!-- Features List -->
+              <ul class="features-list">
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Jasa Instalasi Presisi</span>
+                </li>
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Material Pipa Tembaga 2 Meter (Tebal 0.61mm)</span>
+                </li>
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Kabel Listrik 3 Meter</span>
+                </li>
+                 <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Selang Drainnase 3 Meter</span>
+                </li>
+                 <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Braket Outdoor 1 Set</span>
+                </li>
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Proses Vacuum Standar ISO</span>
+                </li>
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Garansi Instalasi 1 Bulan</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- WA Order Buttons -->
+            <div class="space-y-1.5 mt-auto">
+              <a href="https://wa.me/6285799289354?text=Halo%20Admin%20Pacific%20AC,%20saya%20ingin%20memesan%20Paket%20Hemat%20(1/2%20-%201%20PK)" target="_blank" class="btn-wa btn-wa-green">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+                </svg>
+                Pesan Paket (1/2 - 1 PK)
+              </a>
+              <a href="https://wa.me/6285799289354?text=Halo%20Admin%20Pacific%20AC,%20saya%20ingin%20memesan%20Paket%20Hemat%20(1.5%20-%202%20PK)" target="_blank" class="btn-wa btn-wa-dark">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+                </svg>
+                Pesan Paket (1.5 - 2 PK)
+              </a>
+            </div>
+          </div>
+
+          <!-- Paket 2: Nyaman -->
+          <div class="package-card card-nyaman">
+            <!-- Populer Top Right Banner -->
+            <div class="absolute -top-3.5 right-6 z-10">
+              <span class="bg-cyan-600 text-white text-[9px] font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-widest shadow-sm">Populer</span>
+            </div>
+
+            <div>
+              <!-- Header Badge & Number -->
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-7 h-7 rounded-xl bg-pacific-100 text-pacific-700 font-extrabold text-xs flex items-center justify-center">2</div>
+                <span class="bg-cyan-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">Rekomendasi Utama</span>
+              </div>
+              
+              <!-- Title -->
+              <h3 class="package-title">PAKET NYAMAN</h3>
+              <p class="package-subtitle">Pipa Multilayer Anti Bocor & Bebas Khawatir</p>
+              
+              <!-- Prices Grid -->
+              <div class="price-container">
+                <div class="price-row">
+                  <span class="price-label">🔰1/2 - 1 PK:</span>
+                  <span class="price-val">Rp 750.000</span>
+                </div>
+                <div class="price-row">
+                  <span class="price-label">🔰 1.5 - 2 PK:</span>
+                  <span class="price-val">Rp 1.000.000</span>
+                </div>
+              </div>
+
+              <!-- Features List -->
+              <ul class="features-list">
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Jasa Instalasi</span>
+                </li>
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Material Pipa Multilayer Riffo 2 Meter (Tebal 1.5mm)</span>
+                </li>
+                <li class="feature-item feature-item-bold">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Pipa Garansi Resmi 3 TAHUN</span>
+                </li>
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Kabel Listrik 3 Meter</span>
+                </li>
+                 <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Selang Drainnase 3 Meter</span>
+                </li>
+                 <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Braket Outdoor 1 Set</span>
+                </li>
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Proses Vacuum Standar ISO</span>
+                </li>
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Garansi Instalasi 3 Bulan</span>
+                </li>
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="badge-capsule">Gratis Cuci AC 1x</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- WA Order Buttons -->
+            <div class="space-y-1.5 mt-auto">
+              <a href="https://wa.me/6285799289354?text=Halo%20Admin%20Pacific%20AC,%20saya%20ingin%20memesan%20Paket%20Nyaman%20(1/2%20-%201%20PK)" target="_blank" class="btn-wa btn-wa-green">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+                </svg>
+                Pesan Paket (1/2 - 1 PK)
+              </a>
+              <a href="https://wa.me/6285799289354?text=Halo%20Admin%20Pacific%20AC,%20saya%20ingin%20memesan%20Paket%20Nyaman%20(1.5%20-%202%20PK)" target="_blank" class="btn-wa btn-wa-dark">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+                </svg>
+                Pesan Paket (1.5 - 2 PK)
+              </a>
+            </div>
+          </div>
+
+          <!-- Paket 3: Premium -->
+          <div class="package-card card-premium">
+            <div>
+              <!-- Header Badge & Number -->
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-7 h-7 rounded-xl bg-amber-500 text-pacific-900 font-extrabold text-xs flex items-center justify-center">3</div>
+                <span class="bg-amber-500 text-gray-900 text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">Garansi 6 Bulan</span>
+              </div>
+              
+              <!-- Title -->
+              <h3 class="package-title">PAKET PREMIUM</h3>
+              <p class="package-subtitle">Proteksi Maksimal Garansi Panjang & Perawatan</p>
+              
+              <!-- Prices Grid -->
+              <div class="price-container">
+                <div class="price-row">
+                  <span class="price-label">🔰 1/2 - 1 PK:</span>
+                  <span class="price-val">Rp 1.250.000</span>
+                </div>
+                <div class="price-row">
+                  <span class="price-label">🔰 1.5 - 2 PK:</span>
+                  <span class="price-val">Rp 1.500.000</span>
+                </div>
+              </div>
+
+              <!-- Features List -->
+              <ul class="features-list">
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Jasa Instalasi Presisi</span>
+                </li>
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Material Pipa 3 Meter (Tebal 1.5mm)</span>
+                </li>
+                <li class="feature-item feature-item-bold">
+                  <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Pipa Garansi Resmi 3 TAHUN</span>
+                </li>
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Kabel Listrik 4 Meter</span>
+                </li>
+                 <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Selang Drainnase 3 Meter</span>
+                </li>
+                 <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Braket Outdoor 1 Set</span>
+                </li>
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Proses Vacuum Standar ISO</span>
+                </li>
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Garansi Instalasi 6 Bulan</span>
+                </li>
+                <li class="feature-item">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="badge-capsule">Gratis Cuci AC 2x</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- WA Order Buttons -->
+            <div class="space-y-1.5 mt-auto">
+              <a href="https://wa.me/6285799289354?text=Halo%20Admin%20Pacific%20AC,%20saya%20ingin%20memesan%20Paket%20Premium%20(1/2%20-%201%20PK)" target="_blank" class="btn-wa btn-wa-green">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+                </svg>
+                Pesan Paket (1/2 - 1 PK)
+              </a>
+              <a href="https://wa.me/6285799289354?text=Halo%20Admin%20Pacific%20AC,%20saya%20ingin%20memesan%20Paket%20Premium%20(1.5%20-%202%20PK)" target="_blank" class="btn-wa btn-wa-dark">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+                </svg>
+                Pesan Paket (1.5 - 2 PK)
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Section: Penambahan Material & Simulasi Kalkulator -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10 items-start text-left" id="paket-pasang-addon-layout">
+          
+          <!-- Left Column: Tabel Biaya Penambahan Material -->
+          <div class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-7 shadow-sm">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center border border-sky-100/80 shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-slate-900 tracking-tight">Biaya Penambahan Material</h3>
+                <p class="text-[10px] sm:text-xs text-slate-400 font-semibold mt-0.5">Tarif per meter apabila penggunaan material melebihi kuota paket</p>
+              </div>
+            </div>
+
+            <!-- Table -->
+            <div class="overflow-x-auto rounded-2xl border border-slate-100 mb-6">
+              <table class="w-full text-[10px] sm:text-xs text-left text-slate-900 border-collapse">
+                <thead>
+                  <tr class="bg-slate-50  text-slate-900 border-b border-slate-200">
+                    <th class="py-3 px-4 font-bold ">Kategori Material</th>
+                    <th class="py-3 px-4 font-bold text-center">1/2 - 1 PK</th>
+                    <th class="py-3 px-4 font-bold text-center">1.5 - 2 PK</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 font-medium text-[8px] md:text-sm lg:text-md  text-slate-900">
+                                <tr class="hover:bg-slate-50/50">
+                                    <td class="p-3 font-semibold text-slate-600 flex items-center gap-2">
+                                      <i class="fa-solid fa-faucet-drip text-coolcyan"></i>Pipa AC (per Meter)
+                                    </td>
+                                    <td class="p-3 text-center font-bold text-slate-600">Rp 110.000<span class="block text-[8px] font-normal text-slate-400">(Min. Beli Kabel 20rb/m)</span></td>
+                                    <td class="p-3 text-center font-bold text-slate-600">Rp 130.000<span class="block text-[8px] font-normal text-slate-400">(Min. Beli Kabel 30rb/m)</span></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/50 text-[10px] md:text-xs">
+                                    <td class="p-3 font-semibold  text-slate-600 flex items-center gap-2">
+                                        <i class="fa-solid fa-bolt text-amber-600"></i> Kabel Listrik (per Meter)
+                                    </td>
+                                    <td class="p-3 text-center font-bold text-slate-600">Rp 20.000</td>
+                                    <td class="p-3 text-center font-bold text-slate-600">Rp 30.000</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/50 text-[10px] md:text-xs">
+                                    <td class="p-3 font-semibold  text-slate-600 flex items-center gap-2">
+                                        <i class="fa-solid fa-faucet-drip text-coolcyan"></i> Selang Drain / Air (per Meter)
+                                    </td>
+                                    <td class="p-3 text-center font-bold text-slate-600">Rp 10.000</td>
+                                    <td class="p-3 text-center font-bold text-slate-600">Rp 10.000</td>
+                                </tr>
+                            </tbody>
+              </table>
+            </div>
+
+            <!-- Amber Alert Info Box -->
+            <div class="bg-amber-50/50 border border-amber-200/60 rounded-xl p-4 flex gap-3 text-[10px] md:text-xs text-amber-800 font-medium">
+              <!-- <svg class="w-5 h-5 text-amber-600 shrink-0 mt-0.5" style="width: 20px !important; height: 20px !important;" fill="currentColor" viewBox="0 0 20 20"> -->
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zm-1 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+              </svg>
+              <span>*Panjang pipa diukur langsung di lokasi pemasangan oleh teknisi resmi Pacific AC sesuai jalur fisik bangunan Anda.</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Simulasi Total Pasang + Ekstra Material Calculator -->
+          <div class="rounded-3xl p-6 sm:p-7 text-white shadow-xl" id="sim-calculator-card">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-cyan-950 text-cyan-400 flex items-center justify-center border border-cyan-900 shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold tracking-tight">Simulasi Total Pasang + Ekstra Material</h3>
+                <p class="text-xs text-slate-400 font-semibold mt-0.5">Hitung estimasi total unit AC, paket pasang, & tambahan meter</p>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <div class="space-y-4">
+              <!-- Select Unit AC dropdown -->
+              <div>
+                <label class="block text-slate-300 text-xs font-bold mb-1.5" for="sim-ac-select">Pilih Unit AC (Opsional):</label>
+                <select id="sim-ac-select" class="w-full text-[10px] md:text-xs rounded-xl px-3 py-2 cursor-pointer">
+                  <option value="0" data-price="0" data-pk="1">-- Tanpa Unit AC (Jasa & Paket Pasang Saja) --</option>
+                  <!-- Dynamically populated via JS -->
+                </select>
+              </div>
+
+              <!-- PK & Package selection row -->
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-slate-300 text-xs font-bold mb-1.5" for="sim-pk-select">Kapasitas PK:</label>
+                  <select id="sim-pk-select" class="w-full text-[10px] md:text-xs rounded-xl px-3 py-2 cursor-pointer">
+                    <option value="1">1/2 PK - 1 PK</option>
+                    <option value="2">1.5 PK - 2 PK</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-slate-300 text-xs font-bold mb-1.5" for="sim-package-select">Pilih Paket Pasang:</label>
+                  <select id="sim-package-select" class="w-full text-[10px] md:text-xs rounded-xl px-3 py-2 cursor-pointer">
+                    <option value="hemat">1. Paket Hemat</option>
+                    <option value="nyaman" selected>2. Paket Nyaman</option>
+                    <option value="premium">3. Paket Premium</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Extra inputs row -->
+              <div class="grid grid-cols-3 gap-3">
+                <div>
+                  <label class="block text-slate-300 text-[10px] font-bold mb-1.5 text-center" for="sim-pipa-input">Ekstra Pipa (m)</label>
+                  <input type="number" id="sim-pipa-input" min="0" value="0" class="w-full text-xs rounded-xl px-3 py-2 text-center font-bold" />
+                </div>
+                <div>
+                  <label class="block text-slate-300 text-[10px] font-bold mb-1.5 text-center" for="sim-kabel-input">Ekstra Kabel (m)</label>
+                  <input type="number" id="sim-kabel-input" min="0" value="0" class="w-full text-xs rounded-xl px-3 py-2 text-center font-bold" />
+                </div>
+                <div>
+                  <label class="block text-slate-300 text-[10px] font-bold mb-1.5 text-center" for="sim-drain-input">Ekstra Drain (m)</label>
+                  <input type="number" id="sim-drain-input" min="0" value="0" class="w-full text-xs rounded-xl px-3 py-2 text-center font-bold" />
+                </div>
+              </div>
+
+              <!-- Summary Container -->
+              <div class="bg-slate-800/80 rounded-2xl p-4 border border-slate-700/80 space-y-2 mt-2">
+                <div class="flex items-center justify-between text-xs text-slate-400">
+                  <span>Harga Unit AC:</span>
+                  <span class="font-bold text-slate-200" id="sim-display-unit-price">Rp 0</span>
+                </div>
+                <div class="flex items-center justify-between text-xs text-slate-400">
+                  <span>Biaya Paket Pasang:</span>
+                  <span class="font-bold text-slate-200" id="sim-display-package-cost">Rp 750.000</span>
+                </div>
+                <div class="flex items-center justify-between text-xs text-slate-400">
+                  <span>Estimasi Ekstra Material:</span>
+                  <span class="font-bold text-slate-200" id="sim-display-extra-cost">Rp 0</span>
+                </div>
+                <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
+                  <span class="text-xs sm:text-sm font-bold text-slate-200">Grand Total Estimasi:</span>
+                  <span class="text-base sm:text-lg font-black text-cyan-400" id="sim-display-grand-total">Rp 750.000</span>
+                </div>
+              </div>
+
+              <!-- WhatsApp Order CTA -->
+              <a href="#" target="_blank" id="sim-wa-btn" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30 text-xs sm:text-sm">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+                </svg>
+                Pesan Paket & Konsultasi via WhatsApp
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
 
       <!-- Contact Section -->
-      <section id="contact-section" class="container mx-auto grow p-6 hidden">
-        <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10">
-          Kontak Kami
-        </h2>
-        <div
-          class="bg-white rounded-xl shadow-md p-8 grid grid-cols-1 md:grid-cols gap-12"
-        >
+      <section id="contact-section" class="bg-white rounded-2xl shadow-md p-6 sm:p-10 hidden border border-slate-200">
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-8 text-center">Kontak Kami</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">
-              CV. KING GASAUSE
-            </h3>
-            <h5 class="text-xl font-semibold text-gray-700 mb-2">Dealer :</h5>
-            <p class="text-gray-700 mb-6">
-              Jl. Fatmawati Raya No.147, Pedurungan, Semarang, Jawa Tengah 50191
-            </p>
-            <h5 class="text-xl font-semibold text-gray-700 mb-2">Workshop :</h5>
-            <p class="text-gray-700 mb-6">
-              Jl. Klipang Blok R.III No.B10, Sendangmulyo, Kec.Tembalang
-            </p>
-            <div class="mb-6">
-              <h4 class="text-xl font-semibold text-gray-700 mb-2">
-                Jam Operasional
-              </h4>
-              <p class="text-gray-600">08.30 - 17.00 (Senin - Jumat)</p>
-              <p class="text-gray-600">08.30 - 17.00 (Sabtu)</p>
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">CV. KING GASAUSE</h3>
+            <h5 class="text-lg font-semibold text-slate-700 mb-1">Dealer :</h5>
+            <p class="text-slate-600 mb-4 text-sm">Jl. Fatmawati Raya No.147, Pedurungan, Semarang, Jawa Tengah 50191</p>
+            <h5 class="text-lg font-semibold text-slate-700 mb-1">Workshop :</h5>
+            <p class="text-slate-600 mb-6 text-sm">Jl. Klipang Blok R.III No.B10, Sendangmulyo, Kec.Tembalang</p>
+            <div class="mb-4">
+              <h4 class="text-base font-semibold text-slate-700 mb-1">Jam Operasional</h4>
+              <p class="text-xs text-slate-600">08.30 - 17.00 (Senin - Jumat)</p>
+              <p class="text-xs text-slate-600">08.30 - 17.00 (Sabtu)</p>
             </div>
-            <div class="mb-6">
-              <h4 class="text-xl font-semibold text-gray-700 mb-2">Whatsapp</h4>
-              <p class="text-gray-600">+62 857-9928-9354</p>
-              <p class="text-gray-600">+62 856-4105-9555</p>
+            <div class="mb-4">
+              <h4 class="text-base font-semibold text-slate-700 mb-1">Whatsapp</h4>
+              <p class="text-xs text-slate-600">+62 857-9928-9354</p>
+              <p class="text-xs text-slate-600">+62 878-4823-5962</p>
             </div>
-            <div>
-              <h4 class="text-xl font-semibold text-gray-700 mb-2">Email</h4>
-              <p class="text-blue-600 hover:underline">
-                <a href="mailto:kinggasause@gmail.com">kinggasause@gmail.com</a>
-              </p>
+             <div class="mb-4">
+              <h4 class="text-base font-semibold text-slate-700 mb-1">Email</h4>
+              <p class="text-xs text-slate-600">kinggasause@gmai.com</p>
             </div>
           </div>
           <div>
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">
-              Kirim Pesan Kepada Kami
-            </h3>
-            <form class="space-y-4">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <h3 class="text-xl font-bold text-slate-800 mb-4">Kirim Pesan Kepada Kami</h3>
+            <form id="contact-form" class="space-y-3.5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label
-                    for="firstName"
-                    class="block text-gray-700 text-sm font-bold mb-2"
-                    >Nama Depan<span class="text-red-500">*</span></label
-                  >
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:shadow-outline sm:text-based sm:leading-6"
-                    required
-                  />
+                  <label class="block text-slate-700 text-xs font-bold mb-1">Nama Depan *</label>
+                  <input type="text" required class="w-full rounded-lg border border-slate-300 px-3 py-2 text-xs focus:ring-cyan-500" />
                 </div>
                 <div>
-                  <label
-                    for="lastName"
-                    class="block text-gray-700 text-sm font-bold mb-2"
-                    >Nama Belakang<span class="text-red-500">*</span></label
-                  >
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:shadow-outline sm:text-based sm:leading-6"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label
-                    for="email"
-                    class="block text-gray-700 text-sm font-bold mb-2"
-                    >Email<span class="text-red-500">*</span></label
-                  >
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:shadow-outline sm:text-based sm:leading-6l"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    for="phone"
-                    class="block text-gray-700 text-sm font-bold mb-2"
-                    >Ponsel<span class="text-red-500">*</span></label
-                  >
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:shadow-outline sm:text-based sm:leading-6"
-                    required
-                  />
+                  <label class="block text-slate-700 text-xs font-bold mb-1">Nama Belakang *</label>
+                  <input type="text" required class="w-full rounded-lg border border-slate-300 px-3 py-2 text-xs focus:ring-cyan-500" />
                 </div>
               </div>
               <div>
-                <label
-                  for="province"
-                  class="block text-gray-700 text-sm font-bold mb-2"
-                  >Provinsi<span class="text-red-500">*</span></label
-                >
-                <input
-                  type="text"
-                  id="province"
-                  name="province"
-                  class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:shadow-outline sm:text-based sm:leading-6"
-                  required
-                />
+                <label class="block text-slate-700 text-xs font-bold mb-1">Pesan *</label>
+                <textarea rows="4" required class="w-full rounded-lg border border-slate-300 px-3 py-2 text-xs focus:ring-cyan-500" placeholder="Halo, ada yang bisa kami bantu?"></textarea>
               </div>
-              <div>
-                <label
-                  for="subject"
-                  class="block text-gray-700 text-sm font-bold mb-2"
-                  >Subjek<span class="text-red-500">*</span></label
-                >
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:shadow-outline sm:text-based sm:leading-6"
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  for="message"
-                  class="block text-gray-700 text-sm font-bold mb-2"
-                  >Pesan<span class="text-red-500">*</span></label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:shadow-outline sm:text-based sm:leading-6"
-                  placeholder="Halo, ada yang bisa kami bantu?"
-                  required
-                ></textarea>
-              </div>
-              <div class="flex justify-end">
-                <button
-                  type="submit"
-                  class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg hover:shadow-xl flex items-center"
-                >
-                  Kirim Pesan
-                </button>
-              </div>
+              <button type="submit" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-xs px-6 py-2.5 rounded-xl transition-all cursor-pointer">
+                Kirim Pesan
+              </button>
             </form>
           </div>
         </div>
       </section>
 
-      <!-- Footer -->
-      <footer class="bg-gray-800 text-white p-6 mt-10 rounded-t-lg">
-        <div class="container mx-auto text-center text-sm">
-          <p>&copy; 2025 Katalog AC Terbaik.</p>
-          <p>Juli 2025 Pacific AC</p>
-        </div>
-      </footer>
-    </div>
+    </main>
 
-    <!-- Product List Modal -->
-    <div id="product-modal" class="modal-overlay hidden">
-      <div class="modal-content w-full md:w-3/4 lg:w-2/3">
-        <button class="close-button" onclick="closeProductModal()">
-          &times;
-        </button>
-        <h3
-          id="modal-brand-title"
-          class="text-3xl font-bold text-gray-800 mb-6 text-center"
-        ></h3>
-        <div id="modal-product-list" class="space-y-8">
-          <!-- Product types and cards will be dynamically inserted here -->
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 mt-10">
+      <div class="container mx-auto px-4 text-center text-xs space-y-1">
+        <p class="text-slate-300 font-semibold">&copy; 2026 Pacific AC - Katalog Harga AC & Paket Pemasangan Resmi</p>
+        <p class="text-slate-500">CV. KING GASAUSE | Semarang, Jawa Tengah</p>
+      </div>
+    </footer>
+
+    <!-- MODAL 1: PK Calculator Modal -->
+    <div id="pk-calc-modal" class="modal-overlay">
+      <div class="modal-content w-full max-w-lg">
+        <button class="close-button" onclick="closePkCalcModal()">&times;</button>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m-6 4h6m-6 4h6M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-sm sm:text-xl font-bold text-slate-900">Kalkulator Kebutuhan PK AC</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500">Hitung daya pendinginan optimal untuk ruangan Anda</p>
+          </div>
+        </div>
+
+        <form id="pk-calc-form" class="space-y-4">
+          <div class="grid grid-cols-3 gap-3">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Panjang (m)</label>
+              <input type="number" id="calc-length" min="1" max="50" step="0.5" value="4" required class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-cyan-500" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Lebar (m)</label>
+              <input type="number" id="calc-width" min="1" max="50" step="0.5" value="3" required class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-cyan-500" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Tinggi (m)</label>
+              <input type="number" id="calc-height" min="1" max="10" step="0.5" value="3" required class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-cyan-500" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Paparan Sinar Matahari / Jenis Ruangan</label>
+            <select id="calc-sun" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-cyan-500">
+              <option value="500">Sedang (Kamar Tidur / Standar)</option>
+              <option value="600">Panas (Tergrow Kaca / Ruang Tamu)</option>
+              <option value="700">Sangat Panas (Lantai Atas / Banyak Orang)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2.5 rounded-xl transition-all cursor-pointer text-sm shadow-md">
+            Hitung Rekomendasi PK
+          </button>
+        </form>
+
+        <div id="pk-calc-result" class="hidden mt-5 p-4 bg-cyan-50 border border-cyan-200 rounded-xl text-center">
+          <p class="text-xs text-cyan-800 font-semibold uppercase">Estimasi Kebutuhan Pendinginan</p>
+          <div class="text-3xl font-extrabold text-cyan-900 my-1" id="res-btu">0 BTU/h</div>
+          <p class="text-sm font-bold text-cyan-700" id="res-pk">Rekomendasi: 1/2 PK (0.5 PK)</p>
+          <button id="btn-apply-pk-filter" class="mt-3 bg-cyan-600 text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-cyan-700 transition-all cursor-pointer">
+            Tampilkan AC Dengan PK Ini
+          </button>
         </div>
       </div>
     </div>
 
-    <!-- Product Detail Modal -->
-    <div id="product-detail-modal" class="modal-overlay hidden">
-      <div
-        id="product-detail-content"
-        class="modal-content w-full md:w-3/4 lg:w-1/2"
-      >
-        <button class="close-button" onclick="closeDetailModal()">
-          &times;
-        </button>
-        <!-- Detail content will be dynamically inserted here -->
+    <!-- MODAL 2: Product Detail Modal -->
+    <div id="product-detail-modal" class="modal-overlay">
+      <div id="product-detail-content" class="modal-content w-full max-w-2xl">
+        <button class="close-button" onclick="closeDetailModal()">&times;</button>
+        <!-- Dynamic detail content -->
       </div>
     </div>
+
+    <!-- MODAL 3: Comparison Modal -->
+    <div id="compare-modal" class="modal-overlay">
+      <div class="modal-content w-full max-w-4xl">
+        <button class="close-button" onclick="closeCompareModal()">&times;</button>
+        <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l9-4 9 4M3 6v14a1 1 0 001 1h16a1 1 0 001-1V6M3 6l9 6 9-6" />
+          </svg>
+          Komparasi Produk AC
+        </h3>
+        <div id="compare-table-container" class="overflow-x-auto">
+          <!-- Comparison table will be rendered dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 4: Wishlist Modal -->
+    <div id="wishlist-modal" class="modal-overlay">
+      <div class="modal-content w-full max-w-xl">
+        <button class="close-button" onclick="closeWishlistModal()">&times;</button>
+        <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <svg class="w-6 h-6 text-rose-500 fill-rose-500/20" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+          Daftar Wishlist Saya
+        </h3>
+        <div id="wishlist-items-container" class="space-y-3 max-h-96 overflow-y-auto pr-1">
+          <!-- Wishlist items dynamically populated -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
     <a
-      href="https://wa.me/6285641059555?text=Halo%2C%20Admin%20Pacifc%20AC."
+      href="https://wa.me/6285641059555?text=Halo%20Admin%20Pacific%20AC%2C%20saya%20ingin%20bertanya%20mengenai%20katalog%20harga%20AC."
       target="_blank"
       rel="noopener noreferrer"
-      class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 ease-in-out transform hover:scale-110 z-50 group"
+      class="fixed bottom-6 right-6 bg-emerald-500 text-white p-4 rounded-full shadow-2xl hover:bg-emerald-600 transition-all duration-300 ease-in-out transform hover:scale-110 z-50 group flex items-center justify-center glow-cyan"
+      aria-label="Hubungi Admin WhatsApp"
     >
-      <svg
-        xmlns="img/logo/ikon.svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-      >
-        <path
-          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.487 5.235 3.487 8.413 0 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l.474.852-1.24 4.525 4.639-1.219.823.442z"
-        />
+      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.487 5.235 3.487 8.413 0 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l.474.852-1.24 4.525 4.639-1.219.823.442z"/>
       </svg>
-      <span
-        class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap"
-      >
-        Hubungi Admin Kami
+      <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
+        Chat Admin WhatsApp
       </span>
     </a>
 

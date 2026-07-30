@@ -10,9 +10,9 @@ const sewaStnading = [
           {
             name: "AC Standing 3 PK Gree",
             desc: "Sewa AC Standing 3 PK untuk acara atau kebutuhan sementara.",
-            price: "Rp 500.000/bulan",
-            imgList: "img/gree/f5s.png",
-            imgDetail: "img/gree/d.f5s.jpeg",
+            price: "Rp 0/bulan",
+            imgList: "img/commecial/gree.st/st.png",
+            imgDetail: "img/commercial/gree.st/desc.png",
             features: [
               "Sewa Bulanan",
               "Instalasi Gratis",
@@ -31,9 +31,9 @@ const sewaStnading = [
           {
             name: "AC Standing 5 PK Gree",
             desc: "Sewa AC Standing 5 PK untuk ruangan sangat besar.",
-            price: "Rp 600.000/bulan",
-            imgList: "img/gree/f5s.png",
-            imgDetail: "img/gree/d.f5s.jpeg",
+            price: "Rp 0/bulan",
+            imgList: "img/commecial/gree.st/st.png",
+            imgDetail: "img/commercial/gree.st/desc.png",
             features: [
               "Sewa Bulanan",
               "Instalasi Gratis",
