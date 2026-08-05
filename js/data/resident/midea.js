@@ -30,8 +30,8 @@ const midea = {
         {
           name: "Midea AC Split 0.5 PK Standar",
           desc: "AC split standar 1/2 PK, pendinginan efektif dan tahan lama.",
-          price: "Rp 3.200.000",
-          oldPrice: "Rp 3.300.000",
+          price: "Rp 3.350.000",
+          oldPrice: "Rp 3.450.000",
           imgList: "img/Midea/ST.webp", // Image for list view
           imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
           features: [
@@ -52,8 +52,8 @@ const midea = {
         {
           name: "Midea AC Split 0.7 PK Standar",
           desc: "AC split standar 3/4 PK, pendinginan efektif dan tahan lama.",
-          price: "Rp 3.400.000",
-          oldPrice: "Rp 3.500.000",
+          price: "Rp 3.500.000",
+          oldPrice: "Rp 3.600.000",
           imgList: "img/Midea/ST.webp", // Image for list view
           imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
           features: [
@@ -74,8 +74,8 @@ const midea = {
         {
           name: "Midea AC Split 1.5 PK Standar",
           desc: "AC split standar 1.5 PK, pendinginan efektif dan tahan lama.",
-          price: "Rp 4.775.000",
-          oldPrice: "Rp 4.850.000",
+          price: "Rp 4.800.000",
+          oldPrice: "Rp 4.000.000",
           imgList: "img/Midea/ST.webp", // Image for list view
           imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
           features: [
@@ -96,8 +96,8 @@ const midea = {
         {
           name: "Midea AC Split 2 PK Standar",
           desc: "AC split standar 2 PK, pendinginan efektif dan tahan lama.",
-          price: "Rp 6.300.000",
-          oldPrice: "Rp 6.450.000",
+          price: "Rp 6.500.000",
+          oldPrice: "Rp 6.000.000",
           imgList: "img/Midea/ST.webp", // Image for list view
           imgDetail: "img/Midea/Dt.ST.webp", // Image for detail view
           features: [

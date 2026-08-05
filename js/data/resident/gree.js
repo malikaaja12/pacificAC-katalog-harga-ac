@@ -8,8 +8,8 @@ const gree = {
         {
           name: "Gree AC Split 0.5 PK Inverter",
           desc: "AC split inverter Gree 1/2 PK dengan teknologi hemat energi.",
-          price: "Rp 5.000.000",
-          oldPrice: "Rp 5.150.000",
+          price: "Rp 5.150.000",
+          oldPrice: "Rp 5.250.000",
           imgList: "img/gree/F5.png", // Image for list view
           imgDetail: "img/gree/d.f5s.jpeg", // Image for detail view
           features: [
@@ -24,14 +24,15 @@ const gree = {
             "Tipe Freon": "R32",
             "Dimensi Indoor": "704 x 250 x 196 mm",
             "Dimensi Outdoor": "450 x 710 x 293 mm",
-            Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
+            Garansi:
+              "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
           },
         },
         {
           name: "Gree AC Split 1 PK Inverter",
           desc: "AC split inverter Gree 1 PK, performa tinggi dan sangat efisien.",
-          price: "Rp 5.300.000",
-          oldPrice: "Rp 5.400.000",
+          price: "Rp 5.450.000",
+          oldPrice: "Rp 5.550.000",
           imgList: "img/gree/F5.png", // Image for list view
           imgDetail: "img/gree/d.f5s.jpeg", // Image for detail view
           features: [
@@ -47,14 +48,15 @@ const gree = {
             "Tipe Freon": "R32",
             "Dimensi Indoor": "779 x 260 x 185 mm",
             "Dimensi Outdoor": "732 x 550 x 330 mm",
-            Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
+            Garansi:
+              "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
           },
         },
         {
           name: "Gree AC Split 1.5 PK Inverter",
           desc: "AC split inverter Gree 1.5 PK dengan teknologi hemat energi.",
-          price: "Rp 6.300.000",
-          oldPrice: "Rp 6.399.000",
+          price: "Rp 6.550.000",
+          oldPrice: "Rp 6.350.000",
           imgList: "img/gree/F5.png", // Image for list view
           imgDetail: "img/gree/d.f5s.jpeg", // Image for detail view
           features: [
@@ -69,14 +71,15 @@ const gree = {
             "Tipe Freon": "R32",
             "Dimensi Indoor": "293 x 825 x 196 mm",
             "Dimensi Outdoor": "545 x 776 x 320 mm",
-            Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
+            Garansi:
+              "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
           },
         },
         {
           name: "Gree AC Split 2 PK Inverter",
           desc: "AC split inverter Gree 2 PK dengan teknologi hemat energi.",
-          price: "Rp 8.750.000",
-          oldPrice: "Rp 8.850.000",
+          price: "Rp 9.150.000",
+          oldPrice: "Rp 9.050.000",
           imgList: "img/gree/F5.png", // Image for list view
           imgDetail: "img/gree/d.f5s.jpeg", // Image for detail view
           features: [
@@ -91,7 +94,8 @@ const gree = {
             "Tipe Freon": "R32",
             "Dimensi Indoor": "982 x 311 x 221 mm",
             "Dimensi Outdoor": "732 x 550 x 330 mm",
-            Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
+            Garansi:
+              "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
           },
         },
       ],
@@ -102,8 +106,8 @@ const gree = {
         {
           name: "Gree AC Split 0.5 PK Low Watt",
           desc: "AC split Gree 1/2 PK hemat daya, cocok untuk penghematan listrik.",
-          price: "Rp 4.300.000",
-          oldPrice: "Rp 4.350.000",
+          price: "Rp 4.500.000",
+          oldPrice: "Rp 4.600.000",
           imgList: "img/gree/C3.png", // Image for list view
           imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
           features: [
@@ -118,7 +122,8 @@ const gree = {
             "Tipe Freon": "R32",
             "Dimensi Indoor": "260 x 704 x 185 mm",
             "Dimensi Outdoor": "450 x 705 x 270 mm",
-            Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
+            Garansi:
+              "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
           },
         },
         {
@@ -140,14 +145,15 @@ const gree = {
             "Tipe Freon": "R32",
             "Dimensi Indoor": "260 x 704 x 185 mm",
             "Dimensi Outdoor": "450 x 705 x 270 mm",
-            Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
+            Garansi:
+              "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
           },
         },
         {
           name: "Gree AC Split 1 PK Low Watt",
           desc: "AC split Gree 1 PK hemat daya, cocok untuk penghematan listrik.",
-          price: "Rp 4.750.000",
-          oldPrice: "Rp 4.850.000",
+          price: "Rp 4.900.000",
+          oldPrice: "Rp 4.800.000",
           imgList: "img/gree/C3.png", // Image for list view
           imgDetail: "img/gree/d.c3s.jpeg", // Image for detail view
           features: [
@@ -162,7 +168,8 @@ const gree = {
             "Tipe Freon": "R32",
             "Dimensi Indoor": "260 x 704 x 185 mm",
             "Dimensi Outdoor": "450 x 705 x 270 mm",
-            Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
+            Garansi:
+              "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
           },
         },
       ],
@@ -173,8 +180,8 @@ const gree = {
         {
           name: "Gree AC Split 0.5 PK Standar",
           desc: "AC split standar Gree 1/2 PK, pendinginan stabil dan kuat.",
-          price: "Rp 3.900.000",
-          oldPrice: "Rp 3.999.000",
+          price: "Rp 4.000.000",
+          oldPrice: "Rp 4.150.000",
           imgList: "img/gree/N1.png", // Image for list view
           imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
           features: [
@@ -189,14 +196,15 @@ const gree = {
             "Tipe Freon": "R32",
             "Dimensi Indoor": "260 x 704 x 185 mm",
             "Dimensi Outdoor": "450 x 705 x 270 mm",
-            Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
+            Garansi:
+              "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
           },
         },
         {
           name: "Gree AC Split 0.7 PK Standar",
           desc: "AC split standar Gree 3/4 PK, pendinginan stabil dan kuat.",
-          price: "Rp 4.400.000",
-          oldPrice: "Rp 4.450.000",
+          price: "Rp 4.500.000",
+          oldPrice: "Rp 4.550.000",
           imgList: "img/gree/N1.png", // Image for list view
           imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
           features: [
@@ -211,14 +219,15 @@ const gree = {
             "Tipe Freon": "R32",
             "Dimensi Indoor": "260 x 704 x 185 mm",
             "Dimensi Outdoor": "450 x 705 x 270 mm",
-            Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
+            Garansi:
+              "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
           },
         },
         {
           name: "Gree AC Split 1 PK Standar",
           desc: "AC split standar Gree 1 PK, pendinginan stabil dan kuat.",
-          price: "Rp 4.500.000",
-          oldPrice: "Rp 4.600.000",
+          price: "Rp 4.700.000",
+          oldPrice: "Rp 4.750.000",
           imgList: "img/gree/N1.png", // Image for list view
           imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
           features: [
@@ -233,13 +242,14 @@ const gree = {
             "Tipe Freon": "R32",
             "Dimensi Indoor": "260 x 704 x 185 mm",
             "Dimensi Outdoor": "450 x 705 x 270 mm",
-            Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
+            Garansi:
+              "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
           },
         },
         {
           name: "Gree AC Split 1.5 PK Standar",
           desc: "AC split standar Gree 1.5 PK, pendinginan stabil dan kuat.",
-          price: "Rp 5.900.000",
+          price: "Rp 6.150.000",
           oldPrice: "Rp 5.999.000",
           imgList: "img/gree/N1.png", // Image for list view
           imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
@@ -255,13 +265,14 @@ const gree = {
             "Tipe Freon": "R32",
             "Dimensi Indoor": "260 x 704 x 185 mm",
             "Dimensi Outdoor": "450 x 705 x 270 mm",
-            Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
+            Garansi:
+              "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
           },
         },
         {
           name: "Gree AC Split 2 PK Standar",
           desc: "AC split standar Gree 2 PK, pendinginan stabil dan kuat.",
-          price: "Rp 7.550.000",
+          price: "Rp 7.750.000",
           oldPrice: "Rp 7.650.000",
           imgList: "img/gree/N1.png", // Image for list view
           imgDetail: "img/gree/d.n1.jpeg", // Image for detail view
@@ -277,7 +288,8 @@ const gree = {
             "Tipe Freon": "R32",
             "Dimensi Indoor": "260 x 704 x 185 mm",
             "Dimensi Outdoor": "450 x 705 x 270 mm",
-            Garansi: "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
+            Garansi:
+              "5 Tahun Sparepart, 10 Tahun Kompresor dan 1 Tahun Ganti Baru",
           },
         },
       ],

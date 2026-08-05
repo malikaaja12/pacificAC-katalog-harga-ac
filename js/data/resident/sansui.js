@@ -8,7 +8,7 @@ const sansui = {
         {
           name: "Sansui AC Split 0.5 PK Standar",
           desc: "AC split standar 1/2 PK, pendinginan efektif dan tahan lama.",
-          price: "Rp 3.400.000",
+          price: "Rp 3.300.000",
           oldPrice: "Rp 3.450.000",
           imgList:
             "https://sansui-indonesia.com/wp-content/uploads/2020/01/3-4-2.jpg", // Image for list view

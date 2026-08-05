@@ -31,8 +31,8 @@ const daikin = {
         {
           name: "Daikin AC Split 0.7 PK Beta Inverter ",
           desc: "AC split Daikin inverter 3/4 PK bertenaga besar, pendinginan optimal untuk ruangan luas.",
-          price: "Rp 5.450.000",
-          oldPrice: "Rp 5.500.000",
+          price: "Rp 5.500.000",
+          oldPrice: "Rp 5.600.000",
           imgList: "img/daikin/beta.webp", // Image for list view
           imgDetail: "img/daikin/Beta.png", // Image for detail view
           features: [
@@ -54,7 +54,7 @@ const daikin = {
         {
           name: "Daikin AC Split 1 PK Beta Inverter",
           desc: "AC split Daikin inverter 1 PK bertenaga besar, pendinginan optimal untuk ruangan Sedang.",
-          price: "Rp 5.750.000",
+          price: "Rp 5.800.000",
           oldPrice: "Rp 5.850.000",
           imgList: "img/daikin/beta.webp", // Image for list view
           imgDetail: "img/daikin/Beta.png", // Image for detail view
@@ -77,7 +77,7 @@ const daikin = {
         {
           name: "Daikin AC Split 1.5 PK Beta Inverter",
           desc: "AC split Daikin inverter 1.5 PK bertenaga besar, pendinginan optimal untuk ruangan Sedang.",
-          price: "Rp 7.150.000",
+          price: "Rp 7.200.000",
           oldPrice: "Rp 7.300.000",
           imgList: "img/daikin/beta.webp", // Image for list view
           imgDetail: "img/daikin/Beta.png", // Image for detail view
@@ -100,7 +100,7 @@ const daikin = {
         {
           name: "Daikin AC Split 2 PK Beta Inverter",
           desc: "AC split Daikin inverter 2 PK bertenaga besar, pendinginan optimal untuk ruangan Sedang.",
-          price: "Rp 9.350.000",
+          price: "Rp 9.450.000",
           oldPrice: "Rp 9.550.000",
           imgList: "img/daikin/beta.webp", // Image for list view
           imgDetail: "img/daikin/Beta.png", // Image for detail view
@@ -128,7 +128,7 @@ const daikin = {
         {
           name: "Daikin AC Split 0.5 PK Standar",
           desc: "AC split standar dari Daikin 1/2 PK, pendinginan handal untuk ruangan sedang.",
-          price: "Rp 4.500.000",
+          price: "Rp 4.550.000",
           oldPrice: "Rp 4.600.000",
           imgList: "img/daikin/sms.webp", // Image for list view
           imgDetail: "img/daikin/ind.png", // Image for detail view
@@ -150,8 +150,8 @@ const daikin = {
         {
           name: "Daikin AC Split 1 PK Standar",
           desc: "AC split standar dari Daikin 1 PK, pendinginan handal untuk ruangan sedang.",
-          price: "Rp 5.250.000",
-          oldPrice: "Rp 5.350.000",
+          price: "Rp 4.650.000",
+          oldPrice: "Rp 4.750.000",
           imgList: "img/daikin/sms.webp", // Image for list view
           imgDetail: "img/daikin/ind.png", // Image for detail view
           features: [
@@ -172,8 +172,8 @@ const daikin = {
         {
           name: "Daikin AC Split 1.5 PK Standar",
           desc: "AC split standar dari Daikin 1.5 PK, pendinginan handal untuk ruangan sedang.",
-          price: "Rp 6.650.000",
-          oldPrice: "Rp 6.750.000",
+          price: "Rp 6.700.000",
+          oldPrice: "Rp 6.650.000",
           imgList: "img/daikin/sms.webp", // Image for list view
           imgDetail: "img/daikin/ind.png", // Image for detail view
           features: [
@@ -194,8 +194,8 @@ const daikin = {
         {
           name: "Daikin AC Split 2 PK Standar",
           desc: "AC split standar dari Daikin 2 PK, pendinginan handal untuk ruangan sedang.",
-          price: "Rp 8.500.000",
-          oldPrice: "Rp 8.750.000",
+          price: "Rp 8.600.000",
+          oldPrice: "Rp 8.550.000",
           imgList: "img/daikin/sms.webp", // Image for list view
           imgDetail: "img/daikin/ind.png", // Image for detail view
           features: [
@@ -221,7 +221,7 @@ const daikin = {
         {
           name: "Daikin AC Split 0.5 PK Alpha Inverter",
           desc: "AC split standar dari Daikin 1/2 PK, pendinginan handal untuk ruangan sedang.",
-          price: "Rp 6.650.000",
+          price: "Rp 6.700.000",
           oldPrice: "Rp 6.850.000",
           imgList: "img/daikin/ftkh.webp", // Image for list view
           imgDetail: "img/daikin/Alpha.png", // Image for detail view
@@ -243,7 +243,7 @@ const daikin = {
         {
           name: "Daikin AC Split 0.7 PK Alpha Inverter",
           desc: "AC split standar dari Daikin 3/4 PK, pendinginan handal untuk ruangan sedang.",
-          price: "Rp 6.850.000",
+          price: "Rp 6.900.000",
           oldPrice: "Rp 7.000.000",
           imgList: "img/daikin/ftkh.webp", // Image for list view
           imgDetail: "img/daikin/Alpha.png", // Image for detail view
@@ -265,8 +265,8 @@ const daikin = {
         {
           name: "Daikin AC Split 1 PK Alpha Inverter",
           desc: "AC split standar dari Daikin 1 PK, pendinginan handal untuk ruangan sedang.",
-          price: "Rp 7.150.000",
-          oldPrice: "Rp 7.250.000",
+          price: "Rp 7.200.000",
+          oldPrice: "Rp 7.350.000",
           imgList: "img/daikin/ftkh.webp", // Image for list view
           imgDetail: "img/daikin/Alpha.png", // Image for detail view
           features: [
@@ -287,8 +287,8 @@ const daikin = {
         {
           name: "Daikin AC Split 1.5 PK Alpha Inverter",
           desc: "AC split standar dari Daikin 1.5 PK, pendinginan handal untuk ruangan sedang.",
-          price: "Rp 9.000.000",
-          oldPrice: "Rp 9.150.000",
+          price: "Rp 9.100.000",
+          oldPrice: "Rp 9.050.000",
           imgList: "img/daikin/ftkh.webp", // Image for list view
           imgDetail: "img/daikin/Alpha.png", // Image for detail view
           features: [
@@ -309,8 +309,8 @@ const daikin = {
         {
           name: "Daikin AC Split 2 PK Alpha Inverter",
           desc: "AC split standar dari Daikin 2 PK, pendinginan handal untuk ruangan Besar.",
-          price: "Rp 11.650.000",
-          oldPrice: "Rp 11.850.000",
+          price: "Rp 11.800.000",
+          oldPrice: "Rp 11.750.000",
           imgList: "img/daikin/ftkh.webp", // Image for list view
           imgDetail: "img/daikin/Alpha.png", // Image for detail view
           features: [
@@ -325,6 +325,28 @@ const daikin = {
             "Tipe Freon": "R32",
             "Dimensi Indoor": "288 x 730 x 219 mm",
             "Dimensi Outdoor": "595 x 895 x 300 mm",
+            Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
+          },
+        },
+        {
+          name: "Daikin AC Split 2.5 PK Alpha Inverter",
+          desc: "AC split standar dari Daikin 2.5 PK, pendinginan handal untuk ruangan Besar.",
+          price: "Rp 14.700.000",
+          oldPrice: "Rp 14.850.000",
+          imgList: "img/daikin/ftkh.webp", // Image for list view
+          imgDetail: "img/daikin/Alpha.png", // Image for detail view
+          features: [
+            "3D AirFlow",
+            "Theknologi STREAMER",
+            "Mulai Ulang Otomatis",
+            "Pengoperasian Hening",
+          ],
+          specs: {
+            "Kapasitas Pendingin": "22,500 (6,600 - 24,500) Btu/h",
+            "Daya Listrik": "2,000 (380 - 2,200) Watt",
+            "Tipe Freon": "R32",
+            "Dimensi Indoor": "288 x 990 x 297 mm",
+            "Dimensi Outdoor": "595 x 845 x 300 mm",
             Garansi: "3 Tahun Jasa, 5 Tahun Kompresor & Sprepart",
           },
         },

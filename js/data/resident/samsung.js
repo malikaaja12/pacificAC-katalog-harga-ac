@@ -1,6 +1,6 @@
 const samsung = {
   brand: "Samsung",
-  imageUrl: "img/samsung/logo.WEBP",
+  imageUrl: "img/samsung/logo.webp",
   types: [
     {
       name: "Standar Series",
@@ -10,7 +10,7 @@ const samsung = {
           desc: "AC split Neo Alpha Inverter  1/2 PK, pendinginan efektif dan tahan lama.",
           price: "Rp 3.750.000",
           oldPrice: "Rp 3.850.000",
-          imgList: "img/samsung/NEO.WEBP", // Image for list view
+          imgList: "img/samsung/NEO.webp", // Image for list view
           imgDetail: "img/samsung/DESC.webp", // Image for detail view
           features: ["HD Filter", "DuraFin+", "Smart Saver", "Fast Cooling"],
           specs: {

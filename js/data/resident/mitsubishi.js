@@ -30,7 +30,7 @@ const mitsubishi = {
         {
           name: "Mitsubishi Hevy Duty AC Split 0.5 PK Standar",
           desc: "AC split standar 1/2 PK, pendinginan efektif dan tahan lama.",
-          price: "Rp 4.500.000",
+          price: "Rp 4.550.000",
           oldPrice: "Rp 4.700.000",
           imgList: "img/MHI/AC.png", // Image for list view
           imgDetail: "img/MHI/desc.png", // Image for detail view
