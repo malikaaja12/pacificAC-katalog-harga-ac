@@ -1,4 +1,4 @@
-import { getAllProducts, getAllBrands, getMaxCatalogPrice } from "../data/allProducts.js";
+import { getAllProducts, getAllBrands, getMaxCatalogPrice, updatePricesFromAPI } from "../data/allProducts.js";
 import { 
   renderProductGrid, 
   updateBadges, 
@@ -6,6 +6,7 @@ import {
   renderWishlistModal,
   showProductDetails 
 } from "../componnet/Card.js";
+import { fetchPriceUpdates } from "./apiService.js";
 
 // Global Filter State
 let state = {
@@ -19,7 +20,17 @@ let state = {
 };
 
 // Initialize app
-function init() {
+async function init() {
+  // Try to load dynamic prices from API
+  try {
+    const updates = await fetchPriceUpdates();
+    if (updates) {
+      updatePricesFromAPI(updates);
+    }
+  } catch (e) {
+    console.error("API Service Error: unexpected error in init()", e);
+  }
+
   // Populate brand checkboxes
   buildBrandFilters();
 

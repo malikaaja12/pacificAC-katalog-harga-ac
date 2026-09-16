@@ -137,12 +137,58 @@ function processBrands(brandList, categoryName) {
   return products;
 }
 
+let cachedProducts = null;
+
 export function getAllProducts() {
+  if (cachedProducts) {
+    return cachedProducts;
+  }
+
   const residential = processBrands(ResidentialAC, "ResidentialAC");
   const commercial = processBrands(commercialAC, "CommercialAC");
   const sewa = processBrands(sewaStanding, "SewaStandingAC");
 
-  return [...residential, ...commercial, ...sewa];
+  cachedProducts = [...residential, ...commercial, ...sewa];
+  return cachedProducts;
+}
+
+/**
+ * Updates prices dynamically in the cached products array.
+ * Re-applies mounting cost logic for ResidentialAC matching processBrands logic.
+ */
+export function updatePricesFromAPI(apiPrices) {
+  if (!Array.isArray(apiPrices)) return;
+
+  // Initialize cachedProducts if it hasn't been loaded yet
+  if (!cachedProducts) {
+    getAllProducts();
+  }
+
+  apiPrices.forEach((update) => {
+    const product = cachedProducts.find(p => p.id === update.id);
+    if (product) {
+      const priceNum = parsePrice(update.price);
+      let finalPrice = update.price || "Hubungi Admin";
+      let finalPriceNum = priceNum;
+      const originalPrice = update.price || "Hubungi Admin";
+      const originalPriceNum = priceNum;
+
+      if (product.category === "ResidentialAC" && priceNum > 0) {
+        const mountingCost = product.pk > 1 ? 750000 : 500000;
+        finalPriceNum = priceNum - mountingCost;
+        finalPrice = "Rp " + finalPriceNum.toLocaleString("id-ID");
+      }
+
+      product.price = finalPrice;
+      product.priceNum = finalPriceNum;
+      product.packagePrice = originalPrice;
+      product.packagePriceNum = originalPriceNum;
+      
+      if (update.oldPrice !== undefined) {
+        product.oldPrice = update.oldPrice;
+      }
+    }
+  });
 }
 
 export function getAllBrands() {
@@ -159,3 +205,4 @@ export function getMaxCatalogPrice() {
   });
   return max || 25000000;
 }
+
