@@ -148,7 +148,7 @@ export function renderProductGrid(products) {
 
     // Setup dynamic badges based on tech
     let badgePopularText = "POPULAR";
-    let badgePopularBg = "bg-cyan-600";
+    let badgePopularBg = "bg-blue-600";
     if (product.tech === "Low Watt") {
       badgePopularText = "HEMAT";
       badgePopularBg = "bg-emerald-600";
@@ -158,7 +158,7 @@ export function renderProductGrid(products) {
     }
 
     const card = document.createElement("div");
-    card.className = "product-card bg-white rounded-3xl border border-slate-100 p-3 sm:p-4 hover:shadow-lg hover:border-cyan-400 transition-all relative flex flex-col justify-between w-full";
+    card.className = "product-card bg-white rounded-3xl border border-slate-100 p-3 sm:p-4 hover:shadow-lg hover:border-blue-400 transition-all relative flex flex-col justify-between w-full";
 
     card.innerHTML = `
       <!-- Thumbnail Section -->
@@ -189,7 +189,7 @@ export function renderProductGrid(products) {
           />
           <label 
             for="compare-${product.id}" 
-            class="compare-label w-8 h-8 rounded-full bg-white/90 text-slate-500 hover:text-cyan-600 flex items-center justify-center shadow-md border border-slate-100/50 transition-all hover:scale-105 cursor-pointer"
+            class="compare-label w-8 h-8 rounded-full bg-white/90 text-slate-500 hover:text-blue-600 flex items-center justify-center shadow-md border border-slate-100/50 transition-all hover:scale-105 cursor-pointer"
             title="Bandingkan"
           >
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -217,7 +217,7 @@ export function renderProductGrid(products) {
           </div>
 
           <!-- Product Name -->
-          <h4 class="btn-view-detail font-bold text-slate-800 text-xs sm:text-sm mb-2 sm:mb-3 leading-snug line-clamp-2 hover:text-cyan-600 transition-colors cursor-pointer" data-id="${product.id}" title="${product.name}">
+          <h4 class="btn-view-detail font-bold text-slate-800 text-xs sm:text-sm mb-2 sm:mb-3 leading-snug line-clamp-2 hover:text-blue-600 transition-colors cursor-pointer" data-id="${product.id}" title="${product.name}">
             ${product.name}
           </h4>
 
@@ -335,7 +335,7 @@ export function showProductDetails(id) {
         </div>
         <!-- Hover indicator badge -->
         <div class="absolute bottom-3 right-3 bg-slate-900/75 backdrop-blur-sm text-white text-[10px] font-semibold px-2.5 py-1.5 rounded-lg shadow opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center gap-1.5 z-10">
-          <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
           </svg>
           Klik untuk memperbesar
@@ -346,7 +346,7 @@ export function showProductDetails(id) {
       <div class="space-y-5">
         <div>
           <div class="flex items-center gap-2 mb-2 flex-wrap">
-            <span class="bg-cyan-50 text-cyan-700 border border-cyan-100 text-xs font-bold px-2.5 py-1 rounded-lg">
+            <span class="bg-blue-50 text-blue-700 border border-blue-100 text-xs font-bold px-2.5 py-1 rounded-lg">
               ${product.tech}
             </span>
             <span class="bg-slate-100 text-slate-700 text-xs font-bold px-2.5 py-1 rounded-lg">
@@ -364,7 +364,7 @@ export function showProductDetails(id) {
         <div class="bg-slate-50 border border-slate-200/60 rounded-2xl p-4 space-y-2">
           <div class="text-xs text-slate-400 font-bold uppercase tracking-wider">Detail Harga AC (Unit Only):</div>
           <div class="flex items-baseline gap-2">
-            <span class="text-xl sm:text-2xl font-extrabold text-cyan-600">${product.price}</span>
+            <span class="text-xl sm:text-2xl font-extrabold text-blue-600">${product.price}</span>
             ${product.oldPrice ? `
               <span class="text-xs sm:text-sm text-slate-400 line-through">
                 ${
@@ -378,7 +378,7 @@ export function showProductDetails(id) {
           <p class="text-[10px] sm:text-[11px] text-slate-500 font-medium">Harga di atas adalah unit saja (tidak termasuk pipa, kabel, bracket, dan jasa pasang).</p>
           
           ${product.category === "ResidentialAC" ? `
-            <div class="flex justify-between text-[10px] sm:text-xs  text-slate-500 border-t border-slate-200/50 pt-2 mt-2">
+            <div class="flex justify-between text-[10px] sm:text-xs text-slate-500 border-t border-slate-200/50 pt-2 mt-2">
               <span>Harga + Paket Pasang (Hemat):</span>
               <span class="font-extrabold text-xs sm:text-md text-slate-800">${product.packagePrice}</span>
             </div>
@@ -471,10 +471,10 @@ export function renderCompareModal() {
         <div class="flex justify-center p-2"><img src="${prod.imgList}" class="h-24 object-contain" alt=""></div>
       </td>`;
     brandRow += `<td><span class="font-bold text-slate-700">${prod.brand}</span></td>`;
-    priceRow += `<td><span class="font-bold text-cyan-600 text-sm">${prod.price}</span></td>`;
+    priceRow += `<td><span class="font-bold text-blue-600 text-sm">${prod.price}</span></td>`;
     packagePriceRow += `<td><span class="font-semibold text-slate-700 text-xs">${prod.category === "ResidentialAC" ? prod.packagePrice : "-"}</span></td>`;
     pkRow += `<td><span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded font-semibold">${prod.pk} PK</span></td>`;
-    techRow += `<td><span class="bg-cyan-50 text-cyan-700 text-xs px-2 py-0.5 rounded font-semibold">${prod.tech}</span></td>`;
+    techRow += `<td><span class="bg-blue-50 text-blue-700 text-xs px-2 py-0.5 rounded font-semibold">${prod.tech}</span></td>`;
     wattRow += `<td>${prod.specs["Daya Listrik"] || "-"}</td>`;
     btuRow += `<td>${prod.specs["Kapasitas Pendingin"] || "-"}</td>`;
     freonRow += `<td>${prod.specs["Tipe Freon"] || "R32"}</td>`;
@@ -553,7 +553,7 @@ export function renderWishlistModal() {
         <div>
           <h4 class="font-bold text-slate-800 text-xs sm:text-sm line-clamp-1">${item.name}</h4>
           <div class="flex gap-2 items-center mt-0.5">
-            <span class="text-[10px] font-bold text-cyan-600">${item.price} (Unit Only)</span>
+            <span class="text-[10px] font-bold text-blue-600">${item.price} (Unit Only)</span>
             <span class="bg-slate-200 text-slate-700 text-[9px] font-bold px-1.5 py-0.2 rounded">${item.pk} PK</span>
           </div>
         </div>

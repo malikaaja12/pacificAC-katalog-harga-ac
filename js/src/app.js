@@ -72,7 +72,7 @@ function buildBrandFilters() {
       <input 
         type="checkbox" 
         value="${brand}" 
-        class="filter-brand-checkbox rounded text-cyan-600 focus:ring-cyan-500" 
+        class="filter-brand-checkbox rounded text-blue-600 focus:ring-blue-500" 
       />
       ${brand}
     `;
@@ -177,6 +177,18 @@ function filterAndRender() {
 
   // Render to grid
   renderProductGrid(products);
+
+  // Update mobile active filter badge
+  const activeCount = state.selectedBrands.length + state.selectedPKs.length + state.selectedTechs.length + (state.maxPrice < 35000000 ? 1 : 0);
+  const mobileBadge = document.getElementById("mobile-filter-badge");
+  if (mobileBadge) {
+    if (activeCount > 0) {
+      mobileBadge.textContent = activeCount;
+      mobileBadge.classList.remove("hidden");
+    } else {
+      mobileBadge.classList.add("hidden");
+    }
+  }
 }
 
 // Reset all filters in sidebar
@@ -214,10 +226,10 @@ function setupEventListeners() {
   document.querySelectorAll(".cat-tab-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       document.querySelectorAll(".cat-tab-btn").forEach((b) => {
-        b.classList.remove("active", "bg-cyan-600", "text-white");
+        b.classList.remove("active", "bg-blue-600", "bg-cyan-600", "text-gray-400");
         b.classList.add("bg-white", "text-slate-700", "border", "border-slate-200");
       });
-      btn.classList.add("active", "bg-cyan-600", "text-white");
+      btn.classList.add("active", "bg-blue-600", "text-gray-900");
       btn.classList.remove("bg-white", "text-slate-700", "border", "border-slate-200");
 
       state.category = btn.getAttribute("data-cat");
@@ -294,6 +306,44 @@ function setupEventListeners() {
     });
   }
 
+  // 7.5. Mobile Filter Sidebar Drawer Toggle & Overlay
+  const btnToggleFilterMobile = document.getElementById("btn-toggle-filter-mobile");
+  const btnCloseFilterMobile = document.getElementById("btn-close-filter-mobile");
+  const btnApplyFilterMobile = document.getElementById("btn-apply-filter-mobile");
+  const filterSidebar = document.getElementById("catalog-filter-sidebar");
+  const filterBackdrop = document.getElementById("filter-sidebar-backdrop");
+
+  const openMobileFilter = () => {
+    if (filterSidebar) filterSidebar.classList.add("open");
+    if (filterBackdrop) {
+      filterBackdrop.classList.add("show");
+      filterBackdrop.classList.remove("hidden");
+    }
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeMobileFilter = () => {
+    if (filterSidebar) filterSidebar.classList.remove("open");
+    if (filterBackdrop) {
+      filterBackdrop.classList.remove("show");
+      filterBackdrop.classList.add("hidden");
+    }
+    document.body.style.overflow = "";
+  };
+
+  if (btnToggleFilterMobile) {
+    btnToggleFilterMobile.addEventListener("click", openMobileFilter);
+  }
+  if (btnCloseFilterMobile) {
+    btnCloseFilterMobile.addEventListener("click", closeMobileFilter);
+  }
+  if (btnApplyFilterMobile) {
+    btnApplyFilterMobile.addEventListener("click", closeMobileFilter);
+  }
+  if (filterBackdrop) {
+    filterBackdrop.addEventListener("click", closeMobileFilter);
+  }
+
   // 8. Navigation Links (Home)
   const homeLink = document.getElementById("home-link");
   if (homeLink) {
@@ -304,12 +354,12 @@ function setupEventListeners() {
       
       // Reset active tab class
       document.querySelectorAll(".cat-tab-btn").forEach((b) => {
-        b.classList.remove("active", "bg-cyan-600", "text-white");
+        b.classList.remove("active", "bg-blue-600", "bg-cyan-600", "text-white");
         b.classList.add("bg-white", "text-slate-700", "border", "border-slate-200");
       });
       const firstTab = document.querySelector('.cat-tab-btn[data-cat="all"]');
       if (firstTab) {
-        firstTab.classList.add("active", "bg-cyan-600", "text-white");
+        firstTab.classList.add("active", "bg-blue-600", "text-white");
         firstTab.classList.remove("bg-white", "text-slate-700", "border", "border-slate-200");
       }
       
