@@ -150,8 +150,8 @@ const daikin = {
         {
           name: "Daikin AC Split 1 PK Standar",
           desc: "AC split standar dari Daikin 1 PK, pendinginan handal untuk ruangan sedang.",
-          price: "Rp 4.650.000",
-          oldPrice: "Rp 4.750.000",
+          price: "Rp 5.350.000",
+          oldPrice: "Rp 5.400.000",
           imgList: "img/daikin/sms.webp", // Image for list view
           imgDetail: "img/daikin/ind.png", // Image for detail view
           features: [

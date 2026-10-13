@@ -226,7 +226,7 @@ function setupEventListeners() {
   document.querySelectorAll(".cat-tab-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       document.querySelectorAll(".cat-tab-btn").forEach((b) => {
-        b.classList.remove("active", "bg-blue-600", "bg-cyan-600", "text-gray-400");
+        b.classList.remove("active", "bg-blue-600", "bg-cyan-600", "text-gray-900");
         b.classList.add("bg-white", "text-slate-700", "border", "border-slate-200");
       });
       btn.classList.add("active", "bg-blue-600", "text-gray-900");
